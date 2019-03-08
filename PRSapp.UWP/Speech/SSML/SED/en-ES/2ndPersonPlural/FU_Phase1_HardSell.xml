@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-US">
+  <p>
+    <s xml:lang="en">F U Phase 1</s>
+    <s>The Hard Sell</s>
+  </p>
+  <p>
+    <s>Your cute and cool</s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+</speak>

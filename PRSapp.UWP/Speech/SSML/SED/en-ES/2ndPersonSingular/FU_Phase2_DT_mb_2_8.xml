@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-US">
+  <prosody rate="+25%">
+  <p>
+    <!-- mb 2 2 8 -->
+    <s>Condition:</s>
+    <s>If you feel it is needed to say now or in act. Say:</s>
+    <s>Just shut the fuck up,  relax your asshole, and enjoy it. You'll thank me later.</s>
+  </p>
+  </prosody>
+</speak>

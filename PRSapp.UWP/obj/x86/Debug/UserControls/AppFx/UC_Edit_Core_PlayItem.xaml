@@ -1,0 +1,73 @@
+﻿<UserControl
+    x:Class="PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UserControls.AppFx"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:m="using:PRSapp.UWP.Models"
+    xmlns:vm="using:PRSapp.UWP.ViewModels"
+    xmlns:converters="using:PRSapp.UWP.ViewModels.Converters"
+    mc:Ignorable="d"
+    d:DesignHeight="620"
+    d:DesignWidth="360"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <UserControl.DataContext>
+        <vm:TimeViewModel/>
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <!--<vm:MainViewModel x:Key="mainViewModel"/>
+        <vm:SpeechViewModel x:Key="speechViewModel"/>-->
+
+        <vm:TimeViewModel x:Key="timeViewModel"/>
+        <vm:ViewModelBase x:Key="viewModelBase"/>
+
+        <!--<m:SpeechModel x:Key="speechModel"/>
+
+        <converters:BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>-->
+        <converters:DateTimeToDateTimeOffsetConverter x:Key="dateTimeToDateTimeOffsetConverter"/>
+        <!--<converters:DateTimeToTimeSpanConverter x:Key="dateTimeToTimeSpanConverter"/>
+        <converters:TimeSpanToStringConverter x:Key="timeSpanToStringConverter"/>
+        <converters:DateTimeToStringConverter x:Key="dateTimeToStringConverter"/>-->
+    </UserControl.Resources>
+
+    <StackPanel Background="Black">
+        <!--Time="{Binding SomeDateTimeTimeSpanProxy, Mode=TwoWay}"-->
+
+        <StackPanel>
+            <DatePicker Date="{Binding SomeDateTime
+             ,Converter={StaticResource dateTimeToDateTimeOffsetConverter}
+             ,Mode=TwoWay}"                  
+                Header="SomeDateTime Date" 
+                        Foreground="Ivory" FontSize="28"
+                        Width="Auto"/>
+            <TimePicker Time="{Binding SomeDateTimeTimeSpanProxy, Mode=TwoWay}"
+                Header="SomeDateTime Time" 
+                        Foreground="Ivory" FontSize="28"
+                        Width="Auto" Margin="0 5"/>
+            <TextBlock  Text="{Binding SomeDateTime}" 
+                        Foreground="Ivory" FontSize="28"
+                        Width="Auto" Margin="5 10 0 0"/>
+        </StackPanel>
+
+        <StackPanel x:ConnectionId='2' x:Name="stpPlayOne" 
+            DataContext="{Binding Source={StaticResource timeViewModel}}">
+            <TextBlock Text="{Binding CurrentTime}"
+                FontSize="28" Foreground="Ivory"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Height="40" Width="150"
+                Margin="20 50 0 0"/>
+
+            <AppBarButton  DataContext="{StaticResource viewModelBase}"  
+                Command="{Binding AddNewContentCmd}"                                                        
+                FontWeight="Bold" Foreground="Ivory"
+                Icon="Add"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Height="70" Width="100"
+                Margin="60 50 0 0"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
+

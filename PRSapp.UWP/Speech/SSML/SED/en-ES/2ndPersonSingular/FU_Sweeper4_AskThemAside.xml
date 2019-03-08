@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-US">
+  <meta name="TitleName" content="Sweeper 4 - Ask Them Aside"/>
+  <prosody rate="+50%">
+    <p>
+    <s>Sweeper 4 - Ask Them Aside</s>
+    <s>All</s>
+    </p>
+    <p>
+      <s>Bar , club, or outside with music or noise.</s>
+      <s>Can we go over there?</s>
+      <s> It's hard to hear you here.</s>
+    </p>
+    
+    <p>
+      <s>Beach</s>
+      <s>Can we go over there?</s>
+      <s> It's hard to hear you here.</s>
+      <s></s>
+      <s></s>
+    </p>
+    <p>
+      <s>Store</s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+
+    <p>
+      <s>Driving Both Parked</s>
+      <s>Like 7-eleven girl in nissan z.</s>
+      <s>I like your car.</s>
+      <s>what r u up to?</s>
+      <s>where is your boyfriend?</s>
+      <s>I wanna hang out with you. I'm serious.</s>
+      <s>u wanna give me your number?</s>
+      <s>if no or she is shy, just throw here yours and tell her to text in a couple minutes.</s>
+    </p>
+   
+    <p>
+      <s>Driving Beach</s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+   
+    <p>
+      <s>Driving them walking</s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+
+    <p>
+      <s>Driving them nearby or passing in car , cart, or bike</s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+    
+  </prosody>
+</speak>

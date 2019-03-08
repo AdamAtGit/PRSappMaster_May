@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="ru-RU">
+  <s xml:lang="ru">Чтобы сказать добрый день по английски, произнесите</s>
+  <p>
+    <s xml:lang="en">5500</s>
+    <s>U W P , Win R T.</s>
+  </p>
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+</speak>

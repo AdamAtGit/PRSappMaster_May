@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{652EF22E-D274-4888-9450-70B940F79851}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PRSapp.UWP</RootNamespace>
+    <AssemblyName>PRSapp.UWP</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>PRSapp.UWP_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\PlayList.cs" />
+    <Compile Include="Classes\TimeLineTitle.cs" />
+    <Compile Include="Classes\Title.cs" />
+    <Compile Include="CustomHelperClasses\CondenseDay.cs" />
+    <Compile Include="CustomHelperClasses\TimeFormatNCompare.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Models\SpeechModel.cs" />
+    <Compile Include="Models\TimeModel.cs" />
+    <Compile Include="PagesPhone\AppAboutPage.xaml.cs">
+      <DependentUpon>AppAboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppCopyWritePage.xaml.cs">
+      <DependentUpon>AppCopyWritePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppCreateUserNamePage.xaml.cs">
+      <DependentUpon>AppCreateUserNamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppDemoPage.xaml.cs">
+      <DependentUpon>AppDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppHelpPage.xaml.cs">
+      <DependentUpon>AppHelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppProfilePage.xaml.cs">
+      <DependentUpon>AppProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppResetPwdPage.xaml.cs">
+      <DependentUpon>AppResetPwdPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppResetUserNamePage.xaml.cs">
+      <DependentUpon>AppResetUserNamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppSettingsOverViewPage.xaml.cs">
+      <DependentUpon>AppSettingsOverViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppSplashPage.xaml.cs">
+      <DependentUpon>AppSplashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPhone\AppSignInPage.xaml.cs">
+      <DependentUpon>AppSignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddOrCreatePage.xaml.cs">
+      <DependentUpon>AddOrCreatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddPlayListPage.xaml.cs">
+      <DependentUpon>AddPlayListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AppFxs-PlayList-Titles.xaml.cs">
+      <DependentUpon>AppFxs-PlayList-Titles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AppSignedOutPage.xaml.cs">
+      <DependentUpon>AppSignedOutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QnAPage.xaml.cs">
+      <DependentUpon>QnAPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DayPage.xaml.cs">
+      <DependentUpon>DayPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DragDropImgsExplorToListViewPage.xaml.cs">
+      <DependentUpon>DragDropImgsExplorToListViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DTLuc_N_CreateTTSuc.xaml.cs">
+      <DependentUpon>DTLuc_N_CreateTTSuc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Template3Col3Row640x360.xaml.cs">
+      <DependentUpon>Template3Col3Row640x360.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TimeLines_n_CreateBig_Page.xaml.cs">
+      <DependentUpon>TimeLines_n_CreateBig_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SpeechClasses\AudioCapturePermissions.cs" />
+    <Compile Include="SpeechClasses\Interactive.cs" />
+    <Compile Include="UserControls\AddChooseMenuUserControl.xaml.cs">
+      <DependentUpon>AddChooseMenuUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppFx\RepeaterUserControl.xaml.cs">
+      <DependentUpon>RepeaterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppFx\UC_Edit_Core_PlayItem.xaml.cs">
+      <DependentUpon>UC_Edit_Core_PlayItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppFx\UC_Mood.xaml.cs">
+      <DependentUpon>UC_Mood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppFx\UC_PlayGroup.xaml.cs">
+      <DependentUpon>UC_PlayGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppFx\UC_TMinus30.xaml.cs">
+      <DependentUpon>UC_TMinus30.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Nested\AddChooseExistOrCreateUserControl.xaml.cs">
+      <DependentUpon>AddChooseExistOrCreateUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CreateTtsLargeUserControl.xaml.cs">
+      <DependentUpon>CreateTtsLargeUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MainTimeLineUserControl.xaml.cs">
+      <DependentUpon>MainTimeLineUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Nested\AddCreateUserControl.xaml.cs">
+      <DependentUpon>AddCreateUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Nested\AddExistingFileUserControl.xaml.cs">
+      <DependentUpon>AddExistingFileUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlayListUserControl.xaml.cs">
+      <DependentUpon>PlayListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_AddCreateTTS.xaml.cs">
+      <DependentUpon>UC_AddCreateTTS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Commands\ChangeForeGroundColorCommand.cs" />
+    <Compile Include="ViewModels\Commands\DeleteDataSingleCommand.cs" />
+    <Compile Include="ViewModels\Commands\DeleteMultipleAsyncCommand.cs" />
+    <Compile Include="ViewModels\Commands\RelayCommand.cs" />
+    <Compile Include="ViewModels\Commands\Speech\Synth\SynthTextToSpeechCommand.cs" />
+    <Compile Include="ViewModels\Converters\DateTimeToDateTimeOffsetConverter.cs" />
+    <Compile Include="ViewModels\Converters\DateTimeToStringConverter.cs" />
+    <Compile Include="ViewModels\Converters\DateTimeToTimeSpanConverter.cs" />
+    <Compile Include="ViewModels\Converters\TimeSpanToStringConverter.cs" />
+    <Compile Include="ViewModels\TimeViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlayListsPage.xaml.cs">
+      <DependentUpon>PlayListsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpeechClasses\TextToSpeechAsync.cs" />
+    <Compile Include="UserControls\DetailsUserControl.xaml.cs">
+      <DependentUpon>DetailsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ListUserControl.xaml.cs">
+      <DependentUpon>ListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaveControl.xaml.cs">
+      <DependentUpon>SaveControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <PackageLayout Include="App.packagelayout" />
+    <None Include="PRSapp.UWP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AV\PlayLibray\Audio\BackInHighLife.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\FightSong.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\HoneyImGood.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\Issues.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\Jessie.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\Mother.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\Relax2Sleep.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\Thunder.m4a" />
+    <Content Include="Assets\AV\PlayLibray\Audio\Thunderstruck.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Audio\TookAPillinIbiza.mp3" />
+    <Content Include="Assets\AV\PlayLibray\Videos\FullMetJack_30s.WMV" />
+    <Content Include="Assets\Images\AdamPassProfile-01.png" />
+    <Content Include="Assets\Images\All-Three-01.png" />
+    <Content Include="Assets\Images\Camera-Icon-Black-01.png" />
+    <Content Include="Assets\Images\Camera-Icon-Wh-01.png" />
+    <Content Include="Assets\Images\Camera-Icon-Wh-Zoomed-01.png" />
+    <Content Include="Assets\Images\Mic-Icon-Bl-01.png" />
+    <Content Include="Assets\Images\Mic-Icon-Bl-03.png" />
+    <Content Include="Assets\Images\Mic-Icon-Colorful-01.png" />
+    <Content Include="Assets\Images\Mic-Icon-Wh-02.png" />
+    <Content Include="Assets\Images\Mic-Icon_wh-01.png" />
+    <Content Include="Assets\Images\Music-Icon-Wh-100x-04.png" />
+    <Content Include="Assets\Images\Music-Icon-WhDodgerBlue-01.png" />
+    <Content Include="Assets\Images\Play-Icon-Red-01.png" />
+    <Content Include="Assets\Images\PRS_Logo_Scale-100-70x70.png" />
+    <Content Include="Assets\Images\Video-Icon-bl-02.png" />
+    <Content Include="Assets\Images\Video-Icon-blueGray-01.png" />
+    <Content Include="Assets\Images\Video-Icon-DodgBlue-02.png" />
+    <Content Include="Assets\Images\Video-Icon-Orange-01.png" />
+    <Content Include="Assets\Images\Video-Icon-Wh-02.png" />
+    <Content Include="Assets\Images\Video-Icon-Wh-05.png" />
+    <Content Include="Assets\Images\Video-Play-Icon-DodgBlue-01.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\MetroImages\Military-MedalDodBl_Orange400.png" />
+    <Content Include="Assets\Misc\AdamPassProfile-01.png" />
+    <Content Include="Assets\Misc\All-Three-01.png" />
+    <Content Include="Assets\Misc\Camera-Icon-Black-01.png" />
+    <Content Include="Assets\Misc\Camera-Icon-Wh-01.png" />
+    <Content Include="Assets\Misc\Camera-Icon-Wh-Zoomed-01.png" />
+    <Content Include="Assets\Misc\Mic-Icon-Bl-01.png" />
+    <Content Include="Assets\Misc\Mic-Icon-Bl-03.png" />
+    <Content Include="Assets\Misc\Mic-Icon-Colorful-01.png" />
+    <Content Include="Assets\Misc\Mic-Icon-Wh-02.png" />
+    <Content Include="Assets\Misc\Mic-Icon_wh-01.png" />
+    <Content Include="Assets\Misc\mic-Wh-Bl-3-Active.png" />
+    <Content Include="Assets\Misc\Mic-WhBlBlu-Cmd-Active.png" />
+    <Content Include="Assets\Misc\Mic-WhBlBlu-Cmd-Wait.png" />
+    <Content Include="Assets\Misc\mic-WhBlOra-3-Active.png" />
+    <Content Include="Assets\Misc\Mic-WhBlOra-3-Wait.png" />
+    <Content Include="Assets\Misc\Music-Icon-Wh-100x-04.png" />
+    <Content Include="Assets\Misc\Music-Icon-WhDodgerBlue-01.png" />
+    <Content Include="Assets\Misc\Play-Icon-Red-01.png" />
+    <Content Include="Assets\Misc\Video-Icon-bl-02.png" />
+    <Content Include="Assets\Misc\Video-Icon-blueGray-01.png" />
+    <Content Include="Assets\Misc\Video-Icon-DodgBlue-02.png" />
+    <Content Include="Assets\Misc\Video-Icon-Orange-01.png" />
+    <Content Include="Assets\Misc\Video-Icon-Wh-02.png" />
+    <Content Include="Assets\Misc\Video-Icon-Wh-05.png" />
+    <Content Include="Assets\Misc\Video-Play-Icon-DodgBlue-01.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Speech\SSML\IT\5000_CSharp.xml" />
+    <Content Include="Speech\SSML\IT\5200_MVVM.xml" />
+    <Content Include="Speech\SSML\IT\5300_SQL.xml" />
+    <Content Include="Speech\SSML\IT\5400_Wpf.xml" />
+    <Content Include="Speech\SSML\IT\5500_UWP.xml" />
+    <Content Include="Speech\SSML\IT\5700_HTML_CSS_JQ.xml" />
+    <Content Include="Speech\SSML\IT\5800_MVC_ASPNET.xml" />
+    <Content Include="Speech\SSML\IT\5900_WCF_WebSrvs.xml" />
+    <Content Include="Speech\SSML\IT\en-ES\SecondPersonPlural\FU_Phase1_mb_1_0.xml" />
+    <Content Include="Speech\SSML\IT\en-ES\SecondPersonSingular\PRS_Components.xml" />
+    <Content Include="Speech\SSML\Routine\9100_FloorPlanRoutine.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonPlural\00_MMM.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\00_MMM.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\10_DayPart1.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\20_DayPart2.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\30_DayPart3_MentPrep.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\55_PreCrunchTime.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\90_MMM_Eve.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\PlaySet_0000\01_Alarm.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\PlaySet_0000\02_SED-Outloud.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\PlaySet_0000\03_Run.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\PlaySet_0000\04_Workout.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\PlaySet_0000\05_ProgPlan1st.xml" />
+    <Content Include="Speech\SSML\Routine\en-ES\2ndPersonSingular\PlaySet_0000\06_ListenSuzan.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\EnglishTemplate.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_DT_Asshole.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase1_HardSell.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase1_mb_1_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase1_mb_1_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase1_mb_1_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase1_mb_1_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase1_mb_1_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DirtyTalk.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_1_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_1_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_1_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_1_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_1_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_2_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_2_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_2_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_2_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase2_DT_mb_2_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase3_ClosingAndLogistcs.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase3_ClosKBLog_1_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase3_ClosKBLog_1_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase3_ClosKBLog_1_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase3_ClosKBLog_1_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonPlural\FU_Phase3_ClosKBLog_1_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\EnglishTemplate.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_DT_Asshole.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase0_PointToPoint.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase1_HardSell.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase1_mb_1_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase1_mb_1_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase1_mb_1_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase1_mb_1_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase1_mb_1_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DirtyTalk.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_1_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_1_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_1_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_1_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_1_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_2_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_2_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_2_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_2_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase2_DT_mb_2_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase3_ClosingAndLogistics.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase3_ClosKBLog_1_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase3_ClosKBLog_1_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase3_ClosKBLog_1_4.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase3_ClosKBLog_1_6.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Phase3_ClosKBLog_1_8.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Sweeper4_AskThemAside.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Sweeper4_TakeAside_mb_1_0.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Sweeper4_TakeAside_mb_1_2.xml" />
+    <Content Include="Speech\SSML\SED\en-ES\2ndPersonSingular\FU_Sweeper4_TakeAside_mb_1_4.xml" />
+    <Content Include="Speech\SSML\Templates\CultureTemplates\en-US\EnglishTemplate.xml" />
+    <Content Include="Speech\SSML\Templates\CultureTemplates\es-MX\PlantillaDeEspañol.xml" />
+    <Content Include="Speech\SSML\Templates\CultureTemplates\ru-RU\РусскийШаблон.xml" />
+    <Content Include="Speech\SSML\UsageSyntax.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PagesPhone\AppAboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppCopyWritePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppCreateUserNamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppDemoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppHelpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppResetPwdPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppResetUserNamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppSettingsOverViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppSplashPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PagesPhone\AppSignInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddOrCreatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddPlayListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AppFxs-PlayList-Titles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AppSignedOutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\QnAPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\DayPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DragDropImgsExplorToListViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DTLuc_N_CreateTTSuc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlayListsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Template3Col3Row640x360.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TimeLines_n_CreateBig_Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\AddChooseMenuUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppFx\RepeaterUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppFx\UC_Edit_Core_PlayItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\AppFx\UC_Mood.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\AppFx\UC_PlayGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\AppFx\UC_TMinus30.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Nested\AddChooseExistOrCreateUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CreateTtsLargeUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\DetailsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ListUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MainTimeLineUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Nested\AddCreateUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Nested\AddExistingFileUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PlayListUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SaveControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UC_AddCreateTTS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console">
+      <Version>3.0.0-preview.18572.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PRSapp.Model\PRSapp.Model.csproj">
+      <Project>{68d4b250-b5d2-4e65-be2d-b900ecd35e7d}</Project>
+      <Name>PRSapp.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\AV\PlayLibray\PlayLists\Mood\" />
+    <Folder Include="Assets\AV\PlayLibray\PlayLists\Out\" />
+    <Folder Include="Assets\AV\PlayLibray\PlayLists\WorkOut\" />
+    <Folder Include="Speech\SSML\IT\es-MX\1SegundaPersonaSingular\" />
+    <Folder Include="Speech\SSML\IT\es-MX\SegundaPersonaPlural\" />
+    <Folder Include="Speech\SSML\IT\ru-RU\1ВторойЛицаEдинственногоИсла\" />
+    <Folder Include="Speech\SSML\IT\ru-RU\ВторойЛицаMножественногоИсла\" />
+    <Folder Include="Speech\SSML\Routine\es-MX\SegundaPersonaPlural\" />
+    <Folder Include="Speech\SSML\Routine\es-MX\SegundaPersonaSingular\" />
+    <Folder Include="Speech\SSML\Routine\ru-RU\ВторойЛицаEдинственногоИсла\" />
+    <Folder Include="Speech\SSML\Routine\ru-RU\ВторойЛицаMножественногоИсла\" />
+    <Folder Include="Speech\SSML\SED\en-ES\Other\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Console_CSharp_Only|x86'">
+    <OutputPath>bin\x86\Console_CSharp_Only\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Console_CSharp_Only|ARM'">
+    <OutputPath>bin\ARM\Console_CSharp_Only\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Console_CSharp_Only|x64'">
+    <OutputPath>bin\x64\Console_CSharp_Only\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

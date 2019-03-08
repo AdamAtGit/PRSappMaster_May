@@ -1,0 +1,61 @@
+﻿**This Link explains everything 
+http://www.entityframeworktutorial.net/efcore/entity-framework-core-migration.aspxAdd-Migration 
+**btw  Migration Up() tells what to Create, 
+		Migration Down() Tells What to Remove
+**Btw- Purpose of Model SnapShot is to know what changes have been 
+		made for the NEXT ADD_Migration <MyNextMigration>
+PM> Add-Migration <CreateInitial> or <myFirst Migration> 
+PM> Add-Migration <MySecondMigration>
+PM> Remove-Migration <MySecondMigration> --> You can remove the last migration if it is not applied to the database.
+											Use the remove commands to remove the last created migration files,
+											and revert the model snapshot.
+											Remove command will remove the last migration and revert the 
+											model snapshot to the previous migration. 
+											(***unless you've already run Update-Database,
+											command will revert the database.
+											If so see ***Reverting Steps below
+									
+PM> Script-Migration	--> The above script command will include a script for all the migrations by default.
+						You can specify a range of migrations by using the 
+						-to and -from options. 
+						*It looks like can use this(an executable scripts) to create, recreate other dbs??
+						 
+						 **Keep in mind this source origin is for  MVC and EF 6 Code First,  likely    MSSQL   db provider,
+								   Not my UWP and EFCore (code First?), and SQlite(PCL,UWP?) db Provider
+
+
+//// REVERTING an applied Db migration STEPS \\\\
+*Note if you already applied migration to DB using Update-Database
+To Revert -Steps: (when an errant Migration was applied
+					to Db using Update-Database)
+1. UpDate-Database <AWorkingMigrationName> ,<CreateInitial> , <myFirst Migration> 
+			Use the remove commands to remove them from the project,
+			and revert the model snapshot.
+2. Remove-Migration - Cannot seem to get to work, so till then just leave files and
+						 db table __EFMigrationsHistory's Entries in
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
+Code First migrations and deployment with the Entity Framework in an ASP.NET MVC application
+
+
+
+Source Origin https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
+
+
+Enable Code First migrations
+
+When you develop a new application, your data model changes frequently, 
+and each time the model changes, it gets out of sync with the database. 
+You have configured the Entity Framework to automatically drop and re-create 
+the database each time you change the data model. When you add, remove, 
+or change entity classes or change your DbContext class, the next time 
+you run the application it automatically deletes your existing database, 
+creates a new one that matches the model, and seeds it with test data.
+
+
+and seeds it with test data.<-- answer to question how will EF Migration
+								handle columns with data in them

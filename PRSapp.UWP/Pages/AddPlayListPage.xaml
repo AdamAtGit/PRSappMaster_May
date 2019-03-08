@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="PRSapp.UWP.Pages.AddPlayListPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <AppBarButton Icon="Home" Label="Home"/>
+                <AppBarButton Icon="Back" Label="Back"/>
+                <AppBarButton Icon="Forward" Label="Forward"/>
+            </StackPanel>
+
+            <AppBarButton Grid.Column="1" Icon="More">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Icon="NewWindow" Text="New"/>
+                        <MenuFlyoutItem Icon="OpenFile"  Text="Open"/>
+                        <MenuFlyoutItem Icon="Save"      Text="Save"/>
+                        <MenuFlyoutItem Icon="Save"      Text="Save As"/>
+                        <MenuFlyoutItem Icon="ClosePane" Text="Close"/>
+                        <MenuFlyoutItem Icon="Setting"   Text="Settings"/>
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+        </Grid>
+
+        <!-- Content-->
+
+    </Grid>
+</Page>

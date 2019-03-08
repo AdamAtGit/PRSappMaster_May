@@ -1,0 +1,114 @@
+﻿<Page
+    x:Class="PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:PRSapp.UWP.ViewModels"
+    xmlns:uc="using:PRSapp.UWP.UserControls"
+    mc:Ignorable="d"  
+    d:DesignHeight="740"
+    d:DesignWidth="1180"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
+
+    <!--Dodgerblue #1E90FF, Orange #ff8c00
+        OrangeRed #ff4500  Magenta #ff00ff-->
+    <!-- Blackish grays - fading down as they go
+        blackgrays:
+    gray10 #1a1a1a
+    gray14 #242424
+    gray18 #2e2e2e 
+        dark med Grays:
+    gray22 #383838
+    gray26 #424242
+    gray29 #4a4a4a
+    gray32 #525252
+        gray Grays:
+   gray40 #666666
+   gray46 #757575
+   gray49 #7d7d7d
+    -->
+    <Page.Resources>
+        <vm:ViewModelBase x:Key="viewModel"/>
+    </Page.Resources>
+
+    <Grid Height="640" Width="1080" x:Name="MainPageGrid"
+              Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <!--1080-->
+            <ColumnDefinition Width="*"/>
+            <!--360-->
+            <ColumnDefinition Width="*"/>
+            <!--360-->
+            <ColumnDefinition Width="*"/>
+            <!--360-->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>  <!--640-->        
+            <!---->
+            <RowDefinition Height="2.5*"/>
+            <!---->
+            <RowDefinition Height="2*"/>
+            <!---->
+            <RowDefinition Height="4*"/>
+            <!---->
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Titles List -->
+        <StackPanel x:Name="pan00" Grid.Column="0" Grid.Row="0" 
+                                 Grid.RowSpan="3" Background="DarkGray">
+            <TextBlock Text="Titles" FontSize="19" Margin="0 3"
+                       HorizontalAlignment="Center"/>
+            <ListView x:Name="ShowTitlesListView" Background="WhiteSmoke" 
+                      MinHeight="10" Height="500" MaxHeight="500"
+                      Margin="5 7 5 3" 
+                      DataContext="{Binding Title}"
+                      SelectionMode="Multiple"
+                      KeyUp="ShowTitlesListView_KeyUp"
+                      SelectionChanged="ShowTitlesListView_OnSelectionChanged">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0 0">
+                            <StackPanel Orientation="Horizontal" Margin="0 1">
+                                <TextBlock x:Name="tbTitleName" Text="{Binding TitleName}"
+                                           FontSize="14"
+                                           TextWrapping="NoWrap"                                                                     
+                                           Margin="2 1"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+        <StackPanel x:Name="pan02" Grid.Column="0" Grid.Row="3" 
+                                                Background="DarkGray">
+            <CommandBar ClosedDisplayMode="Compact"  Background="LightGray"
+                                Height="Auto" Width="340">
+                <CommandBar.PrimaryCommands>
+                    <AppBarButton x:Name="btnSetSelectionModeToMulitple"                         
+                            IsEnabled="True"
+                             Click="BtnSetSelectionModeToMulitple_Click"
+                              Icon="SelectAll" Label="Select Multiple"                           
+                              Width="100" Margin="2 0 50 1"/>
+                    <AppBarButton x:Name="btnDeleteSelection"
+                           IsEnabled="True"
+                              Click="DeleteSelectionAsync_Click"
+                              Icon="Delete" Label="Delete Selected"                            
+                              Tag="btnDeleteSelection" Margin="5,0,1,0" Width="120"/>
+
+                </CommandBar.PrimaryCommands>
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Name="setting" Icon="Setting" Label="Setting"/>
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+
+        </StackPanel>
+        
+        <!-- Create TTs Large User Control-->
+        <StackPanel x:Name="pan10">
+            <uc:CreateTtsLargeUserControl/>
+        </StackPanel>
+    </Grid>
+</Page>

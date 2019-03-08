@@ -1,0 +1,34 @@
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+
+namespace Blogging.Model
+{
+    public class BloggingContext : DbContext
+    {
+        public DbSet<Blog> Blogs { get; set; } //DbSet<User> Users
+        public DbSet<Post> Posts { get; set; } //DbSet<Title> Titles
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=blogging.db");
+        }
+    }
+
+    public class Blog	//User
+    {
+        public int BlogId { get; set; } //UserId
+        public string Url { get; set; } //UserLogin
+
+        public List<Post> Posts { get; set; }  //List<Title> Titles 
+    }
+
+    public class Post	//Title
+    {
+        public int PostId { get; set; } //TitleId
+        public string Title { get; set; } //TitleName
+        public string Content { get; set; } //TtsRaw
+
+        public int BlogId { get; set; }  //UserId
+        public Blog Blog { get; set; }   //User User
+    }
+}

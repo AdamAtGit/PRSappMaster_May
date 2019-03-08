@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-ES">
+
+  <prosody rate="medium">
+    <p>
+      <s>Day Part 1</s>
+      <voice gender="female">
+        <s></s>
+      </voice>
+    </p>
+    <p>
+      <voice gender="male">
+        <s>10</s>
+      </voice>
+      <s></s>
+      <voice gender="female">
+        <s>woo hoo!</s>
+      </voice>
+    </p>
+    <p>
+      <s>category -IT Stuff</s>
+      <s>3.9 App challenge 4 - list part 3</s>
+    </p>
+
+    <p>
+      <s>
+        For image t show up,
+        you may need to start path with a slash before, Assets.
+      </s>
+      <s>
+        You may also need to change image file name,
+        to have a dash zero, one.
+      </s>
+    </p>
+
+    <p>
+      <s>
+        For phone apps, need the hardware button pressed,
+        remember phones have thier own back button.
+      </s>
+    </p>
+
+    <p>
+      <s>Look close at Udemy's code in 3.9, List part 3.</s>
+      <s>
+        Not only does it have mediaCapture, i e camera integration,
+        but may also have the observable collection code.
+      </s>
+    </p>
+
+    <p>
+      <s></s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+  </prosody>
+</speak>

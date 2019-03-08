@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?>
+<speak version="1.1" xmlns="http://www.w3.org/2001/10/synthesis"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.w3.org/2001/10/synthesis
+                 http://www.w3.org/TR/speech-synthesis11/synthesis.xsd"
+       xml:lang="en-US">
+  <voice gender="female" languages="en-US" required="languages gender variant">Mary had a little lamb,</voice>
+  <!-- now request a different female child's voice -->
+  <voice gender="female" variant="2">
+    Its fleece was white as snow.
+  </voice>
+  <!-- processor-specific voice selection -->
+  <voice name="Mike" required="name">I want to be like Mike.</voice>
+  
+    
+  <p>
+    <s xml:lang="en-ES">P R S Components To-Do</s>
+    <s>Carefully and Steadily is as Fast as can do anything.</s>
+  </p>
+  <p>
+    <s>Do-Something-ism.</s>
+    <s>UP The GUT.</s>
+    <s>Shower</s>
+    <s>1 power set</s>
+    <s>bi and back bump, and push up pump</s>
+  </p>
+  <p>
+    <s>Say and repeat 1 part of SED</s>
+    <s>Beach 20 strokes</s>
+    <s>re-shower and dress good</s>
+     <s>Start new wash and organize</s>
+     <s>100% uncluster space for Isolation</s>
+    <s>Then do Day part 1</s>
+    <s></s>
+  </p>
+  
+</speak>

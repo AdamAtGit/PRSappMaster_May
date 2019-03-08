@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-US">
+  <meta name="TitleName" content="Phase 3 - Closing, Cock-Block Handling, and Logistics"/>
+  <prosody rate="+50%">
+    <p>
+      <s>Phase 3 - Closing, Cock-Block Handling, and Logistics</s>
+      <s>All</s>
+    </p>
+    <p>
+      <s>Let's go will the mood is hot...</s>
+      <s></s>
+      <s></s>
+    </p>
+    <p>
+      <s></s>
+      <s></s>
+    </p>
+  </prosody>
+</speak>

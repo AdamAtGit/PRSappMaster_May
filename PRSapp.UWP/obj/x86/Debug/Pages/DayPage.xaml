@@ -1,0 +1,134 @@
+﻿<Page
+    x:Class="PRSapp.UWP.Pages.DayPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="using:PRSapp.UWP.UserControls"   
+    Background="Black">
+    <!--mc:Ignorable="d"
+    d:DesignHeight="740"
+    d:DesignWidth="1250"
+    Background="RosyBrown"-->
+
+    <Grid Height="740" Width="1340" Background="Black">
+        <Grid.ColumnDefinitions>
+            <!--1080-->
+            <ColumnDefinition Width="283*"/>
+            <!--360-->
+            <ColumnDefinition Width="28*"/>
+            <!--360-->
+            <ColumnDefinition Width="181*"/>
+            <!--360-->
+            <ColumnDefinition Width="178*"/>
+            <!--360-->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!--640-->
+            <RowDefinition Height="59*"/>
+            <!--50-->
+            <RowDefinition Height="605*"/>
+            <!--500-->
+            <RowDefinition Height="76*"/>
+            <!--50-->
+        </Grid.RowDefinitions>
+
+        <!-- 1st Col -->
+        <StackPanel x:ConnectionId='2' x:Name="pan00" Grid.Column="0" Grid.Row="0" 
+                    Grid.ColumnSpan="2" Background="DarkGray" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" Margin="0,0,0,0">
+            <TextBlock x:ConnectionId='28' x:Name="tbNaveInfo"  FontSize="20" Text="Adam's Day"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="0 20 0 0"/>
+        </StackPanel>
+        <StackPanel x:ConnectionId='3' x:Name="pan01" Grid.Column="0" Grid.Row="1" 
+                     Background="LightGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <uc:MainTimeLineUserControl  HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="566"/>
+        </StackPanel>
+        <StackPanel x:ConnectionId='4' x:Name="pan02" Grid.Column="0" Grid.Row="2" 
+                    Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+        </StackPanel>
+
+        <!-- 2nd Col -->
+        <StackPanel x:ConnectionId='5' x:Name="pan10" Grid.Column="1" Grid.Row="0" 
+                     Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+
+        <StackPanel x:ConnectionId='6' x:Name="pan11" Grid.Column="1" Grid.Row="1" 
+                      Background="#1a1a1a">
+            <AppBarButton x:ConnectionId='16' x:Name="BtnChooseCreateExist0" 
+                      Icon="Add" Foreground="Ivory"
+                      HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Margin="0,126,0,0" 
+                      Width="30">
+                <AppBarButton.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem x:ConnectionId='22' Icon="Microphone" Text="Create - TTS"                                      />
+                        <MenuFlyoutItem x:ConnectionId='23' Icon="Microphone" Text="Create - Audio Recording"                                        />
+                        <MenuFlyoutItem x:ConnectionId='24' Icon="Add" Text="Existing - TTS"                                        />
+                        <MenuFlyoutItem x:ConnectionId='25' Icon="Add" Text="Existing file - TTS"                                            />
+                        <MenuFlyoutItem x:ConnectionId='26' Icon="Audio" Text="Existing file - Audio"                                              />
+                        <MenuFlyoutItem x:ConnectionId='27' Icon="Video" Text="Existing file - Video"                                              />
+                    </MenuFlyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+
+            <AppBarButton x:ConnectionId='17' x:Name="BtnChooseCreateExist1" 
+                      Icon="Add" Foreground="Ivory"
+                      HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Margin="0,28,0,0" 
+                      Width="30"/>
+            <AppBarButton x:ConnectionId='18' x:Name="BtnChooseCreateExist2" 
+                      Icon="Add" Foreground="Ivory"
+                      HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Margin="0,26,0,0" 
+                      Width="30"/>
+            <AppBarButton x:ConnectionId='19' x:Name="BtnChooseCreateExist3" 
+                      Icon="Add" Foreground="Ivory"
+                      HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Margin="0,24,0,0" 
+                      Width="30"/>
+            <AppBarButton x:ConnectionId='20' x:Name="BtnChooseCreateExist4" 
+                      Icon="Add" Foreground="Ivory"
+                      HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Margin="0,24,0,0" 
+                      Width="30"/>
+            <AppBarButton x:ConnectionId='21' x:Name="BtnChooseCreateExist5" 
+                      Icon="Add" Foreground="Ivory"
+                      HorizontalAlignment="Left" VerticalAlignment="Top"
+                      Margin="0,22,0,0" 
+                      Width="30"/>
+        </StackPanel>
+        <StackPanel x:ConnectionId='7' x:Name="pan12" Grid.Column="1" Grid.Row="2" 
+                    Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+
+        <!-- 3rd Col -->
+        <StackPanel x:ConnectionId='8' x:Name="pan20" Grid.Column="2" Grid.Row="0" 
+                    Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <!--<CommandBar ClosedDisplayMode="Compact"  Background="Gray" 
+                        VerticalAlignment="Top" MinHeight="60">-->
+            <AppBarButton x:ConnectionId='15' x:Name="NavBack"
+                                                         
+                              Label="Home" Icon="Home"/>
+            <!--</CommandBar>-->
+        </StackPanel>
+        <StackPanel x:ConnectionId='9' x:Name="pan21" Grid.Column="2" Grid.Row="1" 
+                    Grid.RowSpan="2" Background="Black">
+            <!--<uc:CreateTtsLargeUserControl  HorizontalAlignment="Left"/>-->
+            <uc:ListUserControl x:ConnectionId='14' x:Name="ucListUserControl" Height="640" Width="360" 
+                                Visibility="Collapsed"
+                                Margin="0 25 0 0"/>
+
+        </StackPanel>
+        <StackPanel x:ConnectionId='10' x:Name="pan22" Grid.Column="2" Grid.Row="2" 
+                    Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <StackPanel x:ConnectionId='11' x:Name="pan30" Grid.Column="3" Grid.Row="0" 
+                    Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <StackPanel x:ConnectionId='12' x:Name="pan31" Grid.Column="3" Grid.Row="1" 
+                   Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <StackPanel x:ConnectionId='13' x:Name="pan32" Grid.Column="3" Grid.Row="2" 
+                    Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+    </Grid>
+</Page>
+

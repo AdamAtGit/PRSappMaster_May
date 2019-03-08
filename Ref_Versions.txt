@@ -1,0 +1,41 @@
+Microsoft Visual Studio Community 2017  - Version 15.8.7
+
+Microsoft .NET Framework  -  Version 4.7.03056
+
+C# Tools   2.9.0-beta8-63208-01
+
+GitHub.VisualStudio   2.5.9.5485
+
+JetBrains ReSharper Ultimate 2018.2.3   Build 182.0.20180912.70621
+
+NuGet Package Manager   4.6.0
+
+ResourcePackage Extension   1.0
+	
+SQLite & SQL Server Compact Toolbox   4.7
+
+Install-Package Microsoft.Extensions.Logging.Console -Version 2.2.0
+		
+Visual Studio Tools for Universal Windows Apps   15.0.28010.2046
+	
+-------------
+Under Project: PRSapp.Migrations.Startup
+
+	-Dependency > NuGet > EntityFrameworkCoreTools(2.1.4)
+	-Dependency > SDK > .NETCoreApp(2.1) * IE EF Core 2.1 *
+	-Projects > *** PRSapp.Model
+
+Under Project: PRSapp.Model
+
+	-Dependency > NuGet > Microsoft.EntityFrameworkCore.Sqlite(2.1.4)
+	-Dependency > SDK > NETStandard.Library(2.0.3)
+	
+Under Project: PRSapp.UWP
+
+	-Properties 
+			- Target: Windows Universal
+			- Target Version: Windows 10, Version 1803 (10.1; Build 17134)
+			- Min Version:  Windows 10 Fall Creators Update(10.1; Build 16299)
+	
+	-References > Microsoft.NETCore.UniversalWindowsPlatform
+	-References > *** PRSapp.Model

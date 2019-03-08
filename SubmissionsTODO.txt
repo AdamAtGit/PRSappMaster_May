@@ -1,0 +1,8 @@
+/////     Before Next Submission TODO's     \\\\\\
+
+01- Email Submissions back and ask:
+		how to fix meta data and is the App.packagelayout page needed/Usefull?
+02- Fix meta data according to timelines
+03- Fill out the App.packagelayout page > I added it under Project PRSapp>UWP
+04- Fix all in Supression File
+05- Go to View > Task List and do all the TODO's

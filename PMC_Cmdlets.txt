@@ -1,0 +1,37 @@
+*Note for these Nuget Package Manager Console Cmdlets to work
+Startup Project needs to be PRSapp.Migrations.Startup,
+which a  Console App (.NET Core).
+
+//For initial Migration
+Add-Migration InitialCreate -StartupProject PRSapp.Migrations.Startup
+
+Remove-Migration
+
+
+
+
+*The PRSapp.UWP 
+Package Name: 43b51fe8-8772-4067-a104-9ff66fd6cb51
+Package family name: 43b51fe8-8772-4067-a104-9ff66fd6cb51_wegrnb1k1py8w
+Path (relative to BlackHawk): C:\Users\Flazz\AppData\Local\Packages\43b51fe8-8772-4067-a104-9ff66fd6cb51_wegrnb1k1py8w\LocalState
+
+get-help Add-Migration -full
+
+
+After intial Migration, 
+use this sequence to make changes
+
+A. Set Solution Startup Project
+B. In PMC Make sure the project with the Model is 
+	 the Default project (to apply cmdlets to)
+
+1. Add-Migration Title_DirPath << Updates ContextModelSnapShot.cs
+							   << and adds .cs and .Designer.cs Files
+2. UpDate-Database -verbose    <<This applies the changes to Database
+
+3.1 Refresh the db Connection or *may need to disconnect/reconnect 
+3.2 Check the __EFMigrationsHistory Table for new record entry 
+3.3 Check Database updates to Entities have been made and are correct
+
+C. Set Solution Start up to Your Front End project
+

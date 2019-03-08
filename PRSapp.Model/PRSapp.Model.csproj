@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Console_CSharp_Only</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20181119094806_InitialCreate.cs" />
+    <Compile Remove="Migrations\20181209005811_RenameUserUserNameToUserFirstName.cs" />
+    <Compile Remove="Migrations\20181209011659_RenameUserUserNameToUserFirstName - Copy.cs" />
+    <Compile Remove="Migrations\20181209011659_RenameUserUserNameToUserFirstName_MODIFIED.cs" />
+    <Compile Remove="Migrations\20181209020751_RenameUserUserNameToUserFirstName.cs" />
+    <Compile Remove="Migrations\20181213212126_InitialCreate.cs" />
+    <Compile Remove="Migrations\20181213215637_InitialCreate.cs" />
+    <Compile Remove="Migrations\20181213224119_AddColumnUserPwdToUsers.cs" />
+    <Compile Remove="Migrations\20181213224119_AddColumnUserPwdToUsers.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.0-preview.18572.1" />
+  </ItemGroup>
+
+</Project>

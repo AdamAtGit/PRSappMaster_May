@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-ES">
+
+  <prosody rate="medium">
+    <p>
+      <s>Listen to Susan's relax to sleep.</s>
+      <voice gender="female">
+        <s></s>
+      </voice>
+    </p>
+    <p>
+      <voice gender="male">
+        <s></s>
+      </voice>
+      <voice gender="female">
+        <s>Over and Over till asleep.</s>
+      </voice>
+    </p>
+    <p>
+      <s>Repeating it with volume decreasing.</s>
+      <s></s>
+    </p>
+
+    <p>
+      <s></s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+
+    <p>
+      <s></s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+  </prosody>
+</speak>

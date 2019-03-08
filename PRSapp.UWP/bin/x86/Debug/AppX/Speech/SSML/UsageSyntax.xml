@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-US">
+  <s xml:lang="en">Usage Syntax ,Speech Synthesis Markup Language</s>
+    <s> https://www.w3.org/TR/speech-synthesis/#S2.3.1 </s>
+  <p>
+    <s>The Prosody element permits control of the pitch, speaking rate and volume of the speech output.</s>
+    <s> The attributes, all optional, are:</s>
+    <s>Pitch, Contour, range, rate, duration, and volume</s>
+  </p>
+  <p>
+    <s>Although each attribute individually is optional,
+      it is an error if no attributes are specified when the prosody element is used.</s>
+    <s>The "x-foo " attribute value names are intended to be mnemonics for "extra foo". </s>
+    <s>All units, H z, and  s t , are case-sensitive.</s>
+    <s> Note also that customary pitch levels and standard pitch ranges may vary significantly by language,
+        as may the meanings of the labelled values for pitch targets and ranges.</s>
+  </p>
+  <p>
+    <s>Setting a prosody element attribute using a Number value.</s>
+    <s>Number is a simple positive floating point value without exponentials.</s>
+    <s>Legal formats are: "n", "n" point, point "n", and "n" point "n", 
+        where "n" is a sequence of one or more digits.</s>
+    <s>Examples are:</s>
+    <s>minus 5 point 5, or plus 4 5 .</s>
+  </p>
+  <p>
+    <s>Relative values.</s>
+    <s>Relative changes for the attributes above can be specified</s>
+    <s> as a percentage . a number optionally preceded by plus or minus, and followed by the percent sign.</s>
+    <s>Examples are: 3 percent, plus 1 5 point 2 percent, or
+      minus 8 point 0 percent.</s>
+    <s>Relative Values can also be specified with a relative number:</s>
+    <s>
+      For the rate attribute, relative changes are a number.
+    </s>
+    <s> For the volume attribute, relative changes are a number preceded by "+" or "-", e.g. "+10", "-5.5".</s>
+    <s> For the pitch and range attributes, relative changes can be given in semitones.</s>
+
+    <s>A number preceded by plus or minus and followed by s t .</s>
+    <s> Or in Hertz (a number preceded by "+" or "-" and followed by "H z"):
+      plus 0 point 5 s t, "+5st", "-2st", "+10Hz", "-5.5Hz". </s>
+    <s>A semitone is half of a tone, (a half step), on the standard diatonic scale.</s>
+  </p>
+
+  <p>
+    <s>Pitch</s>
+    <s>The baseline pitch for the contained text. </s>
+    <s>
+      Although the exact meaning of "baseline pitch" will vary across synthesis processors,
+      increasing/decreasing this value will typically increase/decrease the approximate pitch of the output.
+    </s>
+    <s>
+      Legal values are: a number followed by "Hz",
+      a relative change or "x-low", "low", "medium", "high", "x-high", or "default".
+    </s>
+
+    <s> Labels "x-low" through "x-high" represent a sequence of monotonically non-decreasing pitch levels.</s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+
+  <p>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+    <s></s>
+  </p>
+</speak>

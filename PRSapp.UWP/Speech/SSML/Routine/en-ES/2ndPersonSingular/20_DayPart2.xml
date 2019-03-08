@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-ES">
+
+  <prosody rate="medium">
+    <p>
+      <s>Day Part 2</s>
+      <voice gender="female">
+        <s></s>
+      </voice>
+    </p>
+    <p>
+      <voice gender="male">
+        <s>20</s>
+      </voice>
+      <s></s>
+      <voice gender="female">
+        <s>woo hoo!</s>
+      </voice>
+    </p>
+
+    <p>
+      <s>I-T Stuff</s>
+      <s>Title, making code behind Data Bound.</s>
+    </p>
+
+    <p>
+      <s>
+        First of all on the parameter command, in the command file,
+        I had Model dot property.
+      </s>
+      <s>This gave a Null Reference Exception.</s>
+    </p>
+
+    <p>
+      <s>Instead, parameter as string is what goes there.</s>
+      <s>
+        It is in the V M Base file, 
+        where I create the commands method,
+        that I put string model's variable name.
+      </s>
+    </p>
+
+    <p>
+      <s>
+        Example,
+        public Void  Parameter Method,
+        in parenthesis, string m under score content.
+      </s>
+    </p>
+
+    <p>
+      <s>
+        In  U I zaml,
+      </s>
+      <s>
+        Command binding requires full view Model and path equals command name,
+        in cases where main container is bound Model.
+      </s>
+      <s>
+        Then for Command Parameter, just put Binding, space, property name
+        from the Model.
+      </s>
+    </p>
+
+    <p>
+      <s>
+        Example,
+        Command Parameter equals,
+        in curly braces, binding ContentName.
+      </s>
+    </p>
+
+    <p>
+      <s></s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+  </prosody>
+</speak>

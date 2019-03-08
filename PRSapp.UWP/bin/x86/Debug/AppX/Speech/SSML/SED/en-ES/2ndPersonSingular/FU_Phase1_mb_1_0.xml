@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-US">
+  <prosody rate='fast'>
+    <s>Phase 1 - Hard Sell. Manageable bits begin.</s>
+    <p>
+      <s> Deliver: As Fast as Possible is Hotter. Speed, Fun, and Serious</s>
+    </p>
+    <p>
+      <s>Your cute and cool,</s>
+      <s>And I apologize for being so forward,</s>
+      <s>but I really wanna fuck you.</s>
+      <s>It's just seems every girl has a boyfriend or is married, and I have Needs.</s>
+      <s>I'm Serious.</s>
+    </p>
+  </prosody>
+</speak>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-US">
+  <prosody rate="fast">
+    <p>
+      <s>I know I'm a little forward,</s>
+      <s>but if I didn't tell you I wanted to fuck you,</s>
+      <s>how would you know?</s>
+      <break/>
+      <s>Right?</s>
+    </p>
+  </prosody>
+</speak>

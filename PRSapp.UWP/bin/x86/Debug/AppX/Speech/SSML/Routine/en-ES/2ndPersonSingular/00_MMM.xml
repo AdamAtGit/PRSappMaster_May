@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-ES">  
+  
+  <prosody rate="medium">
+    <p>
+    <s>Morning Mind Mold</s>
+      <voice gender="female">
+        <s>Getting Started is hard, Every Day.</s>
+      </voice>
+  </p>
+  <p>
+    <s>Do-Something-ism.</s>
+    <s>UP The GUT.</s>
+    <s>Shower and dress good</s>
+    <s>1 power set</s>
+    <s></s>
+  </p>
+    <p>
+      <s>Say and repeat 1 part of SED</s>   
+      <s>Start new wash and organize</s>
+      <s>100% uncluster space for Isolation</s>
+      <s>Then do Day part 1</s>
+      <s></s>
+    </p>
+  </prosody>
+</speak>

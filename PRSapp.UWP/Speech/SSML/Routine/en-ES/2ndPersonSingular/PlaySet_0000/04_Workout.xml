@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="en-ES">
+
+  <prosody rate="medium">
+    <p>
+      <s>Workout</s>
+      <voice gender="female">
+        <s></s>
+      </voice>
+    </p>
+    <p>
+      <voice gender="male">
+        <s></s>
+      </voice>
+      <voice gender="female">
+        <s>T-Minus</s>
+      </voice>
+    </p>
+    <p>
+      <s></s>
+      <s></s>
+    </p>
+
+    <p>
+      <s></s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+
+    <p>
+      <s></s>
+      <s></s>
+      <s></s>
+      <s></s>
+    </p>
+  </prosody>
+</speak>

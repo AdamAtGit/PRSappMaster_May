@@ -1,0 +1,25 @@
+//Locations 
+//Actual Solutions 
+Path by Computer 
+	Computer 1 - BlackHawk C:\Users\Flazz\source\repos\FebOn\0_PRSapp_Master_Wip
+	Computer 2 - RedRoyal  C:\Users\ etc
+	 
+
+//TODO: ARS- Change repos from and too as shown below
+Currently using PRSappEFCoreSqlite, but has prob.
+	   Opening repositories:
+C:\Users\Flazz\source\repos\FebOn\0_PRSapp_Master_Wip\PRSapp
+
+
+This is what you need to paste in team explorer window for new remote repo(sync):
+https://github.com/AdamAtGit/Repo_Master_Wip.git
+
+
+
+RECOVERY STEPS:
+
+Best for now to just go to each file's history and copy and paste
+
+***Revert- is the whole Repo (ie solution and projects)
+
+

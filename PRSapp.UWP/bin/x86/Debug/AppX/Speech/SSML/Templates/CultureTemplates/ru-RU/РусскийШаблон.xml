@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<speak version="1.0"
+ xmlns="http://www.w3.org/2001/10/synthesis"
+ xml:lang="ru-RU">
+  <p>
+  <s xml:lang="ru">Русский Шаблон</s>
+    <s></s>
+    <s></s>
+  </p>
+</speak>
