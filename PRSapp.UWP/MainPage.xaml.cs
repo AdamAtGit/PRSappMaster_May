@@ -1553,7 +1553,7 @@ namespace PRSapp.UWP
             mediaElement.SetSource(stream, string.Empty);
             mediaElement.Play();
 
-            await taskCompleted.Task;
+            await taskCompleted.Task;//HERE is where it waits till complete
             mediaElement.MediaEnded -= endOfPlayHandler;
         }
     }

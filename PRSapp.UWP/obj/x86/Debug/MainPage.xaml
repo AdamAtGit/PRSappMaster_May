@@ -629,7 +629,7 @@
 
 
         <!--Repeater (mental Prep dic or type speech recog) user control-->
-        <ucappfx:RepeaterUserControl  Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" />
+        <ucappfx:MentPrepRepeaterUserControl  Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" />
 
         <!--Arrange Play Times-->
         <StackPanel x:ConnectionId='10' x:Name="ArrangePanel" Grid.Column="3" Grid.Row="2" Grid.RowSpan="1"

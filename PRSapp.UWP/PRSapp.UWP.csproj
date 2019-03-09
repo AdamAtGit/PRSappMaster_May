@@ -168,8 +168,12 @@
     </Compile>
     <Compile Include="SpeechClasses\AudioCapturePermissions.cs" />
     <Compile Include="SpeechClasses\Interactive.cs" />
+    <Compile Include="SpeechClasses\RepeatersMediaElementExtensions.cs" />
     <Compile Include="UserControls\AddChooseMenuUserControl.xaml.cs">
       <DependentUpon>AddChooseMenuUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppFx\MentPrepRepeaterUserControl.xaml.cs">
+      <DependentUpon>MentPrepRepeaterUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AppFx\RepeaterUser2.xaml.cs">
       <DependentUpon>RepeaterUser2.xaml</DependentUpon>
@@ -536,6 +540,10 @@
     <Page Include="UserControls\AddChooseMenuUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppFx\MentPrepRepeaterUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\AppFx\RepeaterUser2.xaml">
       <Generator>MSBuild:Compile</Generator>

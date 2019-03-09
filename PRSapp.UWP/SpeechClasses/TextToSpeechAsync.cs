@@ -30,13 +30,13 @@ namespace PRSapp.UWP.SpeechClasses
         {
             IRandomAccessStream stream = await this.SynthesizeTextToSpeechAsync(text);
 
-            await mediaElement.PlayStreamAsync(stream, true);
+            await mediaElement.PlayStream_Async(stream, true);
         }      
     }
 
     static class MediaElementExtensions
     {
-        public static async Task PlayStreamAsync(
+        public static async Task PlayStream_Async(
           this MediaElement mediaElement,
           IRandomAccessStream stream,
           bool disposeStream = true)

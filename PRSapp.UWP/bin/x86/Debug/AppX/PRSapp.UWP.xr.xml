@@ -76,7 +76,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="DataContext" />
     </RootType>
-    <RootType FullName="PRSapp.UWP.UserControls.AppFx.RepeaterUserControl" />
+    <RootType FullName="PRSapp.UWP.UserControls.AppFx.MentPrepRepeaterUserControl" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
@@ -236,6 +236,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="PRSapp.UWP.UserControls.AppFx.RepeaterUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.MainTimeLineUserControl">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />

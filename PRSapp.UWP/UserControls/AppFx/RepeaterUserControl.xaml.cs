@@ -448,38 +448,4 @@ namespace PRSapp.UWP.UserControls.AppFx
             await messageDialog.ShowAsync();
         }
     }
-
-    /////Ends MainPage partial Class and starts a static 'Top Level'(non-nested) class in same NameSpace
-    //This below static class is an extension method for MediaElement
-    static class MediaElementExtensions
-    {
-        public static async Task PlayStreamAsync(
-          //? this MediaElement mediaElement,
-          this MediaElement mediaElement,
-          IRandomAccessStream stream,
-          bool disposeStream = true)
-        {
-            // bool is irrelevant here, just using this to flag task completion.
-            TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
-
-            // Note that the MediaElement needs to be in the UI tree for events
-            // like MediaEnded to fire.
-            RoutedEventHandler endOfPlayHandler = (s, e) =>
-            {
-                if (disposeStream)
-                {
-                    stream.Dispose();
-                }
-                taskCompleted.SetResult(true);
-            };
-            mediaElement.MediaEnded += endOfPlayHandler;
-
-            mediaElement.SetSource(stream, string.Empty);
-            mediaElement.Play();
-
-            await taskCompleted.Task;
-            mediaElement.MediaEnded -= endOfPlayHandler;
-        }
-    }
-
 }

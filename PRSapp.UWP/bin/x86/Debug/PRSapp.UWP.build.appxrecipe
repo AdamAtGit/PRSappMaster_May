@@ -1294,6 +1294,9 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AddChooseMenuUserControl.xbf">
       <PackagePath>UserControls\AddChooseMenuUserControl.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\MentPrepRepeaterUserControl.xbf">
+      <PackagePath>UserControls\AppFx\MentPrepRepeaterUserControl.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\RepeaterUser2.xbf">
       <PackagePath>UserControls\AppFx\RepeaterUser2.xbf</PackagePath>
     </AppxPackagedFile>
