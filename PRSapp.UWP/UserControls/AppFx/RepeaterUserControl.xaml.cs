@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-//using MentalPrepApp.Classes.Extensions;
 using PRSapp.UWP.SpeechClasses;
 using System.Collections;
 using System.Diagnostics;
@@ -22,9 +21,6 @@ using Windows.Media.SpeechSynthesis;
 using Windows.Storage.Streams;
 using Windows.UI;
 using Windows.Media.SpeechRecognition;
-
-
-// The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace PRSapp.UWP.UserControls.AppFx
 {
@@ -213,13 +209,10 @@ namespace PRSapp.UWP.UserControls.AppFx
         //Instantiate class outside of method.
         Interactive interactive = new Interactive();
 
-
         private async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-
-
                 if (TgsRepeats.IsOn)
                 {
                     //  repeatDispTimer.Tick -= RepeatDispTimer_Tick;
@@ -237,8 +230,8 @@ namespace PRSapp.UWP.UserControls.AppFx
                     #region Code Set - Interactive                 
                     //Below to allow what is in boxTtsRawBig to play first
                     interactive.PlName = boxTtsRawBig.Text.Trim();
-                    Debug.WriteLine("interactive.PlName = boxTtsRawBig.Text.Trim(); \n" +
-                                        interactive.PlName);
+                    //Debug.WriteLine("interactive.PlName = boxTtsRawBig.Text.Trim(); \n" +
+                    //                    interactive.PlName);
                    // interactive.ChangeTitle(IRep_Status, plName: interactive.PlName);
                     interactive.ChangeTitle(IRep_Status);
                     if (IRep_Status > 0)
@@ -304,7 +297,6 @@ namespace PRSapp.UWP.UserControls.AppFx
                         Debug.WriteLine(ex.Message.ToString());
                     }
                 }
-
             }
 
             catch (Exception ex)
@@ -463,7 +455,7 @@ namespace PRSapp.UWP.UserControls.AppFx
     {
         public static async Task PlayStreamAsync(
           //? this MediaElement mediaElement,
-          MediaElement mediaElement,
+          this MediaElement mediaElement,
           IRandomAccessStream stream,
           bool disposeStream = true)
         {

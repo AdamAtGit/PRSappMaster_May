@@ -129,6 +129,7 @@ PagesPhone\AppSignInPage.xbf
 PagesPhone\AppSplashPage.xbf
 PRSapp.UWP.xr.xml
 UserControls\AddChooseMenuUserControl.xbf
+UserControls\AppFx\RepeaterUser2.xbf
 UserControls\AppFx\RepeaterUserControl.xbf
 UserControls\AppFx\UC_Edit_Core_PlayItem.xbf
 UserControls\AppFx\UC_Mood.xbf

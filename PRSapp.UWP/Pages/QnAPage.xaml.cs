@@ -78,12 +78,11 @@ namespace PRSapp.UWP.Pages
         {
 
         }
-
-       
+     
 
         private void BtnNavToDayPage_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Pages.DayPage));
         }
     }
 }

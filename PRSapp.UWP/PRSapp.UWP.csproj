@@ -171,6 +171,9 @@
     <Compile Include="UserControls\AddChooseMenuUserControl.xaml.cs">
       <DependentUpon>AddChooseMenuUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AppFx\RepeaterUser2.xaml.cs">
+      <DependentUpon>RepeaterUser2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AppFx\RepeaterUserControl.xaml.cs">
       <DependentUpon>RepeaterUserControl.xaml</DependentUpon>
     </Compile>
@@ -533,6 +536,10 @@
     <Page Include="UserControls\AddChooseMenuUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppFx\RepeaterUser2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\AppFx\RepeaterUserControl.xaml">
       <SubType>Designer</SubType>

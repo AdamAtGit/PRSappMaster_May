@@ -33,10 +33,10 @@ namespace PRSapp.UWP.SpeechClasses
         public void ChangeTitle(int repStatus, int titleId = 0, string titleName = "Status", string plName = "NA", string ttsRaw = "Status Info", string fileUri = "NA")
         {
             
-            if (plName == "PL10P")
-            {
-                PlName = plName;
-                Debug.WriteLine("plName: " + repStatus.ToString() + "\n");
+            //if (plName == "PL10P")
+            //{
+            //    PlName = plName;
+            //    Debug.WriteLine("plName: " + repStatus.ToString() + "\n");
 
                 Debug.WriteLine("repStatus: " + repStatus.ToString() + "\n");              
                 if (repStatus != 0)
@@ -94,29 +94,13 @@ namespace PRSapp.UWP.SpeechClasses
                 Debug.WriteLine(repStatus.ToString() + ", " + titleId.ToString() + ", " +
                                 titleName + ", " + ttsRaw + ", " +
                                 fileUri + "\n");
-            }
-            else
-            {
-                Debug.WriteLine("in else >> plName: " + plName + "\n");
-            }
+            //}
+            //else
+            //{
+            //    Debug.WriteLine("in else >> plName: " + plName + "\n");
+            //}
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         /// <summary>
@@ -131,11 +115,6 @@ namespace PRSapp.UWP.SpeechClasses
         //public void ChangeTitle(int repStatus, int titleId, string titleName, string ttsRaw, string fileUri, bool isRandomized)
         //{
         //}
-
-
-
-
-
 
         // Show Hints, Mnemonic devices, or helpful reminders and sayings.
 
