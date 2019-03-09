@@ -66,7 +66,7 @@
                           Visibility="Collapsed" Margin="0 0 0 10" Height="54"/>
             <ToggleSwitch x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
             <TextBox x:Name="boxRepetitions" Text="3"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:Name="boxInterval" Text="3" Header="   Intervals (Mins)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
+            <TextBox x:Name="boxInterval" Text="3" Header="   Intervals (Secs)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
             <MediaElement x:Name="uiMediaElement"/>
         </StackPanel>
 

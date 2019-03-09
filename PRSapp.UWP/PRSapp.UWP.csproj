@@ -167,6 +167,7 @@
       <DependentUpon>TimeLines_n_CreateBig_Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="SpeechClasses\AudioCapturePermissions.cs" />
+    <Compile Include="SpeechClasses\InteractiveResponses.cs" />
     <Compile Include="SpeechClasses\Interactive.cs" />
     <Compile Include="SpeechClasses\RepeatersMediaElementExtensions.cs" />
     <Compile Include="UserControls\AddChooseMenuUserControl.xaml.cs">

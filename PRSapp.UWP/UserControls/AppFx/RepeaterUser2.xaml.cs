@@ -42,11 +42,8 @@ namespace PRSapp.UWP.UserControls.AppFx
         int i = 0;
         int repetitions;
 
-
-
         // Media Output Async 
         string ttsRaw = string.Empty;
-
 
 
         //Speech Synth and Recogn
@@ -207,7 +204,7 @@ namespace PRSapp.UWP.UserControls.AppFx
 
         //Code Set - Interactive
         //Instantiate class outside of method.
-        Interactive interactive = new Interactive();
+        InteractiveResponses interactiveResponses = new InteractiveResponses();
 
         private async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {
@@ -229,15 +226,14 @@ namespace PRSapp.UWP.UserControls.AppFx
 
                     #region Code Set - Interactive                 
                     //Below to allow what is in boxTtsRawBig to play first
-                    interactive.PlName = boxTtsRawBig.Text.Trim();
+                    interactiveResponses.ResponsePlName = boxTtsRawBig.Text.Trim();
                     //Debug.WriteLine("interactive.PlName = boxTtsRawBig.Text.Trim(); \n" +
                     //                    interactive.PlName);
-                   // interactive.ChangeTitle(IRep_Status, plName: interactive.PlName);
-                    interactive.ChangeTitle(IRep_Status);
+                    // interactive.ChangeTitle(IRep_Status, plName: interactive.PlName);
+                    interactiveResponses.ChangeTitle(IRep_Status);
                     if (IRep_Status > 0)
                     {
-                        boxTtsRawBig.Text = interactive.TitleName.Trim();
-
+                        boxTtsRawBig.Text = interactiveResponses.ResponseTitleName.Trim();
                     }
                     #endregion
 
@@ -346,9 +342,6 @@ namespace PRSapp.UWP.UserControls.AppFx
             //await messageDialog.ShowAsync();
         }
         #endregion
-
-
-
 
 
         #region User Speech Settings

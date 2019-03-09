@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		BloggingContext_Ref.txt = BloggingContext_Ref.txt
 		PRSapp.Model\EF_CL_Model_Notes.txt = PRSapp.Model\EF_CL_Model_Notes.txt
+		Git-Bash_InitializeLocal_Push2Remote.txt = Git-Bash_InitializeLocal_Push2Remote.txt
 		Git_InfoAndCaveats.txt = Git_InfoAndCaveats.txt
 		PMC_Cmdlets.txt = PMC_Cmdlets.txt
 		Ref_Versions.txt = Ref_Versions.txt
