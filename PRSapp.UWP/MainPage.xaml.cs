@@ -19,7 +19,6 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Navigation;
 using Windows.Storage;
 using Windows.Storage.Pickers;
-using System.Collections.Generic;
 
 namespace PRSapp.UWP
 {
@@ -142,7 +141,7 @@ namespace PRSapp.UWP
         public void DispatcherTimerSetup()
         {
             dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Tick += DispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0,0,30);
             //IsEnabled defaults to false
             Debug.WriteLine("dispatcherTimer.IsEnabled = " + dispatcherTimer.IsEnabled + "\n");
@@ -153,7 +152,7 @@ namespace PRSapp.UWP
             //IsEnabled should now be true after calling start
             Debug.WriteLine("dispatcherTimer.IsEnabled = " + dispatcherTimer.IsEnabled + "\n");
         }
-        private void dispatcherTimer_Tick(object sender, object e)
+        private void DispatcherTimer_Tick(object sender, object e)
         {
             //ARS- adding to start PlayAsync_Click method
             ////PlayAsync_Click(sender, (Windows.UI.Xaml.RoutedEventArgs)e);
@@ -1528,6 +1527,9 @@ namespace PRSapp.UWP
     }
     /////Ends MainPage partial Class and starts a static 'Top Level'(non-nested) class in same NameSpace
     //This below static class is an extension method for MediaElement
+    //Callers are:
+    //  1. MainPage\TitleDetails Play AppBarButton
+    //  2.  MainPage\Add Title TestPlay AppBarButton
     static class MediaElementExtensions
     {
         public static async Task PlayStreamAsync(
@@ -1552,8 +1554,10 @@ namespace PRSapp.UWP
 
             mediaElement.SetSource(stream, string.Empty);
             mediaElement.Play();
-
+            //start Stop watch TimeSpenBegin
             await taskCompleted.Task;//HERE is where it waits till complete
+            //TimeSPanEnd
+            //Then add or subtract uc2 intervals.
             mediaElement.MediaEnded -= endOfPlayHandler;
         }
     }

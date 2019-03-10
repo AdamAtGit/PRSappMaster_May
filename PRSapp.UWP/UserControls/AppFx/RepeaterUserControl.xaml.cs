@@ -43,10 +43,8 @@ namespace PRSapp.UWP.UserControls.AppFx
         int repetitions;
 
 
-
         // Media Output Async 
         string ttsRaw = string.Empty;
-
 
 
         //Speech Synth and Recogn
@@ -74,7 +72,7 @@ namespace PRSapp.UWP.UserControls.AppFx
             //btnAddTitleBigAsync.Click += new RoutedEventHandler(AddTitleBigAsync_Click);
 
             TimerSetUp();
-            cboVoiceGender.SelectedIndex = cboVoiceGender.Items.Count - 1;
+            CboVoiceGender.SelectedIndex = CboVoiceGender.Items.Count - 1;
         }
 
         public void TimerSetUp()
@@ -232,7 +230,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                     interactive.PlName = boxTtsRawBig.Text.Trim();
                     //Debug.WriteLine("interactive.PlName = boxTtsRawBig.Text.Trim(); \n" +
                     //                    interactive.PlName);
-                   // interactive.ChangeTitle(IRep_Status, plName: interactive.PlName);
+                    // interactive.ChangeTitle(IRep_Status, plName: interactive.PlName);
                     interactive.ChangeTitle(IRep_Status);
                     if (IRep_Status > 0)
                     {
@@ -244,8 +242,8 @@ namespace PRSapp.UWP.UserControls.AppFx
                     repetitions = Convert.ToInt32(boxRepetitions.Text.Trim());
                     if (i == 0)
                     {
-                        int intervalinMins = Convert.ToInt32(boxInterval.Text.Trim());
-                        interval = new TimeSpan(0, intervalinMins, 0);
+                        int intervalInSecs = Convert.ToInt32(boxInterval.Text.Trim());
+                        interval = new TimeSpan(0, 0, intervalInSecs);
                         repeatDispTimer.Interval = interval;
                         timesToTick = (repetitions - 1);
                     }
@@ -256,7 +254,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
-                        await SpeakTextAsync(ttsRaw, uiMediaElement);
+                        await SpeakTextAsync(ttsRaw, UIMediaElement);
                     }
                     catch (Exception ex)
                     {
@@ -290,7 +288,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
-                        await SpeakTextAsync(ttsRaw, uiMediaElement);
+                        await SpeakTextAsync(ttsRaw, UIMediaElement);
                     }
                     catch (Exception ex)
                     {
@@ -354,7 +352,7 @@ namespace PRSapp.UWP.UserControls.AppFx
         #region User Speech Settings
         private void cboVoiceGender_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            VoiceGender = cboVoiceGender.SelectedValue.ToString();
+            VoiceGender = CboVoiceGender.SelectedValue.ToString();
         }
         #endregion
         #region Speech
@@ -397,7 +395,7 @@ namespace PRSapp.UWP.UserControls.AppFx
             //   IRandomAccessStream stream = await this.SynthesizeTextToSpeechAsync(text);
             IRandomAccessStream stream = await SynthesizeTextToSpeechAsync(text);
 
-            await mediaElement.PlayStreamAsync(stream, true);
+          await mediaElement.Play_Stream_Async(stream, true);
         }
         #endregion
 
@@ -447,5 +445,41 @@ namespace PRSapp.UWP.UserControls.AppFx
             var messageDialog = new Windows.UI.Popups.MessageDialog(speechRecognitionResult.Text, "Text spoken");
             await messageDialog.ShowAsync();
         }
+
+
+    }
+
+}
+////This below static class is an extension method for MediaElement
+public static class RepeaterUCMediaElementExtensions
+{
+
+    public static object MediaElement { get; internal set; }
+    public static async Task Play_Stream_Async(
+      //? this MediaElement mediaElement,
+      this MediaElement mediaElement,
+      IRandomAccessStream stream,
+      bool disposeStream = true)
+    {
+        // bool is irrelevant here, just using this to flag task completion.
+        TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
+
+        // Note that the MediaElement needs to be in the UI tree for events
+        // like MediaEnded to fire.
+        RoutedEventHandler endOfPlayHandler = (s, e) =>
+        {
+            if (disposeStream)
+            {
+                stream.Dispose();
+            }
+            taskCompleted.SetResult(true);
+        };
+        mediaElement.MediaEnded += endOfPlayHandler;
+
+        mediaElement.SetSource(stream, string.Empty);
+        mediaElement.Play();
+
+        await taskCompleted.Task;
+        mediaElement.MediaEnded -= endOfPlayHandler;
     }
 }

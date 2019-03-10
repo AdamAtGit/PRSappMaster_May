@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{55DDE61A-17DD-4A10-A081-A91CBEE677E8}"
 	ProjectSection(SolutionItems) = preProject
 		BloggingContext_Ref.txt = BloggingContext_Ref.txt
+		ColorThemes.txt = ColorThemes.txt
 		PRSapp.Model\EF_CL_Model_Notes.txt = PRSapp.Model\EF_CL_Model_Notes.txt
 		Git-Bash_InitializeLocal_Push2Remote.txt = Git-Bash_InitializeLocal_Push2Remote.txt
 		Git_InfoAndCaveats.txt = Git_InfoAndCaveats.txt

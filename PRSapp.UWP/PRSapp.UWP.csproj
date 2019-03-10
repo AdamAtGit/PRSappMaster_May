@@ -98,6 +98,9 @@
     <Compile Include="Classes\PlayList.cs" />
     <Compile Include="Classes\TimeLineTitle.cs" />
     <Compile Include="Classes\Title.cs" />
+    <Compile Include="ColorThemes.cs.xaml.cs">
+      <DependentUpon>ColorThemes.cs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomHelperClasses\CondenseDay.cs" />
     <Compile Include="CustomHelperClasses\TimeFormatNCompare.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -148,6 +151,9 @@
     <Compile Include="Pages\AppSignedOutPage.xaml.cs">
       <DependentUpon>AppSignedOutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ColorThemesPage.xaml.cs">
+      <DependentUpon>ColorThemesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\QnAPage.xaml.cs">
       <DependentUpon>QnAPage.xaml</DependentUpon>
     </Compile>
@@ -170,14 +176,15 @@
     <Compile Include="SpeechClasses\InteractiveResponses.cs" />
     <Compile Include="SpeechClasses\Interactive.cs" />
     <Compile Include="SpeechClasses\RepeatersMediaElementExtensions.cs" />
+    <Compile Include="SpeechClasses\SpeechSettingsRepeater.cs" />
     <Compile Include="UserControls\AddChooseMenuUserControl.xaml.cs">
       <DependentUpon>AddChooseMenuUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AppFx\MentPrepRepeaterUserControl.xaml.cs">
       <DependentUpon>MentPrepRepeaterUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\AppFx\RepeaterUser2.xaml.cs">
-      <DependentUpon>RepeaterUser2.xaml</DependentUpon>
+    <Compile Include="UserControls\AppFx\RepeaterUserControl2.xaml.cs">
+      <DependentUpon>RepeaterUserControl2.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\AppFx\RepeaterUserControl.xaml.cs">
       <DependentUpon>RepeaterUserControl.xaml</DependentUpon>
@@ -446,6 +453,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ColorThemes.cs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -510,6 +521,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ColorThemesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\QnAPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -546,7 +561,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControls\AppFx\RepeaterUser2.xaml">
+    <Page Include="UserControls\AppFx\RepeaterUserControl2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

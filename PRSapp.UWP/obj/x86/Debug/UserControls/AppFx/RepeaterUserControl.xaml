@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested">
     <!--RepeaterUserControl-->
-    <Grid Height="640" Width="360" Background="Gray">
+    <Grid Height="640" Width="360" Background="#4a4a4a">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -18,14 +18,14 @@
         </Grid.RowDefinitions>
         <!--1st row-->
         <StackPanel Orientation="Horizontal">
-            <ToggleSwitch x:ConnectionId='21' x:Name="tgsCommandModeOn" Header="Command Mode" FontSize="12"
+            <ToggleSwitch x:ConnectionId='22' x:Name="tgsCommandModeOn" Header="Command Mode" FontSize="12"
                           Width="150" Margin="10 2 -27 0"
                           IsOn="False" IsEnabled="False"/>
             <StackPanel>
                 <TextBlock Text="Mental Prep" FontSize="16"              
                      HorizontalAlignment="Center" VerticalAlignment="Top"
                      Margin="0 3 0 2"/>
-                <TextBlock x:ConnectionId='22' x:Name="TbTitleName" FontSize="12.5"
+                <TextBlock x:ConnectionId='23' x:Name="TbTitleName" FontSize="12.5"
                        Text="Create &amp; Repeat" 
                      HorizontalAlignment="Center"  Margin="0 1"/>
             </StackPanel>
@@ -33,20 +33,20 @@
 
         <!--2nd row-->
         <StackPanel Grid.Row="1" VerticalAlignment="Top"
-                    HorizontalAlignment="Stretch" Background="Gray">
-            <Button x:ConnectionId='17' x:Name="btnRecognitionTtsRawBigAsync"
+                    HorizontalAlignment="Stretch" Background="#2a2a2a">
+            <Button x:ConnectionId='18' x:Name="btnRecognitionTtsRawBigAsync"
                         Margin="0 8 0 0" HorizontalAlignment="Center"
                         Height="Auto" Width="Auto"
                         BorderBrush="DarkGray">
-                <Image x:ConnectionId='20' x:Name="imgMicrophoneTapped"                      
+                <Image x:ConnectionId='21' x:Name="imgMicrophoneTapped"                      
                        Source="/Assets/Misc/Mic-Icon-Bl-03.png"               
                        Height="60" Width="60" Margin="0 0 0 0"/>
             </Button>
-            <TextBlock x:ConnectionId='18' x:Name="tbRecogStatus" FontSize="12.5"
+            <TextBlock x:ConnectionId='19' x:Name="tbRecogStatus" FontSize="12.5"
                            Text="Tap Mic to start Dictating" Foreground="Ivory"
                            Margin="0,5,0,0"
                            HorizontalAlignment="Center"/>
-            <TextBox x:ConnectionId='19' x:Name="boxTtsRawBig" Height="230" Width="350"                  
+            <TextBox x:ConnectionId='20' x:Name="boxTtsRawBig" Height="230" Width="350"                  
                      TextWrapping="Wrap"
                      AcceptsReturn="True"
                      IsReadOnly="False"
@@ -58,16 +58,16 @@
         </StackPanel>
         <!--3rd row-->
         <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <AppBarButton x:ConnectionId='11'  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
+            <AppBarButton x:ConnectionId='12'  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
                                                                
                            Margin="0 0 0 10" Height="54"/>
-            <AppBarButton x:ConnectionId='12'  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
+            <AppBarButton x:ConnectionId='13'  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
                                                                        
                           Visibility="Collapsed" Margin="0 0 0 10" Height="54"/>
-            <ToggleSwitch x:ConnectionId='13' x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
-            <TextBox x:ConnectionId='14' x:Name="boxRepetitions" Text="3"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:ConnectionId='15' x:Name="boxInterval" Text="3" Header="   Intervals (Mins)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
-            <MediaElement x:ConnectionId='16' x:Name="uiMediaElement"/>
+            <ToggleSwitch x:ConnectionId='14' x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
+            <TextBox x:ConnectionId='15' x:Name="boxRepetitions" Text="10"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:ConnectionId='16' x:Name="boxInterval" Text="20" Header="   Intervals (Secs)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
+            <MediaElement x:ConnectionId='17' x:Name="UIMediaElement"/>
         </StackPanel>
 
         <!--4th row-->
@@ -75,19 +75,22 @@
                     Visibility="Visible" Background="Black" Height="Auto">
             <TextBlock Text="Status" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Margin="10 0 5 0"/>
-            <TextBlock x:ConnectionId='10' x:Name="tbStatus" Text="0" FontSize="12" Foreground="WhiteSmoke"
+            <TextBlock x:ConnectionId='11' x:Name="tbStatus" Text="0" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Width="Auto" Margin="10 0 5 0"/>
         </StackPanel>
 
         <!--5th row-->
         <StackPanel x:ConnectionId='3' x:Name="stpSpeechSettings" Grid.Row="4" Orientation="Horizontal" 
-                   Height="Auto">
-
+                   Height="55">
+            <ToggleSwitch x:ConnectionId='9' x:Name="VoiceSelection" Header="         Select Voice"
+                          FontSize="12"
+            IsOn="{Binding UseVoiceSelection, Mode=TwoWay}"
+            OffContent="Male Voice" OnContent="Female Voice" />
 
             <TextBlock Text="Voice Gender" FontSize="12" 
                        VerticalAlignment="Center" Margin="20 6 0 0" 
                        Visibility="Collapsed"/>
-            <ComboBox x:ConnectionId='9' x:Name="cboVoiceGender" FontSize="12" 
+            <ComboBox x:ConnectionId='10' x:Name="CboVoiceGender" FontSize="12" 
                                                                         
                       Height="27" Width="130" Margin="7 5 5 0"
                       Visibility="Collapsed">

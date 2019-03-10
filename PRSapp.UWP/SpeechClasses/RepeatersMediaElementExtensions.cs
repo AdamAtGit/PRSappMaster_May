@@ -12,11 +12,11 @@ namespace PRSapp.UWP.SpeechClasses
     //This below static class is an extension method for MediaElement
    public static class RepeatersMediaElementExtensions
     {
-        internal static readonly object mediaElement;
+        public static readonly MediaElement UIMediaElement;
 
-        public static async Task PlayStreamAsync(
+        public static async Task Play_Stream_Async(
           //? this MediaElement mediaElement,
-          this MediaElement mediaElement,
+          this MediaElement UIMediaElement,
           IRandomAccessStream stream,
           bool disposeStream = true)
         {
@@ -33,13 +33,13 @@ namespace PRSapp.UWP.SpeechClasses
                 }
                 taskCompleted.SetResult(true);
             };
-            mediaElement.MediaEnded += endOfPlayHandler;
+            UIMediaElement.MediaEnded += endOfPlayHandler;
 
-            mediaElement.SetSource(stream, string.Empty);
-            mediaElement.Play();
+            UIMediaElement.SetSource(stream, string.Empty);
+            UIMediaElement.Play();
 
-            await taskCompleted.Task;
-            mediaElement.MediaEnded -= endOfPlayHandler;
+            bool isValid = await taskCompleted.Task;
+            UIMediaElement.MediaEnded -= endOfPlayHandler;
         }
     }
 }

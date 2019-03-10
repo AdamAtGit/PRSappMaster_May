@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested">
     <!--RepeaterUserControl-->
-    <Grid Height="640" Width="360" Background="Gray">
+    <Grid Height="640" Width="360" Background="#4a4a4a">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -33,7 +33,7 @@
 
         <!--2nd row-->
         <StackPanel Grid.Row="1" VerticalAlignment="Top"
-                    HorizontalAlignment="Stretch" Background="Gray">
+                    HorizontalAlignment="Stretch" Background="#2a2a2a">
             <Button x:Name="btnRecognitionTtsRawBigAsync"
                         Margin="0 8 0 0" HorizontalAlignment="Center"
                         Height="Auto" Width="Auto"
@@ -65,9 +65,9 @@
                           Click="BtnStopPauseRepeatMediaOutAsync_Click"
                           Visibility="Collapsed" Margin="0 0 0 10" Height="54"/>
             <ToggleSwitch x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
-            <TextBox x:Name="boxRepetitions" Text="3"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:Name="boxInterval" Text="3" Header="   Intervals (Secs)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
-            <MediaElement x:Name="uiMediaElement"/>
+            <TextBox x:Name="boxRepetitions" Text="10"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="boxInterval" Text="20" Header="   Intervals (Secs)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
+            <MediaElement x:Name="UIMediaElement"/>
         </StackPanel>
 
         <!--4th row-->
@@ -81,13 +81,16 @@
 
         <!--5th row-->
         <StackPanel x:Name="stpSpeechSettings" Grid.Row="4" Orientation="Horizontal" 
-                   Height="Auto">
-
+                   Height="55">
+            <ToggleSwitch x:Name="VoiceSelection" Header="         Select Voice"
+                          FontSize="12"
+            IsOn="{Binding UseVoiceSelection, Mode=TwoWay}"
+            OffContent="Male Voice" OnContent="Female Voice" />
 
             <TextBlock Text="Voice Gender" FontSize="12" 
                        VerticalAlignment="Center" Margin="20 6 0 0" 
                        Visibility="Collapsed"/>
-            <ComboBox x:Name="cboVoiceGender" FontSize="12" 
+            <ComboBox x:Name="CboVoiceGender" FontSize="12" 
                       SelectionChanged="cboVoiceGender_SelectionChanged"
                       Height="27" Width="130" Margin="7 5 5 0"
                       Visibility="Collapsed">

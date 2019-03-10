@@ -1,0 +1,16 @@
+Color Themes
+
+Blackish grays - fading down as they go
+        blackgrays:
+    gray10 #1a1a1a
+    gray14 #242424
+    gray18 #2e2e2e 
+        dark med Grays:
+    gray22 #383838
+    gray26 #424242
+    gray29 #4a4a4a
+    gray32 #525252
+        gray Grays:
+   gray40 #666666
+   gray46 #757575
+   gray49 #7d7d7d

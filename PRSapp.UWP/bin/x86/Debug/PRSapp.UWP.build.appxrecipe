@@ -1222,6 +1222,9 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\ColorThemes.cs.xbf">
+      <PackagePath>ColorThemes.cs.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
@@ -1270,6 +1273,9 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\AppSignedOutPage.xbf">
       <PackagePath>Pages\AppSignedOutPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\ColorThemesPage.xbf">
+      <PackagePath>Pages\ColorThemesPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\QnAPage.xbf">
       <PackagePath>Pages\QnAPage.xbf</PackagePath>
     </AppxPackagedFile>
@@ -1297,8 +1303,8 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\MentPrepRepeaterUserControl.xbf">
       <PackagePath>UserControls\AppFx\MentPrepRepeaterUserControl.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\RepeaterUser2.xbf">
-      <PackagePath>UserControls\AppFx\RepeaterUser2.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\RepeaterUserControl2.xbf">
+      <PackagePath>UserControls\AppFx\RepeaterUserControl2.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\RepeaterUserControl.xbf">
       <PackagePath>UserControls\AppFx\RepeaterUserControl.xbf</PackagePath>

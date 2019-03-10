@@ -90,7 +90,7 @@
                        VerticalAlignment="Center" Margin="20 6 0 0" 
                        Visibility="Collapsed"/>
             <ComboBox x:Name="cboVoiceGender" FontSize="12" 
-                      SelectionChanged="cboVoiceGender_SelectionChanged"
+                      SelectionChanged="CboVoiceGender_SelectionChanged"
                       Height="27" Width="130" Margin="7 5 5 0"
                       Visibility="Collapsed">
                 <ComboBoxItem Background="DodgerBlue" Foreground="WhiteSmoke">
