@@ -383,10 +383,6 @@ namespace PRSapp.UWP.UserControls.AppFx
         }
         #endregion
 
-
-
-
-
         #region User Speech Settings
         private void cboVoiceGender_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

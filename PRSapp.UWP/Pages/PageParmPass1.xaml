@@ -42,18 +42,26 @@
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Margin="0,0,0,0">
             <StackPanel Orientation="Horizontal">
-                <AppBarButton  x:Name="BtnPage1RepeatMediaOutAsync" Foreground="Ivory" Icon="Play"
-                               Label="Play UC1"
-                                HorizontalAlignment="Left"
-                                Width="Auto"/>
-                <AppBarButton  x:Name="BtnPage1RepeatMediaOutAsync2" Foreground="Ivory" Icon="Play"
-                               Label="Play UC2"
-                                HorizontalAlignment="Left"
-                                Width="Auto"/>
-                <TextBox x:Name="boxPassPageParmToUc1" Header="Pass Page Parm Arg to UC1"
-                     Foreground="Ivory" Text="Arg Val to pass"
+                <TextBox x:Name="boxSignedInUser" FontSize="13"
+                         Header="From MainPage" IsReadOnly="True" Margin="1,0"/>
+                <AppBarButton x:Name="BtnPage1RepeatMediaOutAsync" Foreground="Ivory"
+                              Icon="Play" Label="Play UC1"
+                              HorizontalAlignment="Left" Width="Auto" Margin="1,0"/>
+                <AppBarButton  x:Name="BtnPage1RepeatMediaOutAsync2" Foreground="Ivory"
+                               Icon="Play" Label="Play UC2"
+                                HorizontalAlignment="Left" Width="Auto" Margin="1,0"/>
+                <TextBox x:Name="boxPassPageParmToUc1" Header=" Page to UC1"
+                     Foreground="Ivory" Text="Val to pass"
                      HorizontalAlignment="Left"
-                     Width="Auto"/>
+                     Width="Auto" Margin="2,0"/>
+                <TextBox x:Name="boxPassPageParmToUcMid" Header="Page to UCMid"
+                     Foreground="Ivory" Text="Val to pass"
+                     HorizontalAlignment="Left"
+                     Width="Auto" Margin="2,0"/>
+                <TextBox x:Name="boxPassPageParmToUc2" Header=" Page to UC2"
+                     Foreground="Ivory" Text="Val to pass"
+                     HorizontalAlignment="Left"
+                     Width="Auto" Margin="2,0"/>
             </StackPanel>
             <!--<uc:MainTimeLineUserControl HorizontalAlignment="Center" 
                                         Width="566" Height="79" 

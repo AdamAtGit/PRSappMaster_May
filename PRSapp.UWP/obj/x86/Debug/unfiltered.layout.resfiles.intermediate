@@ -146,6 +146,7 @@ UserControls\MainTimeLineUserControl.xbf
 UserControls\Nested\AddChooseExistOrCreateUserControl.xbf
 UserControls\Nested\AddCreateUserControl.xbf
 UserControls\Nested\AddExistingFileUserControl.xbf
+UserControls\Nested\ClockUC.xbf
 UserControls\PlayListUserControl.xbf
 UserControls\SaveControl.xbf
 UserControls\UC_AddCreateTTS.xbf

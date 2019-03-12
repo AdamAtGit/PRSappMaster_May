@@ -160,8 +160,8 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
       <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Tag" />
       <RootEvent Name="KeyUp" />
       <RootEvent Name="LostFocus" />
@@ -386,6 +386,7 @@
     <RootType FullName="PRSapp.UWP.UserControls.DetailsUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.Nested.AddCreateUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl" />
+    <RootType FullName="PRSapp.UWP.UserControls.Nested.ClockUC" />
     <RootType FullName="PRSapp.UWP.UserControls.PlayListUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.SaveControl" />
     <RootType FullName="Views.UsrControls.UC_AddCreateTTS" />

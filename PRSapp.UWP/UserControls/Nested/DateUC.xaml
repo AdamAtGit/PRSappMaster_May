@@ -1,0 +1,35 @@
+﻿<UserControl
+    x:Class="PRSapp.UWP.UserControls.Nested.DateUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.UserControls.Nested"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:vm="using:PRSapp.UWP.ViewModels"
+    xmlns:converters="using:PRSapp.UWP.ViewModels.Converters"
+    d:DesignHeight="40"
+    d:DesignWidth="295"
+    mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <vm:TimeViewModel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <vm:TimeViewModel x:Key="timeViewModel"/>
+        <converters:DateTimeToDateTimeOffsetConverter 
+            x:Key="dateTimeToDateTimeOffsetConverter"/>
+    </UserControl.Resources>
+
+    <StackPanel x:Name="stpDate"
+                     Background="Black" Height="40" Width="295" 
+            DataContext="{Binding Source={StaticResource timeViewModel}}">
+        <DatePicker x:Name="DpDisplay" Date="{Binding SomeDateTime
+             ,Converter={StaticResource dateTimeToDateTimeOffsetConverter}
+             ,Mode=TwoWay}"   
+                        YearVisible="True"
+                        IsTabStop="False"
+                        Foreground="Ivory" FontSize="20"
+                        HorizontalAlignment="Left"
+                        Height="40" Width="295" Margin="0 0 0 0"/>
+    </StackPanel>
+</UserControl>

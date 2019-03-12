@@ -219,6 +219,12 @@
     <Compile Include="UserControls\Nested\AddExistingFileUserControl.xaml.cs">
       <DependentUpon>AddExistingFileUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Nested\ClockUC.xaml.cs">
+      <DependentUpon>ClockUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Nested\DateUC.xaml.cs">
+      <DependentUpon>DateUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PlayListUserControl.xaml.cs">
       <DependentUpon>PlayListUserControl.xaml</DependentUpon>
     </Compile>
@@ -617,6 +623,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\Nested\AddExistingFileUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Nested\ClockUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Nested\DateUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

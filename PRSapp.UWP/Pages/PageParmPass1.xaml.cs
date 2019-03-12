@@ -48,10 +48,14 @@ namespace PRSapp.UWP.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var repeaterUserControl = new RepeaterUserControl();
-            
+            var repeaterUserControl = new RepeaterUserControl();         
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // base.OnNavigatedTo(e); 
+            boxSignedInUser.Text = "Hi, " +  e.Parameter.ToString();
+        }
 
     }
 }

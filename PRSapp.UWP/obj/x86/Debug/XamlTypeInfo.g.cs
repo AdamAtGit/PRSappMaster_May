@@ -189,7 +189,7 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[66];
+            _typeNameTable = new string[67];
             _typeNameTable[0] = "PRSapp.UWP.ColorThemes";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentDialog";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.ContentControl";
@@ -253,11 +253,12 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
             _typeNameTable[60] = "PRSapp.UWP.UserControls.DetailsUserControl";
             _typeNameTable[61] = "PRSapp.UWP.UserControls.Nested.AddCreateUserControl";
             _typeNameTable[62] = "PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl";
-            _typeNameTable[63] = "PRSapp.UWP.UserControls.PlayListUserControl";
-            _typeNameTable[64] = "PRSapp.UWP.UserControls.SaveControl";
-            _typeNameTable[65] = "Views.UsrControls.UC_AddCreateTTS";
+            _typeNameTable[63] = "PRSapp.UWP.UserControls.Nested.ClockUC";
+            _typeNameTable[64] = "PRSapp.UWP.UserControls.PlayListUserControl";
+            _typeNameTable[65] = "PRSapp.UWP.UserControls.SaveControl";
+            _typeNameTable[66] = "Views.UsrControls.UC_AddCreateTTS";
 
-            _typeTable = new global::System.Type[66];
+            _typeTable = new global::System.Type[67];
             _typeTable[0] = typeof(global::PRSapp.UWP.ColorThemes);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
@@ -321,9 +322,10 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
             _typeTable[60] = typeof(global::PRSapp.UWP.UserControls.DetailsUserControl);
             _typeTable[61] = typeof(global::PRSapp.UWP.UserControls.Nested.AddCreateUserControl);
             _typeTable[62] = typeof(global::PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl);
-            _typeTable[63] = typeof(global::PRSapp.UWP.UserControls.PlayListUserControl);
-            _typeTable[64] = typeof(global::PRSapp.UWP.UserControls.SaveControl);
-            _typeTable[65] = typeof(global::Views.UsrControls.UC_AddCreateTTS);
+            _typeTable[63] = typeof(global::PRSapp.UWP.UserControls.Nested.ClockUC);
+            _typeTable[64] = typeof(global::PRSapp.UWP.UserControls.PlayListUserControl);
+            _typeTable[65] = typeof(global::PRSapp.UWP.UserControls.SaveControl);
+            _typeTable[66] = typeof(global::Views.UsrControls.UC_AddCreateTTS);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -405,9 +407,10 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
         private object Activate_60_DetailsUserControl() { return new global::PRSapp.UWP.UserControls.DetailsUserControl(); }
         private object Activate_61_AddCreateUserControl() { return new global::PRSapp.UWP.UserControls.Nested.AddCreateUserControl(); }
         private object Activate_62_AddExistingFileUserControl() { return new global::PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl(); }
-        private object Activate_63_PlayListUserControl() { return new global::PRSapp.UWP.UserControls.PlayListUserControl(); }
-        private object Activate_64_SaveControl() { return new global::PRSapp.UWP.UserControls.SaveControl(); }
-        private object Activate_65_UC_AddCreateTTS() { return new global::Views.UsrControls.UC_AddCreateTTS(); }
+        private object Activate_63_ClockUC() { return new global::PRSapp.UWP.UserControls.Nested.ClockUC(); }
+        private object Activate_64_PlayListUserControl() { return new global::PRSapp.UWP.UserControls.PlayListUserControl(); }
+        private object Activate_65_SaveControl() { return new global::PRSapp.UWP.UserControls.SaveControl(); }
+        private object Activate_66_UC_AddCreateTTS() { return new global::Views.UsrControls.UC_AddCreateTTS(); }
         private void VectorAdd_15_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::PRSapp.Model.Title>)instance;
@@ -927,23 +930,30 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 63:   //  PRSapp.UWP.UserControls.PlayListUserControl
+            case 63:   //  PRSapp.UWP.UserControls.Nested.ClockUC
+                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_63_ClockUC;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 64:   //  PRSapp.UWP.UserControls.PlayListUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_63_PlayListUserControl;
+                userType.Activator = Activate_64_PlayListUserControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  PRSapp.UWP.UserControls.SaveControl
+            case 65:   //  PRSapp.UWP.UserControls.SaveControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_64_SaveControl;
+                userType.Activator = Activate_65_SaveControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 65:   //  Views.UsrControls.UC_AddCreateTTS
+            case 66:   //  Views.UsrControls.UC_AddCreateTTS
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_65_UC_AddCreateTTS;
+                userType.Activator = Activate_66_UC_AddCreateTTS;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
