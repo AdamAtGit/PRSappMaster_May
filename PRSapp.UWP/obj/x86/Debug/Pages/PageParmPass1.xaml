@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:uc="using:PRSapp.UWP.UserControls"
     xmlns:ucappfx="using:PRSapp.UWP.UserControls.AppFx"
+    xmlns:ucnested="using:PRSapp.UWP.UserControls.Nested"
     Background="Black"                     >
     <!--mc:Ignorable="d"
     d:DesignHeight="740"
@@ -41,11 +42,15 @@
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Margin="0,0,0,0">
             <StackPanel Orientation="Horizontal">
-                <AppBarButton x:ConnectionId='8'  x:Name="BtnPage1RepeatMediaOutAsync" Foreground="Ivory" Icon="Play"
+                <AppBarButton x:ConnectionId='12'  x:Name="BtnPage1RepeatMediaOutAsync" Foreground="Ivory" Icon="Play"
                                Label="Play UC1"
                                 HorizontalAlignment="Left"
                                 Width="Auto"/>
-            <TextBox x:ConnectionId='9' x:Name="boxPassPageParmToUc1" Header="Pass Page Parm Arg to UC1"
+                <AppBarButton x:ConnectionId='13'  x:Name="BtnPage1RepeatMediaOutAsync2" Foreground="Ivory" Icon="Play"
+                               Label="Play UC2"
+                                HorizontalAlignment="Left"
+                                Width="Auto"/>
+                <TextBox x:ConnectionId='14' x:Name="boxPassPageParmToUc1" Header="Pass Page Parm Arg to UC1"
                      Foreground="Ivory" Text="Arg Val to pass"
                      HorizontalAlignment="Left"
                      Width="Auto"/>
@@ -63,18 +68,46 @@
 
         <!-- 2nd Col -->
         <StackPanel x:ConnectionId='5' x:Name="pan10" Grid.Column="1" Grid.Row="0" 
-                     Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                     Visibility="Collapsed" Background="DarkGray"
+                    HorizontalAlignment="Stretch" Margin="0,0,0,0"
+                    VerticalAlignment="Stretch"/>
 
 
 
         <StackPanel x:ConnectionId='6' x:Name="pan30" Grid.Column="3" Grid.Row="0" 
                     Background="Black" HorizontalAlignment="Stretch" 
                     Margin="0,0,0,0" VerticalAlignment="Stretch">
-            <AppBarButton x:ConnectionId='7' x:Name="NavBack"
+            <AppBarButton x:ConnectionId='11' x:Name="NavBack"
                                                      
                           Foreground="Ivory"
                           Icon="Home"
                           Label="Home"/>
+        </StackPanel>
+
+        <!-- 2nd Column -->
+        <StackPanel x:ConnectionId='7' x:Name="pan11" Grid.Column="1" Grid.Row="1" 
+                    Grid.RowSpan="2" Background="Black"
+                    HorizontalAlignment="Stretch"
+                    Margin="0,0,0,0" VerticalAlignment="Stretch">
+
+            <!--<ucnested:AddExistingFileUserControl x:Name="AddExistingFileUserControl" Height="640" Width="360" 
+                                Visibility="Visible"
+                                Margin="0 25 0 0"/>-->
+
+        </StackPanel>
+
+        <!-- 3rd Col -->
+        <StackPanel x:ConnectionId='8' x:Name="pan20" Grid.Column="2" Grid.Row="0" 
+                    Background="Black" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <TextBlock x:ConnectionId='10' x:Name="tbNaveInfo" Text="Rehearsal 2 Ready"
+                        FontSize="30" Foreground="Ivory"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="0 15 0 0"/>
+        </StackPanel>
+        <StackPanel x:ConnectionId='9' x:Name="pan21" Grid.Column="2" Grid.Row="1" 
+                    Grid.RowSpan="2" Background="Black" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <ucappfx:RepeaterUserControl2 Height="640" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+         
         </StackPanel>
         
     </Grid>

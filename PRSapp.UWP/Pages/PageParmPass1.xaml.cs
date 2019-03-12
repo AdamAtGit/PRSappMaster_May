@@ -33,6 +33,10 @@ namespace PRSapp.UWP.Pages
             var repeaterUserControl = new RepeaterUserControl();
             repeaterUserControl.BtnRepeatMediaOutAsyncClick += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
             BtnPage1RepeatMediaOutAsync.Click += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
+
+            var repeaterUserControl2 = new RepeaterUserControl2();
+            repeaterUserControl2.BtnRepeatMediaOutAsync2Click += repeaterUserControl2.BtnRepeatMediaOutAsync_Click;
+            BtnPage1RepeatMediaOutAsync2.Click += repeaterUserControl2.BtnRepeatMediaOutAsync_Click;
         }
 
 
@@ -45,7 +49,7 @@ namespace PRSapp.UWP.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             var repeaterUserControl = new RepeaterUserControl();
-            //RepeaterUserControl RepeaterUserControl = new RepeaterUserControl();
+            
         }
 
 

@@ -49,15 +49,15 @@ namespace PRSapp.UWP.UserControls.AppFx
             remove { BtnRepeatMediaOutAsync.Click -= value; }
         }
 
-
-        private void UserControl_LostFocus(object sender, RoutedEventArgs e)
+        private void UserControl_GotFocus(object sender, RoutedEventArgs e)
         {
-           
-            this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Ivory);
+            this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Orange);
         }
 
-
-
+        private void UserControl_LostFocus(object sender, RoutedEventArgs e)
+        {           
+            this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Ivory);
+        }
 
         // Repeater Dispatcher Timer
         DispatcherTimer repeatDispTimer = new DispatcherTimer();
@@ -235,13 +235,20 @@ namespace PRSapp.UWP.UserControls.AppFx
         {
             try
             {
-                FrameworkElement parent = (FrameworkElement)((AppBarButton)sender).Parent;
-                MyParent = parent.Name;
+                ////**somewhere in below 4 lines are causing invalid cast exception
+                //FrameworkElement parent = (FrameworkElement)((AppBarButton)sender).Parent;
+                //MyParent = parent.Name;
 
-                Debug.WriteLine(" MyParent = parent.Name; : " +   MyParent.ToString());
+                //Debug.WriteLine(" MyParent = parent.Name; : " + MyParent.ToString());
 
-                MySender = ((AppBarButton)sender).Name;
-
+                //MySender = ((AppBarButton)sender).Name;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message.ToString());
+            }
+            try
+             {
                 if (TgsRepeats.IsOn)
                 {
                     //  repeatDispTimer.Tick -= RepeatDispTimer_Tick;
@@ -431,7 +438,7 @@ namespace PRSapp.UWP.UserControls.AppFx
         
         }
         #endregion
-
+              
         private void BtnStopPauseRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {
             i = 0;
@@ -481,35 +488,35 @@ private async void BtnSpeechRecogWeatherSearchAsync_Click(object sender, RoutedE
 }
 }
 ////This below static class is an extension method for MediaElement
-public static class RepeaterUCMediaElementExtensions
-{
+//public static class RepeaterUCMediaElementExtensions
+//{
 
-    public static object MediaElement { get; internal set; }
-    public static async Task Play_Stream_Async(
-      //? this MediaElement mediaElement,
-      this MediaElement mediaElement,
-      IRandomAccessStream stream,
-      bool disposeStream = true)
-    {
-        // bool is irrelevant here, just using this to flag task completion.
-        TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
+//    public static object MediaElement { get; internal set; }
+//    public static async Task Play_Stream_Async(
+//      //? this MediaElement mediaElement,
+//      this MediaElement mediaElement,
+//      IRandomAccessStream stream,
+//      bool disposeStream = true)
+//    {
+//        // bool is irrelevant here, just using this to flag task completion.
+//        TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
 
-        // Note that the MediaElement needs to be in the UI tree for events
-        // like MediaEnded to fire.
-        RoutedEventHandler endOfPlayHandler = (s, e) =>
-        {
-            if (disposeStream)
-            {
-                stream.Dispose();
-            }
-            taskCompleted.SetResult(true);
-        };
-        mediaElement.MediaEnded += endOfPlayHandler;
+//        // Note that the MediaElement needs to be in the UI tree for events
+//        // like MediaEnded to fire.
+//        RoutedEventHandler endOfPlayHandler = (s, e) =>
+//        {
+//            if (disposeStream)
+//            {
+//                stream.Dispose();
+//            }
+//            taskCompleted.SetResult(true);
+//        };
+//        mediaElement.MediaEnded += endOfPlayHandler;
 
-        mediaElement.SetSource(stream, string.Empty);
-        mediaElement.Play();
+//        mediaElement.SetSource(stream, string.Empty);
+//        mediaElement.Play();
 
-        await taskCompleted.Task;
-        mediaElement.MediaEnded -= endOfPlayHandler;
-    }
-}
+//        await taskCompleted.Task;
+//        mediaElement.MediaEnded -= endOfPlayHandler;
+//    }
+//}

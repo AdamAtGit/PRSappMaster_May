@@ -2,6 +2,7 @@
 using PRSapp.UWP.SpeechClasses;
 using System;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 using Windows.Media.SpeechRecognition;
 using Windows.Media.SpeechSynthesis;
@@ -23,10 +24,30 @@ namespace PRSapp.UWP.UserControls.AppFx
         public int DeleteTitleId { get; set; }
         //public List<Title> TitleListIds { get; set; }
 
+
+        //Code-Set Get Amount of time takes for Async Task - awqit takes
+        //private long CombinedMs;
+
         // Get Senders and Callers
         public string MyParent;      
         public string MyChild;
         public string MySender; 
+
+        public event RoutedEventHandler BtnRepeatMediaOutAsync2Click
+        {
+            add { BtnRepeatMediaOutAsync2.Click += value; }
+            remove { BtnRepeatMediaOutAsync2.Click -= value; }
+        }
+
+        private void UserControl_GotFocus(object sender, RoutedEventArgs e)
+        {
+            this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Orange);
+        }
+
+        private void UserControl_LostFocus(object sender, RoutedEventArgs e)
+        {
+            this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Ivory);
+        }
 
         // Repeater Dispatcher Timer
         DispatcherTimer repeatDispTimer = new DispatcherTimer();
@@ -199,15 +220,16 @@ namespace PRSapp.UWP.UserControls.AppFx
         //Instantiate class outside of method.
         InteractiveResponses interactiveResponses = new InteractiveResponses();
 
-        private async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
+        public async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                FrameworkElement parent = (FrameworkElement)((AppBarButton)sender).Parent;
-                MyParent = parent.Name;
-                Debug.WriteLine(" MyParent = parent.Name; : " + MyParent.ToString());
+                ////**somewhere in below 4 lines are causing invalid cast exception
+                //FrameworkElement parent = (FrameworkElement)((AppBarButton)sender).Parent;
+                //MyParent = parent.Name;
+                //Debug.WriteLine(" MyParent = parent.Name; : " + MyParent.ToString());
 
-                MySender = ((AppBarButton)sender).Name;
+                //MySender = ((AppBarButton)sender).Name;
 
                 if (TgsRepeats.IsOn)
                 {
@@ -293,12 +315,10 @@ namespace PRSapp.UWP.UserControls.AppFx
                     }
                 }
             }
-
             catch (Exception ex)
             {
                 ex.Message.ToString();
             }
-
         }
 
         #region Speech Recognition
@@ -392,6 +412,8 @@ namespace PRSapp.UWP.UserControls.AppFx
         }
         #endregion
 
+       
+
         private void BtnStopPauseRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {
             i = 0;
@@ -468,25 +490,64 @@ namespace PRSapp.UWP.UserControls.AppFx
 
             mediaElement.SetSource(stream, string.Empty);
             mediaElement.Play();
-            //HERE - get sender/caller
-            RepeaterUserControl repeaterUC = new RepeaterUserControl();
-            RepeaterUserControl2 repeaterUC2 = new RepeaterUserControl2();
-            //QnAPage qnAPage = new QnAPage();
-            if (repeaterUC2.MySender == "BtnRepeatMediaOutAsync2")
-            {
-                Debug.WriteLine("Sender is RepeaterUserControl: " + repeaterUC2.MySender.ToString());
+            ////HERE - get sender/caller
+            //RepeaterUserControl repeaterUC = new RepeaterUserControl();
+            //RepeaterUserControl2 repeaterUC2 = new RepeaterUserControl2();
+            ////QnAPage qnAPage = new QnAPage();
+            //if (repeaterUC2.MySender == "BtnRepeatMediaOutAsync2")
+            //{
+            //    Debug.WriteLine("Sender is RepeaterUserControl: " + repeaterUC2.MySender.ToString());
+            //}
+            //else if(repeaterUC2.MySender == "BtnRepeatMediaOutAsync2")
+            //{
+            //    Debug.WriteLine("Sender is RepeaterUserControl2: " + repeaterUC2.MySender.ToString());
+            //}
+            //else
+            //{
+            //    Debug.WriteLine("Sender undetermined");
+            //}
+
+            //Code-Set Get Amount of time takes for Async Task - await takes
+            Int32 secs = 0;
+            Int32 secs2 = 0;
+            TimeSpan tsCombinedSecs = new TimeSpan(0,0, secs);
+            var sw = new Stopwatch();
+            sw.Start();
+            try
+            {     
+                bool IsValid =  await taskCompleted.Task;
+                Debug.WriteLine("\nbool IsValid : " + IsValid.ToString());              
             }
-            else if(repeaterUC2.MySender == "BtnRepeatMediaOutAsync2")
+            catch (Exception ex)
             {
-                Debug.WriteLine("Sender is RepeaterUserControl2: " + repeaterUC2.MySender.ToString());
+                Debug.WriteLine("\n bool IsValid =  await taskCompleted.Task; : " + ex.Message.ToString());
             }
-            else
+
+            try
             {
-                Debug.WriteLine("Sender undetermined");
+                sw.Stop();
+                TimeSpan tsElapsedSecs = sw.Elapsed;
+                Debug.WriteLine("\nTimeSpan tsElapsedSecs = sw.Elapsed; : " + tsElapsedSecs.ToString());
+                double secsElapsed = sw.Elapsed.TotalSeconds;
+                Debug.WriteLine("\ndouble secsElapsed = sw.Elapsed.TotalSeconds; : " + secsElapsed.ToString());
             }
-           
-            bool IsValid = await taskCompleted.Task;
-            Debug.WriteLine("bool IsValid : " + IsValid.ToString());
+            catch (Exception ex)
+            {
+                Debug.WriteLine("\n sw.Stop(); : " + ex.Message.ToString());
+            }
+
+            try
+            {
+                //Do not think this is doing anything, as secs2 is no value,
+                //but may be hhelping w/thread locked
+                Interlocked.Add(ref secs, secs2);
+                Debug.WriteLine("\nsecs : " + secs.ToString());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("\n  Interlocked.Add(ref secs, secs2); : " + ex.Message.ToString());
+            }
+
             mediaElement.MediaEnded -= endOfPlayHandler;
         }
     }
