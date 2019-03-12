@@ -21,11 +21,14 @@ using Windows.Media.SpeechSynthesis;
 using Windows.Storage.Streams;
 using Windows.UI;
 using Windows.Media.SpeechRecognition;
+using Windows.Storage;
 
 namespace PRSapp.UWP.UserControls.AppFx
 {
     public sealed partial class RepeaterUserControl : UserControl
     {
+        //below line for app settings
+        ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
         // For App Life Cycle and Db
         public string CurrentUserName { get; set; }
@@ -34,6 +37,27 @@ namespace PRSapp.UWP.UserControls.AppFx
         public int EditTitleId { get; set; }
         public int DeleteTitleId { get; set; }
         //public List<Title> TitleListIds { get; set; }
+
+        // Get Senders and Callers
+        public string MyParent;
+        public string MyChild;
+        public string MySender;
+
+        public event RoutedEventHandler BtnRepeatMediaOutAsyncClick
+        {
+            add { BtnRepeatMediaOutAsync.Click += value; }
+            remove { BtnRepeatMediaOutAsync.Click -= value; }
+        }
+
+
+        private void UserControl_LostFocus(object sender, RoutedEventArgs e)
+        {
+           
+            this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Ivory);
+        }
+
+
+
 
         // Repeater Dispatcher Timer
         DispatcherTimer repeatDispTimer = new DispatcherTimer();
@@ -207,10 +231,17 @@ namespace PRSapp.UWP.UserControls.AppFx
         //Instantiate class outside of method.
         Interactive interactive = new Interactive();
 
-        private async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
+        public async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+                FrameworkElement parent = (FrameworkElement)((AppBarButton)sender).Parent;
+                MyParent = parent.Name;
+
+                Debug.WriteLine(" MyParent = parent.Name; : " +   MyParent.ToString());
+
+                MySender = ((AppBarButton)sender).Name;
+
                 if (TgsRepeats.IsOn)
                 {
                     //  repeatDispTimer.Tick -= RepeatDispTimer_Tick;
@@ -383,6 +414,7 @@ namespace PRSapp.UWP.UserControls.AppFx
 
         async Task SpeakTextAsync(string text, MediaElement mediaElement)
         {
+           
             //TODO: ARS use link below to stop async tasks
             //https://stackoverflow.com/questions/15614991/simply-stop-an-async-method
 
@@ -395,7 +427,8 @@ namespace PRSapp.UWP.UserControls.AppFx
             //   IRandomAccessStream stream = await this.SynthesizeTextToSpeechAsync(text);
             IRandomAccessStream stream = await SynthesizeTextToSpeechAsync(text);
 
-          await mediaElement.Play_Stream_Async(stream, true);
+            await mediaElement.Play_Stream_Async(stream, true);
+        
         }
         #endregion
 
@@ -418,37 +451,34 @@ namespace PRSapp.UWP.UserControls.AppFx
             BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
         }
 
-        private async void BtnSpeechRecogWeatherSearchAsync_Click(object sender, RoutedEventArgs e)
-        {
-            // Create an instance of SpeechRecognizer.
-            var speechRecognizer = new Windows.Media.SpeechRecognition.SpeechRecognizer();
+private async void BtnSpeechRecogWeatherSearchAsync_Click(object sender, RoutedEventArgs e)
+{
+    // Create an instance of SpeechRecognizer.
+    var speechRecognizer = new Windows.Media.SpeechRecognition.SpeechRecognizer();
 
-            // Listen for audio input issues.
-            ///////  speechRecognizer.RecognitionQualityDegrading += speechRecognizer_RecognitionQualityDegrading;
+    // Listen for audio input issues.
+    ///////  speechRecognizer.RecognitionQualityDegrading += speechRecognizer_RecognitionQualityDegrading;
 
-            // Add a web search grammar to the recognizer.
-            var webSearchGrammar = new Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint(Windows.Media.SpeechRecognition.SpeechRecognitionScenario.WebSearch, "webSearch");
-
-
-            speechRecognizer.UIOptions.AudiblePrompt = "Say what you want to search for...";
-            speechRecognizer.UIOptions.ExampleText = @"Ex. 'weather for London'";
-            speechRecognizer.Constraints.Add(webSearchGrammar);
-
-            // Compile the constraint.
-            await speechRecognizer.CompileConstraintsAsync();
-
-            // Start recognition.
-            Windows.Media.SpeechRecognition.SpeechRecognitionResult speechRecognitionResult = await speechRecognizer.RecognizeWithUIAsync();
-            //await speechRecognizer.RecognizeWithUIAsync();
-
-            // Do something with the recognition result.
-            var messageDialog = new Windows.UI.Popups.MessageDialog(speechRecognitionResult.Text, "Text spoken");
-            await messageDialog.ShowAsync();
-        }
+    // Add a web search grammar to the recognizer.
+    var webSearchGrammar = new Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint(Windows.Media.SpeechRecognition.SpeechRecognitionScenario.WebSearch, "webSearch");
 
 
-    }
+    speechRecognizer.UIOptions.AudiblePrompt = "Say what you want to search for...";
+    speechRecognizer.UIOptions.ExampleText = @"Ex. 'weather for London'";
+    speechRecognizer.Constraints.Add(webSearchGrammar);
 
+    // Compile the constraint.
+    await speechRecognizer.CompileConstraintsAsync();
+
+    // Start recognition.
+    Windows.Media.SpeechRecognition.SpeechRecognitionResult speechRecognitionResult = await speechRecognizer.RecognizeWithUIAsync();
+    //await speechRecognizer.RecognizeWithUIAsync();
+
+    // Do something with the recognition result.
+    var messageDialog = new Windows.UI.Popups.MessageDialog(speechRecognitionResult.Text, "Text spoken");
+    await messageDialog.ShowAsync();
+}
+}
 }
 ////This below static class is an extension method for MediaElement
 public static class RepeaterUCMediaElementExtensions

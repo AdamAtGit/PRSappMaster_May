@@ -154,6 +154,9 @@
     <Compile Include="Pages\ColorThemesPage.xaml.cs">
       <DependentUpon>ColorThemesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageParmPass1.xaml.cs">
+      <DependentUpon>PageParmPass1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\QnAPage.xaml.cs">
       <DependentUpon>QnAPage.xaml</DependentUpon>
     </Compile>
@@ -524,6 +527,10 @@
     <Page Include="Pages\ColorThemesPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PageParmPass1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\QnAPage.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -33,10 +33,10 @@
 
     <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".65*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="338*"/>
+            <ColumnDefinition Width="340*"/>
+            <ColumnDefinition Width="411*"/>
+            <ColumnDefinition Width="411*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height=".15*"/>
@@ -45,7 +45,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Margin="0 -6 0 0" Background="LightGray">
+        <StackPanel Margin="0,-6,0,0" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <!--<CommandBar ClosedDisplayMode="Compact" Background="Gray">-->
             <StackPanel x:Name="panMainNavigationBar" Orientation="Horizontal" 
                         Background="Gray" Width="360">
@@ -64,7 +64,7 @@
                               IsTapEnabled="True" IsTabStop="True"
                               VerticalAlignment="Top"
                               Height="55" Width="55" Margin="10 0 1 0"/>
-                
+
                 <AppBarButton x:Name="BtnNavToDayPage"
                               Click="NavToDayPage_Click"
                               Foreground="Ivory"
@@ -74,7 +74,17 @@
                               IsTabStop="True"
                               HorizontalAlignment="Left" VerticalAlignment="Top"
                               Height="55" Width="65" Margin="3 0"/>
-                
+
+                <AppBarButton x:Name="BtnNavToPageParmPass1"
+                              Click="BtnNavToPageParmPass1_Click"
+                              Foreground="Ivory"
+                              Icon="NewWindow"
+                              Label="Page Pass1"
+                              IsTapEnabled="True"
+                              IsTabStop="True"
+                              HorizontalAlignment="Left" VerticalAlignment="Top"
+                              Height="55" Width="65" Margin="3 0"/>
+
                 <AppBarButton x:Name="BtnSignOut"
                               Click="BtnSignOut_Click"
                               Foreground="Ivory"
@@ -89,15 +99,15 @@
             <!--<TextBlock Text="Create Login &amp; Sign In"  HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>-->
         </StackPanel>
-        <StackPanel Grid.Column="1" Margin="0 0 0 0" Background="LightGray">
+        <StackPanel Grid.Column="1" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Library &amp; Tracks"  HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
         </StackPanel>
-        <StackPanel Grid.Column="2" Margin="0 0 0 0" Background="LightGray">
+        <StackPanel Grid.Column="2" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Make Changes"  HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
         </StackPanel>
-        <StackPanel Grid.Column="3" Margin="0 0 0 0" Background="LightGray">
+        <StackPanel Grid.Column="3" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Play Settings &amp; Times"
                        HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
@@ -105,9 +115,9 @@
         <!--////  1st Col Alternate Day TimeLine Periods \\\\-->
         <!--////  1st Col  \\\\-->
         <!--CreateLogin-->
-        <StackPanel x:Name="CreateLoginPanel" Margin="10 1" Grid.Row="1" 
+        <StackPanel x:Name="CreateLoginPanel" Margin="10,1,10,1" Grid.Row="1" 
                     Background="#f4efef"
-                    Visibility="Collapsed">
+                    Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Create Login" FontSize="19" Margin="0 3" 
                        HorizontalAlignment="Center"/>
             <TextBox Name="NewUserUserLogin" Header="User Name" Margin="0 5"/>
@@ -117,9 +127,9 @@
             <TextBlock x:Name="JustCreatedUserTextBlock"/>
         </StackPanel>
         <!--SignIn-->
-        <StackPanel x:Name="SignInPanel" Margin="10 1" Grid.Row="2"
+        <StackPanel x:Name="SignInPanel" Margin="10,1,10,1" Grid.Row="2"
                     Background="#7d7d7d"
-                    Visibility="Collapsed">
+                    Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Sign In" FontSize="19" Margin="0 3" 
                        HorizontalAlignment="Center"/>
             <TextBox Name="SignInUserLogin" Header="Login" Margin="0 5"/>
@@ -129,12 +139,21 @@
                 Sign In
             </Button>
         </StackPanel>
+
+
+        <StackPanel x:Name="AppFxPanel" Margin="0,1,0,1" Grid.Row="2" 
+                    Grid.RowSpan="2"
+                    Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ucappfx:UC_TMinus30/>
+        </StackPanel>
+
+
         <!--Default Home Page - Panel >> Post Sign In -->
-        <StackPanel x:Name="DefaultHomePagePanel" Margin="10 1 10 8"
+        <StackPanel x:Name="DefaultHomePagePanel" Margin="19,1,19,8"
                     Grid.Column="1" Grid.Row="3"
                     Background=" #757575"
-                    Width="360"
-                    Visibility="Visible"> <!--Background="#4a4a4a" darker >> #383838-->
+                    Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <!--Background="#4a4a4a" darker >> #383838-->
             <StackPanel Orientation="Horizontal" Height="40" Margin="2 0 0 2">
                 <TextBlock x:Name="tbUserId"
                        DataContext="{Binding User}" Text="{Binding UserId}" 
@@ -165,10 +184,10 @@
 
         <!--////  2nd Col  \\\\-->
         <!--Users Titles List - Library-->
-        <StackPanel x:Name="ShowTitlesPanel" Height="310" Width="360"
+        <StackPanel x:Name="ShowTitlesPanel"
                     Grid.Column="1" Grid.Row="1" 
-                    Background="#ddd7d3" Margin="10 1"
-                    Visibility="Visible">
+                    Background="#ddd7d3" Margin="19,4,19,3"
+                    Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Titles" FontSize="19" Margin="0 3"
                        HorizontalAlignment="Center"/>
             <!--Grid.RowSpan="2"-->
@@ -233,8 +252,7 @@
         <!--Add Title-->
         <StackPanel x:Name="AddTitlesPanel" Background="#ddd8d8"
                     Grid.Column="2" Grid.Row="1" 
-                    Grid.RowSpan="1" 
-                    Width="360" Margin="10 5 10 0">
+                    Grid.RowSpan="1" Margin="26,5,25,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Add Title" FontSize="19"
                        Margin="0 3" HorizontalAlignment="Center"/>
             <TextBox Name="boxAddTitleName" Header=" Name" 
@@ -273,10 +291,10 @@
         <!--Edit Wrapper Panel 3rd Col-->
         <StackPanel x:Name="EditWrapperPanel" 
                     Grid.Column="2" Grid.Row="2" Grid.RowSpan="2"
-                    Height="630" Width="360"
+                    Height="630"
                     VerticalAlignment="Center"
-                    Background="#ddd8d8" Margin="0 1 0 0"
-                    Visibility="Visible">
+                    Background="#ddd8d8" Margin="26,0,25,0"
+                    Visibility="Visible" HorizontalAlignment="Stretch">
 
             <!--Title Details Panel-->
             <StackPanel x:Name="TitleDetailsPanel" Height="315" Width="350"
@@ -589,9 +607,9 @@
 
         <!--////  4th Col   \\\\-->
         <!--Tweak Play Settings-->
-        <StackPanel x:Name="TweakPlaySettinsPanel" Margin="10 1" Grid.Column="3" Grid.Row="1" 
+        <StackPanel x:Name="TweakPlaySettinsPanel" Margin="10,1,10,1" Grid.Column="3" Grid.Row="1" 
                     Background="#ddd8d8"
-                     Visibility="Collapsed">
+                     Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Tweak Play Settings" FontSize="19"
                        Margin="0 3" HorizontalAlignment="Center"/>
             <TextBox Name="PlaySpeedTextBox" Header="Speed" Margin="0 5"/>
@@ -629,12 +647,12 @@
 
 
         <!--Repeater (mental Prep dic or type speech recog) user control-->
-        <ucappfx:MentPrepRepeaterUserControl  Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" />
+        <ucappfx:MentPrepRepeaterUserControl  Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" />
 
         <!--Arrange Play Times-->
         <StackPanel x:Name="ArrangePanel" Grid.Column="3" Grid.Row="2" Grid.RowSpan="1"
-                    Background="LightGray" Margin="10 1" 
-                    Visibility="Collapsed">
+                    Background="LightGray" Margin="10,1,10,1" 
+                    Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Arrange Play Times" FontSize="19"
                        Margin="0 3" HorizontalAlignment="Center"/>
             <!--<TextBox Name="TitleDetailsTitleName" Header="Title Name" Margin="0 5"/>

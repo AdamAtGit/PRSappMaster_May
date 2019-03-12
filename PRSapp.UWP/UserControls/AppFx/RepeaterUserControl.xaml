@@ -5,7 +5,7 @@
     xmlns:local="using:PRSapp.UWP.Views.UserControls.AppFxs"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested">
+    xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested" LostFocus="UserControl_LostFocus">
     <!--RepeaterUserControl-->
     <Grid Height="640" Width="360" Background="#4a4a4a">
         <Grid.RowDefinitions>
@@ -57,9 +57,9 @@
             <!--PlaceholderText="Dictate and/or Type, Paste the Text to be Spoken!"-->
         </StackPanel>
         <!--3rd row-->
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
+        <StackPanel x:Name="stpPlayControls" Grid.Row="2" Orientation="Horizontal">
             <AppBarButton  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
-                           Click="BtnRepeatMediaOutAsync_Click"
+                           Click="BtnRepeatMediaOutAsync_Click" Tag="PlayRepeaterUC"
                            Margin="0 0 0 10" Height="54"/>
             <AppBarButton  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
                           Click="BtnStopPauseRepeatMediaOutAsync_Click"

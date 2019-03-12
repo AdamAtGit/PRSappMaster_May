@@ -1276,6 +1276,9 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\ColorThemesPage.xbf">
       <PackagePath>Pages\ColorThemesPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\PageParmPass1.xbf">
+      <PackagePath>Pages\PageParmPass1.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\QnAPage.xbf">
       <PackagePath>Pages\QnAPage.xbf</PackagePath>
     </AppxPackagedFile>

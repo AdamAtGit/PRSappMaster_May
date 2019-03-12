@@ -10,7 +10,8 @@ using PRSapp.UWP.CustomHelperClasses;
 namespace PRSapp.UWP.UserControls.AppFx
 {
     public sealed partial class UC_TMinus30 : UserControl
-    {   //below line for app settings
+    {  
+        //below line for app settings
         ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
         public UC_TMinus30()
@@ -588,42 +589,29 @@ namespace PRSapp.UWP.UserControls.AppFx
 
         private void btnRePlayGroup_Click(object sender, RoutedEventArgs e)
         {
-            #region Re-Load FileNames from App Settings
-            //try
-            //{
-            //    //switchRemember.IsOn = (bool)localSettings.Values["switchSettings"];
-            //    if (localSettings.Values["TitleFileNameSettings"] != null)
-            //    { tbFilePicked.Text = (string)localSettings.Values["TitleFileNameSettings"]; }
-            //    if (localSettings.Values["TitleFileName2Settings"] != null)
-            //    { tb2FilePicked.Text = (string)localSettings.Values["TitleFileName2Settings"]; }
-            //    if (localSettings.Values["TitleFileName3Settings"] != null)
-            //    { tb3FilePicked.Text = (string)localSettings.Values["TitleFileName3Settings"]; }
-            //    if (localSettings.Values["TitleFileName4Settings"] != null)
-            //    { tb4FilePicked.Text = (string)localSettings.Values["TitleFileName4Settings"]; }
-            //    if (localSettings.Values["TitleFileName5Settings"] != null)
-            //    { tb5FilePicked.Text = (string)localSettings.Values["TitleFileName5Settings"]; }
-            //    //comboMediaType.SelectedValue = (string)localSettings.Values["cboMediaTypeSettings"];
-
-            //    if (localSettings.Values["CountDownTimeSettings"] != null)
-            //    { txtCountDown.Text = (string)localSettings.Values["CountDownTimeSettings"]; }
-            //    if (localSettings.Values["CountDownTime2Settings"] != null)
-            //    { txt2CountDown.Text = (string)localSettings.Values["CountDownTime2Settings"]; }
-            //    if (localSettings.Values["CountDownTime3Settings"] != null)
-            //    { txt3CountDown.Text = (string)localSettings.Values["CountDownTime3Settings"]; }
-            //    if (localSettings.Values["CountDownTime4Settings"] != null)
-            //    { txt4CountDown.Text = (string)localSettings.Values["CountDownTime4Settings"]; }
-            //    if (localSettings.Values["CountDownTime5Settings"] != null)
-            //    { txt5CountDown.Text = (string)localSettings.Values["CountDownTime5Settings"]; }
-            //}
-            //catch (Exception) { }
-            #endregion
+            btnRePlayGroup.Content = "Replay Group";
             btnResestGroup_Click(sender, e);
 
-            Button_Click_1(sender, e);
-            Button_Click_2(sender, e);
-            Button_Click_3(sender, e);
-            Button_Click_4(sender, e);
-            Button_Click_5(sender, e);
+            if(TgsRepeatGroup.IsOn)
+            {
+                for (int i = 0; i < 20; i++)
+                {              
+                    Button_Click_1(sender, e);
+                    Button_Click_2(sender, e);
+                    Button_Click_3(sender, e);
+                    Button_Click_4(sender, e);
+                    Button_Click_5(sender, e);
+                }
+            }
+            else
+            {
+                Button_Click_1(sender, e);
+                Button_Click_2(sender, e);
+                Button_Click_3(sender, e);
+                Button_Click_4(sender, e);
+                Button_Click_5(sender, e);
+            }
+
         }
       
     }

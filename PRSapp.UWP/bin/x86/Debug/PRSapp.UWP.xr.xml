@@ -75,18 +75,22 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Orientation" />
-      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="DataContext" />
     </RootType>
-    <RootType FullName="PRSapp.UWP.UserControls.AppFx.MentPrepRepeaterUserControl" />
+    <RootType FullName="PRSapp.UWP.UserControls.AppFx.MentPrepRepeaterUserControl">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
@@ -216,6 +220,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
     </RootType>
+    <RootType FullName="PRSapp.UWP.UserControls.AppFx.UC_TMinus30" />
     <RootType FullName="PRSapp.UWP.MainPage" />
     <RootType FullName="PRSapp.UWP.PagesPhone.appAboutPage" />
     <RootType FullName="PRSapp.UWP.PagesPhone.AppCopyWritePage" />
@@ -255,6 +260,7 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="PRSapp.UWP.Pages.ColorThemesPage" />
+    <RootType FullName="PRSapp.UWP.Pages.PageParmPass1" />
     <RootType FullName="PRSapp.UWP.Pages.QnAPage" />
     <RootType FullName="PRSapp.UWP.UserControls.ListUserControl">
       <RootProperty Name="Height" />
@@ -277,6 +283,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="LostFocus" />
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Panel">
@@ -349,6 +356,8 @@
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="OffContent" />
       <RootProperty Name="OnContent" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="PRSapp.UWP.ViewModels.TimeViewModel" />
     <RootType FullName="PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter" />
@@ -372,7 +381,6 @@
     <RootType FullName="PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem" />
     <RootType FullName="Views.UsrControls.UC_Mood" />
     <RootType FullName="Views.UsrControls.UC_PlayGroup" />
-    <RootType FullName="PRSapp.UWP.UserControls.AppFx.UC_TMinus30" />
     <RootType FullName="PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.DetailsUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.Nested.AddCreateUserControl" />

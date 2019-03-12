@@ -1200,3 +1200,8 @@ C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Us
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\RepeaterUserControl2.xaml
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\RepeaterUserControl2.xbf
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\RepeaterUserControl2.xbf
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\PageParmPass1.xbf
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PageParmPass1.g.i.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PageParmPass1.g.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PageParmPass1.xaml
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PageParmPass1.xbf

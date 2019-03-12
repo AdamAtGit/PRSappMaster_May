@@ -1,0 +1,82 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="PRSapp.UWP.Pages.PageParmPass1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="using:PRSapp.UWP.UserControls"
+    xmlns:ucappfx="using:PRSapp.UWP.UserControls.AppFx"
+    Background="Black"                     >
+    <!--mc:Ignorable="d"
+    d:DesignHeight="740"
+    d:DesignWidth="1250"
+    Background="RosyBrown"-->
+
+    <Grid Height="740" Width="1340" Background="Black">
+        <Grid.ColumnDefinitions>
+            <!--1080-->
+            <ColumnDefinition Width="483*"/>
+            <!--360-->
+            <ColumnDefinition Width="314*"/>
+            <!--360-->
+            <ColumnDefinition Width="468*"/>
+            <!--360-->
+            <ColumnDefinition Width="75*"/>
+            <!--360-->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!--640-->
+            <RowDefinition Height="69*"/>
+            <!--50-->
+            <RowDefinition Height="644*"/>
+            <!--500-->
+            <RowDefinition Height="27*"/>
+            <!--50-->
+        </Grid.RowDefinitions>
+
+        <!-- 1st Col -->
+        <StackPanel x:ConnectionId='2' x:Name="pan00Page1" Grid.Column="0" Grid.Row="0"
+                    Grid.ColumnSpan="2" Background="Gray" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                    Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton x:ConnectionId='8'  x:Name="BtnPage1RepeatMediaOutAsync" Foreground="Ivory" Icon="Play"
+                               Label="Play UC1"
+                                HorizontalAlignment="Left"
+                                Width="Auto"/>
+            <TextBox x:ConnectionId='9' x:Name="boxPassPageParmToUc1" Header="Pass Page Parm Arg to UC1"
+                     Foreground="Ivory" Text="Arg Val to pass"
+                     HorizontalAlignment="Left"
+                     Width="Auto"/>
+            </StackPanel>
+            <!--<uc:MainTimeLineUserControl HorizontalAlignment="Center" 
+                                        Width="566" Height="79" 
+                                        Margin="-80,-11,0,0"/>-->
+        </StackPanel>
+        <StackPanel x:ConnectionId='3' x:Name="pan01" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <!--<uc:MainTimeLineUserControl  HorizontalAlignment="Center" Width="566" Height="79"/>-->
+            <ucappfx:RepeaterUserControl/>
+        </StackPanel>
+        <StackPanel x:ConnectionId='4' x:Name="pan02" Grid.Column="0" Grid.Row="2" 
+                    Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+
+        <!-- 2nd Col -->
+        <StackPanel x:ConnectionId='5' x:Name="pan10" Grid.Column="1" Grid.Row="0" 
+                     Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+
+
+
+        <StackPanel x:ConnectionId='6' x:Name="pan30" Grid.Column="3" Grid.Row="0" 
+                    Background="Black" HorizontalAlignment="Stretch" 
+                    Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <AppBarButton x:ConnectionId='7' x:Name="NavBack"
+                                                     
+                          Foreground="Ivory"
+                          Icon="Home"
+                          Label="Home"/>
+        </StackPanel>
+        
+    </Grid>
+</Page>
+

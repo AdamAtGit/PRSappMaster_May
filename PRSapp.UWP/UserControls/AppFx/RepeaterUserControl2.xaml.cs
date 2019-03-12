@@ -1,4 +1,5 @@
-﻿using PRSapp.UWP.SpeechClasses;
+﻿using PRSapp.UWP.Pages;
+using PRSapp.UWP.SpeechClasses;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -21,6 +22,11 @@ namespace PRSapp.UWP.UserControls.AppFx
         public int EditTitleId { get; set; }
         public int DeleteTitleId { get; set; }
         //public List<Title> TitleListIds { get; set; }
+
+        // Get Senders and Callers
+        public string MyParent;      
+        public string MyChild;
+        public string MySender; 
 
         // Repeater Dispatcher Timer
         DispatcherTimer repeatDispTimer = new DispatcherTimer();
@@ -197,11 +203,17 @@ namespace PRSapp.UWP.UserControls.AppFx
         {
             try
             {
+                FrameworkElement parent = (FrameworkElement)((AppBarButton)sender).Parent;
+                MyParent = parent.Name;
+                Debug.WriteLine(" MyParent = parent.Name; : " + MyParent.ToString());
+
+                MySender = ((AppBarButton)sender).Name;
+
                 if (TgsRepeats.IsOn)
                 {
                     //  repeatDispTimer.Tick -= RepeatDispTimer_Tick;
                     //  TimerSetUp();
-                    BtnRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
+                    BtnRepeatMediaOutAsync2.Visibility = Visibility.Collapsed;
                     BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Visible;
                     stpStatus.Visibility = Visibility.Visible;
                     tbStatus.Text = (i + 1).ToString();
@@ -235,7 +247,7 @@ namespace PRSapp.UWP.UserControls.AppFx
 
                     Debug.WriteLine("\nAfter the if(1 == 0)...timesToTick = (repetitions - 1);\n" +
                                             timesToTick.ToString());
-                    BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
+                    BtnRepeatMediaOutAsync2.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
@@ -259,8 +271,8 @@ namespace PRSapp.UWP.UserControls.AppFx
                         repeatDispTimer.Stop();
                         //  repeatDispTimer.Tick -= RepeatDispTimer_Tick;
                         BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
-                        BtnRepeatMediaOutAsync.Visibility = Visibility.Visible;
-                        BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                        BtnRepeatMediaOutAsync2.Visibility = Visibility.Visible;
+                        BtnRepeatMediaOutAsync2.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
                         stpStatus.Visibility = Visibility.Collapsed;
                         i = 0;
                     }
@@ -269,7 +281,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                 else
                 {
                     //Debug.Write("Hit tgsReapeats.IsOn//when is false");
-                    BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
+                    BtnRepeatMediaOutAsync2.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
@@ -392,11 +404,11 @@ namespace PRSapp.UWP.UserControls.AppFx
                 + repeatDispTimer.IsEnabled.ToString());
             if (TgsRepeats.IsOn)
             {
-                BtnRepeatMediaOutAsync.Visibility = Visibility.Visible;
+                BtnRepeatMediaOutAsync2.Visibility = Visibility.Visible;
                 BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
                 stpStatus.Visibility = Visibility.Collapsed;
             }
-            BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+            BtnRepeatMediaOutAsync2.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
         }
 
         private async void BtnSpeechRecogWeatherSearchAsync_Click(object sender, RoutedEventArgs e)
@@ -431,6 +443,7 @@ namespace PRSapp.UWP.UserControls.AppFx
     ////This below static class is an extension method for MediaElement
     static class RepeaterUC2MediaElementExtensions
     {
+      
         public static object MediaElement { get; internal set; }
         public static async Task Play_Stream_Async(
           //? this MediaElement mediaElement,
@@ -456,7 +469,24 @@ namespace PRSapp.UWP.UserControls.AppFx
             mediaElement.SetSource(stream, string.Empty);
             mediaElement.Play();
             //HERE - get sender/caller
+            RepeaterUserControl repeaterUC = new RepeaterUserControl();
+            RepeaterUserControl2 repeaterUC2 = new RepeaterUserControl2();
+            //QnAPage qnAPage = new QnAPage();
+            if (repeaterUC2.MySender == "BtnRepeatMediaOutAsync2")
+            {
+                Debug.WriteLine("Sender is RepeaterUserControl: " + repeaterUC2.MySender.ToString());
+            }
+            else if(repeaterUC2.MySender == "BtnRepeatMediaOutAsync2")
+            {
+                Debug.WriteLine("Sender is RepeaterUserControl2: " + repeaterUC2.MySender.ToString());
+            }
+            else
+            {
+                Debug.WriteLine("Sender undetermined");
+            }
+           
             bool IsValid = await taskCompleted.Task;
+            Debug.WriteLine("bool IsValid : " + IsValid.ToString());
             mediaElement.MediaEnded -= endOfPlayHandler;
         }
     }

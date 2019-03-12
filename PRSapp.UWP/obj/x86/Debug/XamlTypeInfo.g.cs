@@ -189,7 +189,7 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[65];
+            _typeNameTable = new string[66];
             _typeNameTable[0] = "PRSapp.UWP.ColorThemes";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentDialog";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.ContentControl";
@@ -202,61 +202,62 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
             _typeNameTable[9] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[10] = "String";
             _typeNameTable[11] = "Int32";
-            _typeNameTable[12] = "PRSapp.UWP.MainPage";
-            _typeNameTable[13] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[14] = "System.Collections.Generic.List`1<PRSapp.Model.Title>";
-            _typeNameTable[15] = "PRSapp.Model.Title";
-            _typeNameTable[16] = "PRSapp.Model.User";
-            _typeNameTable[17] = "PRSapp.UWP.PagesPhone.appAboutPage";
-            _typeNameTable[18] = "PRSapp.UWP.PagesPhone.AppCopyWritePage";
-            _typeNameTable[19] = "PRSapp.UWP.PagesPhone.AppCreateUserNamePage";
-            _typeNameTable[20] = "PRSapp.UWP.PagesPhone.AppDemoPage";
-            _typeNameTable[21] = "PRSapp.UWP.PagesPhone.AppHelpPage";
-            _typeNameTable[22] = "PRSapp.UWP.PagesPhone.AppProfilePage";
-            _typeNameTable[23] = "PRSapp.UWP.PagesPhone.AppResetPwdPage";
-            _typeNameTable[24] = "PRSapp.UWP.PagesPhone.AppResetUserNamePage";
-            _typeNameTable[25] = "PRSapp.UWP.PagesPhone.AppSettingsOverViewPage";
-            _typeNameTable[26] = "PRSapp.UWP.PagesPhone.AppSplashPage";
-            _typeNameTable[27] = "PRSapp.UWP.PagesPhone.App3SignInPage";
-            _typeNameTable[28] = "PRSapp.UWP.Pages.AddOrCreatePage";
-            _typeNameTable[29] = "PRSapp.UWP.Pages.AddPlayListPage";
-            _typeNameTable[30] = "PRSapp.UWP.Pages.AppFxs_PlayList_Titles";
-            _typeNameTable[31] = "PRSapp.UWP.Pages.AppSignedOutPage";
-            _typeNameTable[32] = "PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2";
-            _typeNameTable[33] = "PRSapp.UWP.UserControls.AppFx.RepeaterUserControl";
-            _typeNameTable[34] = "PRSapp.UWP.UserControls.MainTimeLineUserControl";
-            _typeNameTable[35] = "PRSapp.UWP.Pages.ColorThemesPage";
-            _typeNameTable[36] = "PRSapp.UWP.Pages.QnAPage";
-            _typeNameTable[37] = "PRSapp.UWP.UserControls.ListUserControl";
-            _typeNameTable[38] = "PRSapp.UWP.Pages.DayPage";
-            _typeNameTable[39] = "PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage";
-            _typeNameTable[40] = "PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc";
-            _typeNameTable[41] = "PRSapp.UWP.Pages.PlayListsPage";
-            _typeNameTable[42] = "PRSapp.UWP.Pages.Template3Col3Row640x360";
-            _typeNameTable[43] = "PRSapp.UWP.UserControls.CreateTtsLargeUserControl";
-            _typeNameTable[44] = "PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page";
-            _typeNameTable[45] = "PRSapp.UWP.UserControls.AddChooseMenuUserControl";
-            _typeNameTable[46] = "PRSapp.UWP.ViewModels.TimeViewModel";
-            _typeNameTable[47] = "Windows.UI.Xaml.Controls.MediaElement";
-            _typeNameTable[48] = "System.Windows.Input.ICommand";
-            _typeNameTable[49] = "Boolean";
-            _typeNameTable[50] = "System.DateTime";
-            _typeNameTable[51] = "System.ValueType";
-            _typeNameTable[52] = "TimeSpan";
-            _typeNameTable[53] = "PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter";
-            _typeNameTable[54] = "PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem";
-            _typeNameTable[55] = "Views.UsrControls.UC_Mood";
-            _typeNameTable[56] = "Views.UsrControls.UC_PlayGroup";
-            _typeNameTable[57] = "PRSapp.UWP.UserControls.AppFx.UC_TMinus30";
-            _typeNameTable[58] = "PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl";
-            _typeNameTable[59] = "PRSapp.UWP.UserControls.DetailsUserControl";
-            _typeNameTable[60] = "PRSapp.UWP.UserControls.Nested.AddCreateUserControl";
-            _typeNameTable[61] = "PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl";
-            _typeNameTable[62] = "PRSapp.UWP.UserControls.PlayListUserControl";
-            _typeNameTable[63] = "PRSapp.UWP.UserControls.SaveControl";
-            _typeNameTable[64] = "Views.UsrControls.UC_AddCreateTTS";
+            _typeNameTable[12] = "PRSapp.UWP.UserControls.AppFx.UC_TMinus30";
+            _typeNameTable[13] = "PRSapp.UWP.MainPage";
+            _typeNameTable[14] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[15] = "System.Collections.Generic.List`1<PRSapp.Model.Title>";
+            _typeNameTable[16] = "PRSapp.Model.Title";
+            _typeNameTable[17] = "PRSapp.Model.User";
+            _typeNameTable[18] = "PRSapp.UWP.PagesPhone.appAboutPage";
+            _typeNameTable[19] = "PRSapp.UWP.PagesPhone.AppCopyWritePage";
+            _typeNameTable[20] = "PRSapp.UWP.PagesPhone.AppCreateUserNamePage";
+            _typeNameTable[21] = "PRSapp.UWP.PagesPhone.AppDemoPage";
+            _typeNameTable[22] = "PRSapp.UWP.PagesPhone.AppHelpPage";
+            _typeNameTable[23] = "PRSapp.UWP.PagesPhone.AppProfilePage";
+            _typeNameTable[24] = "PRSapp.UWP.PagesPhone.AppResetPwdPage";
+            _typeNameTable[25] = "PRSapp.UWP.PagesPhone.AppResetUserNamePage";
+            _typeNameTable[26] = "PRSapp.UWP.PagesPhone.AppSettingsOverViewPage";
+            _typeNameTable[27] = "PRSapp.UWP.PagesPhone.AppSplashPage";
+            _typeNameTable[28] = "PRSapp.UWP.PagesPhone.App3SignInPage";
+            _typeNameTable[29] = "PRSapp.UWP.Pages.AddOrCreatePage";
+            _typeNameTable[30] = "PRSapp.UWP.Pages.AddPlayListPage";
+            _typeNameTable[31] = "PRSapp.UWP.Pages.AppFxs_PlayList_Titles";
+            _typeNameTable[32] = "PRSapp.UWP.Pages.AppSignedOutPage";
+            _typeNameTable[33] = "PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2";
+            _typeNameTable[34] = "PRSapp.UWP.UserControls.AppFx.RepeaterUserControl";
+            _typeNameTable[35] = "PRSapp.UWP.UserControls.MainTimeLineUserControl";
+            _typeNameTable[36] = "PRSapp.UWP.Pages.ColorThemesPage";
+            _typeNameTable[37] = "PRSapp.UWP.Pages.PageParmPass1";
+            _typeNameTable[38] = "PRSapp.UWP.Pages.QnAPage";
+            _typeNameTable[39] = "PRSapp.UWP.UserControls.ListUserControl";
+            _typeNameTable[40] = "PRSapp.UWP.Pages.DayPage";
+            _typeNameTable[41] = "PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage";
+            _typeNameTable[42] = "PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc";
+            _typeNameTable[43] = "PRSapp.UWP.Pages.PlayListsPage";
+            _typeNameTable[44] = "PRSapp.UWP.Pages.Template3Col3Row640x360";
+            _typeNameTable[45] = "PRSapp.UWP.UserControls.CreateTtsLargeUserControl";
+            _typeNameTable[46] = "PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page";
+            _typeNameTable[47] = "PRSapp.UWP.UserControls.AddChooseMenuUserControl";
+            _typeNameTable[48] = "PRSapp.UWP.ViewModels.TimeViewModel";
+            _typeNameTable[49] = "Windows.UI.Xaml.Controls.MediaElement";
+            _typeNameTable[50] = "System.Windows.Input.ICommand";
+            _typeNameTable[51] = "Boolean";
+            _typeNameTable[52] = "System.DateTime";
+            _typeNameTable[53] = "System.ValueType";
+            _typeNameTable[54] = "TimeSpan";
+            _typeNameTable[55] = "PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter";
+            _typeNameTable[56] = "PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem";
+            _typeNameTable[57] = "Views.UsrControls.UC_Mood";
+            _typeNameTable[58] = "Views.UsrControls.UC_PlayGroup";
+            _typeNameTable[59] = "PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl";
+            _typeNameTable[60] = "PRSapp.UWP.UserControls.DetailsUserControl";
+            _typeNameTable[61] = "PRSapp.UWP.UserControls.Nested.AddCreateUserControl";
+            _typeNameTable[62] = "PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl";
+            _typeNameTable[63] = "PRSapp.UWP.UserControls.PlayListUserControl";
+            _typeNameTable[64] = "PRSapp.UWP.UserControls.SaveControl";
+            _typeNameTable[65] = "Views.UsrControls.UC_AddCreateTTS";
 
-            _typeTable = new global::System.Type[65];
+            _typeTable = new global::System.Type[66];
             _typeTable[0] = typeof(global::PRSapp.UWP.ColorThemes);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
@@ -269,59 +270,60 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
             _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[10] = typeof(global::System.String);
             _typeTable[11] = typeof(global::System.Int32);
-            _typeTable[12] = typeof(global::PRSapp.UWP.MainPage);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[14] = typeof(global::System.Collections.Generic.List<global::PRSapp.Model.Title>);
-            _typeTable[15] = typeof(global::PRSapp.Model.Title);
-            _typeTable[16] = typeof(global::PRSapp.Model.User);
-            _typeTable[17] = typeof(global::PRSapp.UWP.PagesPhone.appAboutPage);
-            _typeTable[18] = typeof(global::PRSapp.UWP.PagesPhone.AppCopyWritePage);
-            _typeTable[19] = typeof(global::PRSapp.UWP.PagesPhone.AppCreateUserNamePage);
-            _typeTable[20] = typeof(global::PRSapp.UWP.PagesPhone.AppDemoPage);
-            _typeTable[21] = typeof(global::PRSapp.UWP.PagesPhone.AppHelpPage);
-            _typeTable[22] = typeof(global::PRSapp.UWP.PagesPhone.AppProfilePage);
-            _typeTable[23] = typeof(global::PRSapp.UWP.PagesPhone.AppResetPwdPage);
-            _typeTable[24] = typeof(global::PRSapp.UWP.PagesPhone.AppResetUserNamePage);
-            _typeTable[25] = typeof(global::PRSapp.UWP.PagesPhone.AppSettingsOverViewPage);
-            _typeTable[26] = typeof(global::PRSapp.UWP.PagesPhone.AppSplashPage);
-            _typeTable[27] = typeof(global::PRSapp.UWP.PagesPhone.App3SignInPage);
-            _typeTable[28] = typeof(global::PRSapp.UWP.Pages.AddOrCreatePage);
-            _typeTable[29] = typeof(global::PRSapp.UWP.Pages.AddPlayListPage);
-            _typeTable[30] = typeof(global::PRSapp.UWP.Pages.AppFxs_PlayList_Titles);
-            _typeTable[31] = typeof(global::PRSapp.UWP.Pages.AppSignedOutPage);
-            _typeTable[32] = typeof(global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2);
-            _typeTable[33] = typeof(global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl);
-            _typeTable[34] = typeof(global::PRSapp.UWP.UserControls.MainTimeLineUserControl);
-            _typeTable[35] = typeof(global::PRSapp.UWP.Pages.ColorThemesPage);
-            _typeTable[36] = typeof(global::PRSapp.UWP.Pages.QnAPage);
-            _typeTable[37] = typeof(global::PRSapp.UWP.UserControls.ListUserControl);
-            _typeTable[38] = typeof(global::PRSapp.UWP.Pages.DayPage);
-            _typeTable[39] = typeof(global::PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage);
-            _typeTable[40] = typeof(global::PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc);
-            _typeTable[41] = typeof(global::PRSapp.UWP.Pages.PlayListsPage);
-            _typeTable[42] = typeof(global::PRSapp.UWP.Pages.Template3Col3Row640x360);
-            _typeTable[43] = typeof(global::PRSapp.UWP.UserControls.CreateTtsLargeUserControl);
-            _typeTable[44] = typeof(global::PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page);
-            _typeTable[45] = typeof(global::PRSapp.UWP.UserControls.AddChooseMenuUserControl);
-            _typeTable[46] = typeof(global::PRSapp.UWP.ViewModels.TimeViewModel);
-            _typeTable[47] = typeof(global::Windows.UI.Xaml.Controls.MediaElement);
-            _typeTable[48] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[49] = typeof(global::System.Boolean);
-            _typeTable[50] = typeof(global::System.DateTime);
-            _typeTable[51] = typeof(global::System.ValueType);
-            _typeTable[52] = typeof(global::System.TimeSpan);
-            _typeTable[53] = typeof(global::PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter);
-            _typeTable[54] = typeof(global::PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem);
-            _typeTable[55] = typeof(global::Views.UsrControls.UC_Mood);
-            _typeTable[56] = typeof(global::Views.UsrControls.UC_PlayGroup);
-            _typeTable[57] = typeof(global::PRSapp.UWP.UserControls.AppFx.UC_TMinus30);
-            _typeTable[58] = typeof(global::PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl);
-            _typeTable[59] = typeof(global::PRSapp.UWP.UserControls.DetailsUserControl);
-            _typeTable[60] = typeof(global::PRSapp.UWP.UserControls.Nested.AddCreateUserControl);
-            _typeTable[61] = typeof(global::PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl);
-            _typeTable[62] = typeof(global::PRSapp.UWP.UserControls.PlayListUserControl);
-            _typeTable[63] = typeof(global::PRSapp.UWP.UserControls.SaveControl);
-            _typeTable[64] = typeof(global::Views.UsrControls.UC_AddCreateTTS);
+            _typeTable[12] = typeof(global::PRSapp.UWP.UserControls.AppFx.UC_TMinus30);
+            _typeTable[13] = typeof(global::PRSapp.UWP.MainPage);
+            _typeTable[14] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[15] = typeof(global::System.Collections.Generic.List<global::PRSapp.Model.Title>);
+            _typeTable[16] = typeof(global::PRSapp.Model.Title);
+            _typeTable[17] = typeof(global::PRSapp.Model.User);
+            _typeTable[18] = typeof(global::PRSapp.UWP.PagesPhone.appAboutPage);
+            _typeTable[19] = typeof(global::PRSapp.UWP.PagesPhone.AppCopyWritePage);
+            _typeTable[20] = typeof(global::PRSapp.UWP.PagesPhone.AppCreateUserNamePage);
+            _typeTable[21] = typeof(global::PRSapp.UWP.PagesPhone.AppDemoPage);
+            _typeTable[22] = typeof(global::PRSapp.UWP.PagesPhone.AppHelpPage);
+            _typeTable[23] = typeof(global::PRSapp.UWP.PagesPhone.AppProfilePage);
+            _typeTable[24] = typeof(global::PRSapp.UWP.PagesPhone.AppResetPwdPage);
+            _typeTable[25] = typeof(global::PRSapp.UWP.PagesPhone.AppResetUserNamePage);
+            _typeTable[26] = typeof(global::PRSapp.UWP.PagesPhone.AppSettingsOverViewPage);
+            _typeTable[27] = typeof(global::PRSapp.UWP.PagesPhone.AppSplashPage);
+            _typeTable[28] = typeof(global::PRSapp.UWP.PagesPhone.App3SignInPage);
+            _typeTable[29] = typeof(global::PRSapp.UWP.Pages.AddOrCreatePage);
+            _typeTable[30] = typeof(global::PRSapp.UWP.Pages.AddPlayListPage);
+            _typeTable[31] = typeof(global::PRSapp.UWP.Pages.AppFxs_PlayList_Titles);
+            _typeTable[32] = typeof(global::PRSapp.UWP.Pages.AppSignedOutPage);
+            _typeTable[33] = typeof(global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2);
+            _typeTable[34] = typeof(global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl);
+            _typeTable[35] = typeof(global::PRSapp.UWP.UserControls.MainTimeLineUserControl);
+            _typeTable[36] = typeof(global::PRSapp.UWP.Pages.ColorThemesPage);
+            _typeTable[37] = typeof(global::PRSapp.UWP.Pages.PageParmPass1);
+            _typeTable[38] = typeof(global::PRSapp.UWP.Pages.QnAPage);
+            _typeTable[39] = typeof(global::PRSapp.UWP.UserControls.ListUserControl);
+            _typeTable[40] = typeof(global::PRSapp.UWP.Pages.DayPage);
+            _typeTable[41] = typeof(global::PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage);
+            _typeTable[42] = typeof(global::PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc);
+            _typeTable[43] = typeof(global::PRSapp.UWP.Pages.PlayListsPage);
+            _typeTable[44] = typeof(global::PRSapp.UWP.Pages.Template3Col3Row640x360);
+            _typeTable[45] = typeof(global::PRSapp.UWP.UserControls.CreateTtsLargeUserControl);
+            _typeTable[46] = typeof(global::PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page);
+            _typeTable[47] = typeof(global::PRSapp.UWP.UserControls.AddChooseMenuUserControl);
+            _typeTable[48] = typeof(global::PRSapp.UWP.ViewModels.TimeViewModel);
+            _typeTable[49] = typeof(global::Windows.UI.Xaml.Controls.MediaElement);
+            _typeTable[50] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[51] = typeof(global::System.Boolean);
+            _typeTable[52] = typeof(global::System.DateTime);
+            _typeTable[53] = typeof(global::System.ValueType);
+            _typeTable[54] = typeof(global::System.TimeSpan);
+            _typeTable[55] = typeof(global::PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter);
+            _typeTable[56] = typeof(global::PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem);
+            _typeTable[57] = typeof(global::Views.UsrControls.UC_Mood);
+            _typeTable[58] = typeof(global::Views.UsrControls.UC_PlayGroup);
+            _typeTable[59] = typeof(global::PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl);
+            _typeTable[60] = typeof(global::PRSapp.UWP.UserControls.DetailsUserControl);
+            _typeTable[61] = typeof(global::PRSapp.UWP.UserControls.Nested.AddCreateUserControl);
+            _typeTable[62] = typeof(global::PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl);
+            _typeTable[63] = typeof(global::PRSapp.UWP.UserControls.PlayListUserControl);
+            _typeTable[64] = typeof(global::PRSapp.UWP.UserControls.SaveControl);
+            _typeTable[65] = typeof(global::Views.UsrControls.UC_AddCreateTTS);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -359,53 +361,54 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
         private object Activate_0_ColorThemes() { return new global::PRSapp.UWP.ColorThemes(); }
         private object Activate_3_ViewModelBase() { return new global::PRSapp.UWP.ViewModels.ViewModelBase(); }
         private object Activate_8_MentPrepRepeaterUserControl() { return new global::PRSapp.UWP.UserControls.AppFx.MentPrepRepeaterUserControl(); }
-        private object Activate_12_MainPage() { return new global::PRSapp.UWP.MainPage(); }
-        private object Activate_14_List() { return new global::System.Collections.Generic.List<global::PRSapp.Model.Title>(); }
-        private object Activate_15_Title() { return new global::PRSapp.Model.Title(); }
-        private object Activate_16_User() { return new global::PRSapp.Model.User(); }
-        private object Activate_17_appAboutPage() { return new global::PRSapp.UWP.PagesPhone.appAboutPage(); }
-        private object Activate_18_AppCopyWritePage() { return new global::PRSapp.UWP.PagesPhone.AppCopyWritePage(); }
-        private object Activate_19_AppCreateUserNamePage() { return new global::PRSapp.UWP.PagesPhone.AppCreateUserNamePage(); }
-        private object Activate_20_AppDemoPage() { return new global::PRSapp.UWP.PagesPhone.AppDemoPage(); }
-        private object Activate_21_AppHelpPage() { return new global::PRSapp.UWP.PagesPhone.AppHelpPage(); }
-        private object Activate_22_AppProfilePage() { return new global::PRSapp.UWP.PagesPhone.AppProfilePage(); }
-        private object Activate_23_AppResetPwdPage() { return new global::PRSapp.UWP.PagesPhone.AppResetPwdPage(); }
-        private object Activate_24_AppResetUserNamePage() { return new global::PRSapp.UWP.PagesPhone.AppResetUserNamePage(); }
-        private object Activate_25_AppSettingsOverViewPage() { return new global::PRSapp.UWP.PagesPhone.AppSettingsOverViewPage(); }
-        private object Activate_26_AppSplashPage() { return new global::PRSapp.UWP.PagesPhone.AppSplashPage(); }
-        private object Activate_27_App3SignInPage() { return new global::PRSapp.UWP.PagesPhone.App3SignInPage(); }
-        private object Activate_28_AddOrCreatePage() { return new global::PRSapp.UWP.Pages.AddOrCreatePage(); }
-        private object Activate_29_AddPlayListPage() { return new global::PRSapp.UWP.Pages.AddPlayListPage(); }
-        private object Activate_30_AppFxs_PlayList_Titles() { return new global::PRSapp.UWP.Pages.AppFxs_PlayList_Titles(); }
-        private object Activate_31_AppSignedOutPage() { return new global::PRSapp.UWP.Pages.AppSignedOutPage(); }
-        private object Activate_32_RepeaterUserControl2() { return new global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2(); }
-        private object Activate_33_RepeaterUserControl() { return new global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl(); }
-        private object Activate_34_MainTimeLineUserControl() { return new global::PRSapp.UWP.UserControls.MainTimeLineUserControl(); }
-        private object Activate_35_ColorThemesPage() { return new global::PRSapp.UWP.Pages.ColorThemesPage(); }
-        private object Activate_36_QnAPage() { return new global::PRSapp.UWP.Pages.QnAPage(); }
-        private object Activate_37_ListUserControl() { return new global::PRSapp.UWP.UserControls.ListUserControl(); }
-        private object Activate_38_DayPage() { return new global::PRSapp.UWP.Pages.DayPage(); }
-        private object Activate_39_DragDropImgsExplorToListViewPage() { return new global::PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage(); }
-        private object Activate_40_DTLuc_N_CreateTTSuc() { return new global::PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc(); }
-        private object Activate_41_PlayListsPage() { return new global::PRSapp.UWP.Pages.PlayListsPage(); }
-        private object Activate_42_Template3Col3Row640x360() { return new global::PRSapp.UWP.Pages.Template3Col3Row640x360(); }
-        private object Activate_43_CreateTtsLargeUserControl() { return new global::PRSapp.UWP.UserControls.CreateTtsLargeUserControl(); }
-        private object Activate_44_TimeLines_n_CreateBig_Page() { return new global::PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page(); }
-        private object Activate_45_AddChooseMenuUserControl() { return new global::PRSapp.UWP.UserControls.AddChooseMenuUserControl(); }
-        private object Activate_46_TimeViewModel() { return new global::PRSapp.UWP.ViewModels.TimeViewModel(); }
-        private object Activate_53_DateTimeToDateTimeOffsetConverter() { return new global::PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter(); }
-        private object Activate_54_UC_Edit_Core_PlayItem() { return new global::PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem(); }
-        private object Activate_55_UC_Mood() { return new global::Views.UsrControls.UC_Mood(); }
-        private object Activate_56_UC_PlayGroup() { return new global::Views.UsrControls.UC_PlayGroup(); }
-        private object Activate_57_UC_TMinus30() { return new global::PRSapp.UWP.UserControls.AppFx.UC_TMinus30(); }
-        private object Activate_58_AddChooseExistOrCreateUserControl() { return new global::PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl(); }
-        private object Activate_59_DetailsUserControl() { return new global::PRSapp.UWP.UserControls.DetailsUserControl(); }
-        private object Activate_60_AddCreateUserControl() { return new global::PRSapp.UWP.UserControls.Nested.AddCreateUserControl(); }
-        private object Activate_61_AddExistingFileUserControl() { return new global::PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl(); }
-        private object Activate_62_PlayListUserControl() { return new global::PRSapp.UWP.UserControls.PlayListUserControl(); }
-        private object Activate_63_SaveControl() { return new global::PRSapp.UWP.UserControls.SaveControl(); }
-        private object Activate_64_UC_AddCreateTTS() { return new global::Views.UsrControls.UC_AddCreateTTS(); }
-        private void VectorAdd_14_List(object instance, object item)
+        private object Activate_12_UC_TMinus30() { return new global::PRSapp.UWP.UserControls.AppFx.UC_TMinus30(); }
+        private object Activate_13_MainPage() { return new global::PRSapp.UWP.MainPage(); }
+        private object Activate_15_List() { return new global::System.Collections.Generic.List<global::PRSapp.Model.Title>(); }
+        private object Activate_16_Title() { return new global::PRSapp.Model.Title(); }
+        private object Activate_17_User() { return new global::PRSapp.Model.User(); }
+        private object Activate_18_appAboutPage() { return new global::PRSapp.UWP.PagesPhone.appAboutPage(); }
+        private object Activate_19_AppCopyWritePage() { return new global::PRSapp.UWP.PagesPhone.AppCopyWritePage(); }
+        private object Activate_20_AppCreateUserNamePage() { return new global::PRSapp.UWP.PagesPhone.AppCreateUserNamePage(); }
+        private object Activate_21_AppDemoPage() { return new global::PRSapp.UWP.PagesPhone.AppDemoPage(); }
+        private object Activate_22_AppHelpPage() { return new global::PRSapp.UWP.PagesPhone.AppHelpPage(); }
+        private object Activate_23_AppProfilePage() { return new global::PRSapp.UWP.PagesPhone.AppProfilePage(); }
+        private object Activate_24_AppResetPwdPage() { return new global::PRSapp.UWP.PagesPhone.AppResetPwdPage(); }
+        private object Activate_25_AppResetUserNamePage() { return new global::PRSapp.UWP.PagesPhone.AppResetUserNamePage(); }
+        private object Activate_26_AppSettingsOverViewPage() { return new global::PRSapp.UWP.PagesPhone.AppSettingsOverViewPage(); }
+        private object Activate_27_AppSplashPage() { return new global::PRSapp.UWP.PagesPhone.AppSplashPage(); }
+        private object Activate_28_App3SignInPage() { return new global::PRSapp.UWP.PagesPhone.App3SignInPage(); }
+        private object Activate_29_AddOrCreatePage() { return new global::PRSapp.UWP.Pages.AddOrCreatePage(); }
+        private object Activate_30_AddPlayListPage() { return new global::PRSapp.UWP.Pages.AddPlayListPage(); }
+        private object Activate_31_AppFxs_PlayList_Titles() { return new global::PRSapp.UWP.Pages.AppFxs_PlayList_Titles(); }
+        private object Activate_32_AppSignedOutPage() { return new global::PRSapp.UWP.Pages.AppSignedOutPage(); }
+        private object Activate_33_RepeaterUserControl2() { return new global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2(); }
+        private object Activate_34_RepeaterUserControl() { return new global::PRSapp.UWP.UserControls.AppFx.RepeaterUserControl(); }
+        private object Activate_35_MainTimeLineUserControl() { return new global::PRSapp.UWP.UserControls.MainTimeLineUserControl(); }
+        private object Activate_36_ColorThemesPage() { return new global::PRSapp.UWP.Pages.ColorThemesPage(); }
+        private object Activate_37_PageParmPass1() { return new global::PRSapp.UWP.Pages.PageParmPass1(); }
+        private object Activate_38_QnAPage() { return new global::PRSapp.UWP.Pages.QnAPage(); }
+        private object Activate_39_ListUserControl() { return new global::PRSapp.UWP.UserControls.ListUserControl(); }
+        private object Activate_40_DayPage() { return new global::PRSapp.UWP.Pages.DayPage(); }
+        private object Activate_41_DragDropImgsExplorToListViewPage() { return new global::PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage(); }
+        private object Activate_42_DTLuc_N_CreateTTSuc() { return new global::PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc(); }
+        private object Activate_43_PlayListsPage() { return new global::PRSapp.UWP.Pages.PlayListsPage(); }
+        private object Activate_44_Template3Col3Row640x360() { return new global::PRSapp.UWP.Pages.Template3Col3Row640x360(); }
+        private object Activate_45_CreateTtsLargeUserControl() { return new global::PRSapp.UWP.UserControls.CreateTtsLargeUserControl(); }
+        private object Activate_46_TimeLines_n_CreateBig_Page() { return new global::PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page(); }
+        private object Activate_47_AddChooseMenuUserControl() { return new global::PRSapp.UWP.UserControls.AddChooseMenuUserControl(); }
+        private object Activate_48_TimeViewModel() { return new global::PRSapp.UWP.ViewModels.TimeViewModel(); }
+        private object Activate_55_DateTimeToDateTimeOffsetConverter() { return new global::PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter(); }
+        private object Activate_56_UC_Edit_Core_PlayItem() { return new global::PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem(); }
+        private object Activate_57_UC_Mood() { return new global::Views.UsrControls.UC_Mood(); }
+        private object Activate_58_UC_PlayGroup() { return new global::Views.UsrControls.UC_PlayGroup(); }
+        private object Activate_59_AddChooseExistOrCreateUserControl() { return new global::PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl(); }
+        private object Activate_60_DetailsUserControl() { return new global::PRSapp.UWP.UserControls.DetailsUserControl(); }
+        private object Activate_61_AddCreateUserControl() { return new global::PRSapp.UWP.UserControls.Nested.AddCreateUserControl(); }
+        private object Activate_62_AddExistingFileUserControl() { return new global::PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl(); }
+        private object Activate_63_PlayListUserControl() { return new global::PRSapp.UWP.UserControls.PlayListUserControl(); }
+        private object Activate_64_SaveControl() { return new global::PRSapp.UWP.UserControls.SaveControl(); }
+        private object Activate_65_UC_AddCreateTTS() { return new global::Views.UsrControls.UC_AddCreateTTS(); }
+        private void VectorAdd_15_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::PRSapp.Model.Title>)instance;
             var newItem = (global::PRSapp.Model.Title)item;
@@ -497,9 +500,16 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  PRSapp.UWP.MainPage
+            case 12:   //  PRSapp.UWP.UserControls.AppFx.UC_TMinus30
+                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_12_UC_TMinus30;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  PRSapp.UWP.MainPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_MainPage;
+                userType.Activator = Activate_13_MainPage;
                 userType.AddMemberName("CurrentUserName");
                 userType.AddMemberName("CurrentUserId");
                 userType.AddMemberName("SelectedTitleId");
@@ -511,20 +521,20 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 13:   //  Windows.UI.Xaml.Controls.Page
+            case 14:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  System.Collections.Generic.List`1<PRSapp.Model.Title>
+            case 15:   //  System.Collections.Generic.List`1<PRSapp.Model.Title>
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_14_List;
+                userType.CollectionAdd = VectorAdd_15_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 15:   //  PRSapp.Model.Title
+            case 16:   //  PRSapp.Model.Title
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_15_Title;
+                userType.Activator = Activate_16_Title;
                 userType.AddMemberName("TitleId");
                 userType.AddMemberName("TitleName");
                 userType.AddMemberName("TtsRaw");
@@ -534,120 +544,120 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 16:   //  PRSapp.Model.User
+            case 17:   //  PRSapp.Model.User
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 17:   //  PRSapp.UWP.PagesPhone.appAboutPage
+            case 18:   //  PRSapp.UWP.PagesPhone.appAboutPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_appAboutPage;
+                userType.Activator = Activate_18_appAboutPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  PRSapp.UWP.PagesPhone.AppCopyWritePage
+            case 19:   //  PRSapp.UWP.PagesPhone.AppCopyWritePage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_AppCopyWritePage;
+                userType.Activator = Activate_19_AppCopyWritePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  PRSapp.UWP.PagesPhone.AppCreateUserNamePage
+            case 20:   //  PRSapp.UWP.PagesPhone.AppCreateUserNamePage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_19_AppCreateUserNamePage;
+                userType.Activator = Activate_20_AppCreateUserNamePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  PRSapp.UWP.PagesPhone.AppDemoPage
+            case 21:   //  PRSapp.UWP.PagesPhone.AppDemoPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_20_AppDemoPage;
+                userType.Activator = Activate_21_AppDemoPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  PRSapp.UWP.PagesPhone.AppHelpPage
+            case 22:   //  PRSapp.UWP.PagesPhone.AppHelpPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_AppHelpPage;
+                userType.Activator = Activate_22_AppHelpPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  PRSapp.UWP.PagesPhone.AppProfilePage
+            case 23:   //  PRSapp.UWP.PagesPhone.AppProfilePage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_22_AppProfilePage;
+                userType.Activator = Activate_23_AppProfilePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 23:   //  PRSapp.UWP.PagesPhone.AppResetPwdPage
+            case 24:   //  PRSapp.UWP.PagesPhone.AppResetPwdPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_23_AppResetPwdPage;
+                userType.Activator = Activate_24_AppResetPwdPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 24:   //  PRSapp.UWP.PagesPhone.AppResetUserNamePage
+            case 25:   //  PRSapp.UWP.PagesPhone.AppResetUserNamePage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_24_AppResetUserNamePage;
+                userType.Activator = Activate_25_AppResetUserNamePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 25:   //  PRSapp.UWP.PagesPhone.AppSettingsOverViewPage
+            case 26:   //  PRSapp.UWP.PagesPhone.AppSettingsOverViewPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_25_AppSettingsOverViewPage;
+                userType.Activator = Activate_26_AppSettingsOverViewPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 26:   //  PRSapp.UWP.PagesPhone.AppSplashPage
+            case 27:   //  PRSapp.UWP.PagesPhone.AppSplashPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_26_AppSplashPage;
+                userType.Activator = Activate_27_AppSplashPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 27:   //  PRSapp.UWP.PagesPhone.App3SignInPage
+            case 28:   //  PRSapp.UWP.PagesPhone.App3SignInPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_27_App3SignInPage;
+                userType.Activator = Activate_28_App3SignInPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 28:   //  PRSapp.UWP.Pages.AddOrCreatePage
+            case 29:   //  PRSapp.UWP.Pages.AddOrCreatePage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_28_AddOrCreatePage;
+                userType.Activator = Activate_29_AddOrCreatePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  PRSapp.UWP.Pages.AddPlayListPage
+            case 30:   //  PRSapp.UWP.Pages.AddPlayListPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_29_AddPlayListPage;
+                userType.Activator = Activate_30_AddPlayListPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 30:   //  PRSapp.UWP.Pages.AppFxs_PlayList_Titles
+            case 31:   //  PRSapp.UWP.Pages.AppFxs_PlayList_Titles
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_30_AppFxs_PlayList_Titles;
+                userType.Activator = Activate_31_AppFxs_PlayList_Titles;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 31:   //  PRSapp.UWP.Pages.AppSignedOutPage
+            case 32:   //  PRSapp.UWP.Pages.AppSignedOutPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_AppSignedOutPage;
+                userType.Activator = Activate_32_AppSignedOutPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2
+            case 33:   //  PRSapp.UWP.UserControls.AppFx.RepeaterUserControl2
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_32_RepeaterUserControl2;
+                userType.Activator = Activate_33_RepeaterUserControl2;
                 userType.AddMemberName("CurrentUserName");
                 userType.AddMemberName("CurrentUserId");
                 userType.AddMemberName("SelectedTitleId");
@@ -658,9 +668,9 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 33:   //  PRSapp.UWP.UserControls.AppFx.RepeaterUserControl
+            case 34:   //  PRSapp.UWP.UserControls.AppFx.RepeaterUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_33_RepeaterUserControl;
+                userType.Activator = Activate_34_RepeaterUserControl;
                 userType.AddMemberName("CurrentUserName");
                 userType.AddMemberName("CurrentUserId");
                 userType.AddMemberName("SelectedTitleId");
@@ -671,30 +681,37 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 34:   //  PRSapp.UWP.UserControls.MainTimeLineUserControl
+            case 35:   //  PRSapp.UWP.UserControls.MainTimeLineUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_34_MainTimeLineUserControl;
+                userType.Activator = Activate_35_MainTimeLineUserControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 35:   //  PRSapp.UWP.Pages.ColorThemesPage
+            case 36:   //  PRSapp.UWP.Pages.ColorThemesPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_35_ColorThemesPage;
+                userType.Activator = Activate_36_ColorThemesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 36:   //  PRSapp.UWP.Pages.QnAPage
+            case 37:   //  PRSapp.UWP.Pages.PageParmPass1
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_36_QnAPage;
+                userType.Activator = Activate_37_PageParmPass1;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 37:   //  PRSapp.UWP.UserControls.ListUserControl
+            case 38:   //  PRSapp.UWP.Pages.QnAPage
+                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_38_QnAPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 39:   //  PRSapp.UWP.UserControls.ListUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_37_ListUserControl;
+                userType.Activator = Activate_39_ListUserControl;
                 userType.AddMemberName("CurrentUserName");
                 userType.AddMemberName("CurrentUserId");
                 userType.AddMemberName("SelectedTitleId");
@@ -705,58 +722,44 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 38:   //  PRSapp.UWP.Pages.DayPage
+            case 40:   //  PRSapp.UWP.Pages.DayPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_38_DayPage;
+                userType.Activator = Activate_40_DayPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage
+            case 41:   //  PRSapp.UWP.Pages.DragDropImgsExplorToListViewPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_39_DragDropImgsExplorToListViewPage;
+                userType.Activator = Activate_41_DragDropImgsExplorToListViewPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 40:   //  PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc
+            case 42:   //  PRSapp.UWP.Pages.DTLuc_N_CreateTTSuc
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_40_DTLuc_N_CreateTTSuc;
+                userType.Activator = Activate_42_DTLuc_N_CreateTTSuc;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 41:   //  PRSapp.UWP.Pages.PlayListsPage
+            case 43:   //  PRSapp.UWP.Pages.PlayListsPage
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_41_PlayListsPage;
+                userType.Activator = Activate_43_PlayListsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 42:   //  PRSapp.UWP.Pages.Template3Col3Row640x360
+            case 44:   //  PRSapp.UWP.Pages.Template3Col3Row640x360
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_42_Template3Col3Row640x360;
+                userType.Activator = Activate_44_Template3Col3Row640x360;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 43:   //  PRSapp.UWP.UserControls.CreateTtsLargeUserControl
+            case 45:   //  PRSapp.UWP.UserControls.CreateTtsLargeUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_43_CreateTtsLargeUserControl;
-                userType.AddMemberName("CurrentUserName");
-                userType.AddMemberName("CurrentUserId");
-                userType.AddMemberName("SelectedTitleId");
-                userType.AddMemberName("EditTitleId");
-                userType.AddMemberName("DeleteTitleId");
-                userType.AddMemberName("TitleListIds");
-                userType.AddMemberName("SpeechInputResult");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 44:   //  PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page
-                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_44_TimeLines_n_CreateBig_Page;
+                userType.Activator = Activate_45_CreateTtsLargeUserControl;
                 userType.AddMemberName("CurrentUserName");
                 userType.AddMemberName("CurrentUserId");
                 userType.AddMemberName("SelectedTitleId");
@@ -768,16 +771,30 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 45:   //  PRSapp.UWP.UserControls.AddChooseMenuUserControl
-                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_45_AddChooseMenuUserControl;
+            case 46:   //  PRSapp.UWP.Pages.TimeLines_n_CreateBig_Page
+                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_46_TimeLines_n_CreateBig_Page;
+                userType.AddMemberName("CurrentUserName");
+                userType.AddMemberName("CurrentUserId");
+                userType.AddMemberName("SelectedTitleId");
+                userType.AddMemberName("EditTitleId");
+                userType.AddMemberName("DeleteTitleId");
+                userType.AddMemberName("TitleListIds");
+                userType.AddMemberName("SpeechInputResult");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 46:   //  PRSapp.UWP.ViewModels.TimeViewModel
+            case 47:   //  PRSapp.UWP.UserControls.AddChooseMenuUserControl
+                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_47_AddChooseMenuUserControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 48:   //  PRSapp.UWP.ViewModels.TimeViewModel
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_46_TimeViewModel;
+                userType.Activator = Activate_48_TimeViewModel;
                 userType.AddMemberName("uiMediaElement");
                 userType.AddMemberName("Path");
                 userType.AddMemberName("FileName");
@@ -823,117 +840,110 @@ namespace PRSapp.UWP.PRSapp_UWP_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 47:   //  Windows.UI.Xaml.Controls.MediaElement
+            case 49:   //  Windows.UI.Xaml.Controls.MediaElement
                 xamlType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 48:   //  System.Windows.Input.ICommand
+            case 50:   //  System.Windows.Input.ICommand
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 49:   //  Boolean
+            case 51:   //  Boolean
                 xamlType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 50:   //  System.DateTime
+            case 52:   //  System.DateTime
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 51:   //  System.ValueType
+            case 53:   //  System.ValueType
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 52:   //  TimeSpan
+            case 54:   //  TimeSpan
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 53:   //  PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter
+            case 55:   //  PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_53_DateTimeToDateTimeOffsetConverter;
+                userType.Activator = Activate_55_DateTimeToDateTimeOffsetConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 54:   //  PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem
+            case 56:   //  PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_54_UC_Edit_Core_PlayItem;
+                userType.Activator = Activate_56_UC_Edit_Core_PlayItem;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 55:   //  Views.UsrControls.UC_Mood
+            case 57:   //  Views.UsrControls.UC_Mood
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_55_UC_Mood;
+                userType.Activator = Activate_57_UC_Mood;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 56:   //  Views.UsrControls.UC_PlayGroup
+            case 58:   //  Views.UsrControls.UC_PlayGroup
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_56_UC_PlayGroup;
+                userType.Activator = Activate_58_UC_PlayGroup;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 57:   //  PRSapp.UWP.UserControls.AppFx.UC_TMinus30
+            case 59:   //  PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_57_UC_TMinus30;
+                userType.Activator = Activate_59_AddChooseExistOrCreateUserControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 58:   //  PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl
+            case 60:   //  PRSapp.UWP.UserControls.DetailsUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_58_AddChooseExistOrCreateUserControl;
+                userType.Activator = Activate_60_DetailsUserControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 59:   //  PRSapp.UWP.UserControls.DetailsUserControl
+            case 61:   //  PRSapp.UWP.UserControls.Nested.AddCreateUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_59_DetailsUserControl;
+                userType.Activator = Activate_61_AddCreateUserControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 60:   //  PRSapp.UWP.UserControls.Nested.AddCreateUserControl
+            case 62:   //  PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_60_AddCreateUserControl;
+                userType.Activator = Activate_62_AddExistingFileUserControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 61:   //  PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl
-                userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_61_AddExistingFileUserControl;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 62:   //  PRSapp.UWP.UserControls.PlayListUserControl
+            case 63:   //  PRSapp.UWP.UserControls.PlayListUserControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_62_PlayListUserControl;
+                userType.Activator = Activate_63_PlayListUserControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 63:   //  PRSapp.UWP.UserControls.SaveControl
+            case 64:   //  PRSapp.UWP.UserControls.SaveControl
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_63_SaveControl;
+                userType.Activator = Activate_64_SaveControl;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  Views.UsrControls.UC_AddCreateTTS
+            case 65:   //  Views.UsrControls.UC_AddCreateTTS
                 userType = new global::PRSapp.UWP.PRSapp_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_64_UC_AddCreateTTS;
+                userType.Activator = Activate_65_UC_AddCreateTTS;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

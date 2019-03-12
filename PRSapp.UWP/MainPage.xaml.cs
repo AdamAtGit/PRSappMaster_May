@@ -1524,6 +1524,11 @@ namespace PRSapp.UWP
         {
 
         }
+
+        private void BtnNavToPageParmPass1_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Pages.PageParmPass1), SignInUserLogin.Text);
+        }
     }
     /////Ends MainPage partial Class and starts a static 'Top Level'(non-nested) class in same NameSpace
     //This below static class is an extension method for MediaElement

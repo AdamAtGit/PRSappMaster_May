@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested">
-    <!--RepeaterUserControl 2-->
+    <!--RepeaterUserControl 2-->         
     <Grid Height="640" Width="360" Background="#6a6a6a">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -60,8 +60,8 @@
 
         <!--3rd row-->
         <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <AppBarButton x:ConnectionId='11'  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
-                                                               
+            <AppBarButton x:ConnectionId='11'  x:Name="BtnRepeatMediaOutAsync2" Label="Play" Icon="play"                    
+                                                                Tag="PlayRepeaterUC2"
                            Margin="0 0 0 10" Height="54"/>
             <AppBarButton x:ConnectionId='12'  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
                                                                        
