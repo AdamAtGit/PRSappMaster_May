@@ -292,7 +292,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
-                        await SpeakTextAsync(ttsRaw, UIMediaElement);
+                        await SpeakTextAsync(ttsRaw, MediaElementPrompter);
                     }
                     catch (Exception ex)
                     {
@@ -326,7 +326,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
-                        await SpeakTextAsync(ttsRaw, UIMediaElement);
+                        await SpeakTextAsync(ttsRaw, MediaElementPrompter);
                     }
                     catch (Exception ex)
                     {
@@ -414,7 +414,12 @@ namespace PRSapp.UWP.UserControls.AppFx
             }
             return (stream);
         }
-
+        
+        
+        
+        
+        
+        //ARS- change to MediaElementPrompter
         async Task SpeakTextAsync(string text, MediaElement mediaElement)
         {
            
@@ -429,7 +434,12 @@ namespace PRSapp.UWP.UserControls.AppFx
             //}
             //   IRandomAccessStream stream = await this.SynthesizeTextToSpeechAsync(text);
             IRandomAccessStream stream = await SynthesizeTextToSpeechAsync(text);
+            
+            
 
+
+
+            //ARS- change to MediaElementPrompter
             await mediaElement.Play_Stream_Async(stream, true);
         
         }
@@ -483,36 +493,53 @@ private async void BtnSpeechRecogWeatherSearchAsync_Click(object sender, RoutedE
 }
 }
 }
-////This below static class is an extension method for MediaElement
-//public static class RepeaterUCMediaElementExtensions
-//{
+//This below static class is an extension method for MediaElement
+public static class RepeaterUCMediaElementExtensions
+{
+   
+    
+    //ARS- change to MediaElementPrompter
+    public static object MediaElement { get; internal set; }
 
-//    public static object MediaElement { get; internal set; }
-//    public static async Task Play_Stream_Async(
-//      //? this MediaElement mediaElement,
-//      this MediaElement mediaElement,
-//      IRandomAccessStream stream,
-//      bool disposeStream = true)
-//    {
-//        // bool is irrelevant here, just using this to flag task completion.
-//        TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
+    
+    
+    
+    //ARS- change to MediaElementPrompter
+    public static async Task Play_Stream_Async(
+      //? this MediaElement mediaElement,
+      this MediaElement mediaElement,
+      IRandomAccessStream stream,
+      bool disposeStream = true)
+    {
+        // bool is irrelevant here, just using this to flag task completion.
+        TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
 
-//        // Note that the MediaElement needs to be in the UI tree for events
-//        // like MediaEnded to fire.
-//        RoutedEventHandler endOfPlayHandler = (s, e) =>
-//        {
-//            if (disposeStream)
-//            {
-//                stream.Dispose();
-//            }
-//            taskCompleted.SetResult(true);
-//        };
-//        mediaElement.MediaEnded += endOfPlayHandler;
+        // Note that the MediaElement needs to be in the UI tree for events
+        // like MediaEnded to fire.
+        RoutedEventHandler endOfPlayHandler = (s, e) =>
+        {
+            if (disposeStream)
+            {
+                stream.Dispose();
+            }
+            taskCompleted.SetResult(true);
+        };
+       
+        
+        
+        
+        //ARS- change to MediaElementPrompter
+        mediaElement.MediaEnded += endOfPlayHandler;
 
-//        mediaElement.SetSource(stream, string.Empty);
-//        mediaElement.Play();
+        mediaElement.SetSource(stream, string.Empty);
+        mediaElement.Play();
 
-//        await taskCompleted.Task;
-//        mediaElement.MediaEnded -= endOfPlayHandler;
-//    }
-//}
+        await taskCompleted.Task;
+       
+        
+        
+        
+        //ARS- change to MediaElementPrompter
+        mediaElement.MediaEnded -= endOfPlayHandler;
+    }
+}

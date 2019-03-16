@@ -222,6 +222,9 @@
     <Compile Include="UserControls\Nested\ClockUC.xaml.cs">
       <DependentUpon>ClockUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Nested\DateButtonUC.xaml.cs">
+      <DependentUpon>DateButtonUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Nested\DateUC.xaml.cs">
       <DependentUpon>DateUC.xaml</DependentUpon>
     </Compile>
@@ -627,6 +630,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Nested\ClockUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Nested\DateButtonUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

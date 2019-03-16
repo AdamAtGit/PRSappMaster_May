@@ -1,0 +1,39 @@
+﻿<UserControl
+    x:Class="PRSapp.UWP.UserControls.Nested.ClockUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.UserControls.Nested"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:vm="using:PRSapp.UWP.ViewModels"
+    xmlns:converters="using:PRSapp.UWP.ViewModels.Converters"
+    d:DesignHeight="45"
+    d:DesignWidth="165"
+    mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <vm:TimeViewModel/>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <vm:TimeViewModel x:Key="timeViewModel"/>
+        <converters:DateTimeToDateTimeOffsetConverter 
+            x:Key="dateTimeToDateTimeOffsetConverter"/>
+    </UserControl.Resources>
+
+    <StackPanel x:ConnectionId='2' x:Name="stpClock" Orientation="Horizontal" 
+                     Background="Black" Height="45" Width="165" 
+            DataContext="{Binding Source={StaticResource timeViewModel}}">
+        <TextBlock Text="{Binding CurrentTime}"
+                FontSize="26" Foreground="Ivory"
+                HorizontalAlignment="Center"
+                Height="45" Width="165" Margin="0,0,0,0"/>
+        <!--<DatePicker Date="{Binding SomeDateTime
+             ,Converter={StaticResource dateTimeToDateTimeOffsetConverter}
+             ,Mode=TwoWay}"                                                      
+                        Foreground="Ivory" FontSize="20"
+                        Width="Auto"
+                        Margin="80 5 0 0"/>-->
+    </StackPanel>
+</UserControl>
+

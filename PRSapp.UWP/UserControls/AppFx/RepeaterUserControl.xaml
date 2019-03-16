@@ -36,9 +36,10 @@
         <StackPanel Grid.Row="1" VerticalAlignment="Top"
                     HorizontalAlignment="Stretch" Background="#2a2a2a">
             <Button x:Name="btnRecognitionTtsRawBigAsync"
-                        Margin="0 8 0 0" HorizontalAlignment="Center"
-                        Height="Auto" Width="Auto"
-                        BorderBrush="DarkGray">
+                    HorizontalAlignment="Center"
+                    BorderBrush="DarkGray" 
+                    Height="Auto" Width="Auto" Margin="0 8 0 0"
+                    Visibility="Collapsed">
                 <Image x:Name="imgMicrophoneTapped"                      
                        Source="/Assets/Misc/Mic-Icon-Bl-03.png"               
                        Height="60" Width="60" Margin="0 0 0 0"/>
@@ -46,19 +47,23 @@
             <TextBlock x:Name="tbRecogStatus" FontSize="12.5"
                            Text="Tap Mic to start Dictating" Foreground="Ivory"
                            Margin="0,5,0,0"
-                           HorizontalAlignment="Center"/>
-            <TextBox x:Name="boxTtsRawBig" Height="230" Width="350"                  
+                           HorizontalAlignment="Center"
+                            Visibility="Collapsed"/>
+            <TextBox x:Name="boxTtsRawBig" Height="230" Width="350"
+                     Background="Black" Foreground="Ivory"
+                     FontSize="16"
                      TextWrapping="Wrap"
                      AcceptsReturn="True"
-                     IsReadOnly="False"
-                     Text= ""
+                     IsReadOnly="True"
+                     Text= "Prompt "
                      IsSpellCheckEnabled="True"
                      HorizontalAlignment="Center" VerticalAlignment="Top"
                      Margin="0 5"/>
             <!--PlaceholderText="Dictate and/or Type, Paste the Text to be Spoken!"-->
         </StackPanel>
         <!--3rd row-->
-        <StackPanel x:Name="stpPlayControls" Grid.Row="2" Orientation="Horizontal">
+        <StackPanel x:Name="stpPlayControls" Grid.Row="2" Orientation="Horizontal"
+                    Visibility="Visible">
             <AppBarButton  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
                            Click="BtnRepeatMediaOutAsync_Click" Tag="PlayRepeaterUC"
                            Margin="0 0 0 10" Height="54"/>
@@ -68,7 +73,7 @@
             <ToggleSwitch x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
             <TextBox x:Name="boxRepetitions" Text="10"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             <TextBox x:Name="boxInterval" Text="20" Header="   Intervals (Secs)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
-            <MediaElement x:Name="UIMediaElement"/>
+            <MediaElement x:Name="MediaElementPrompter"/>
         </StackPanel>
 
         <!--4th row-->

@@ -41,6 +41,7 @@
                     Grid.ColumnSpan="2" Background="Gray" 
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Margin="0,0,0,0">
+            
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="boxSignedInUser" FontSize="13"
                          Header="From MainPage" IsReadOnly="True" Margin="1,0"/>
@@ -67,20 +68,29 @@
                                         Width="566" Height="79" 
                                         Margin="-80,-11,0,0"/>-->
         </StackPanel>
-        <StackPanel x:Name="pan01" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-            <!--<uc:MainTimeLineUserControl  HorizontalAlignment="Center" Width="566" Height="79"/>-->
+
+        <StackPanel x:Name="pan10" Grid.Column="1" Grid.Row="0"
+                    HorizontalAlignment="Stretch" Margin="0,0,0,0"
+                    VerticalAlignment="Stretch">
+            <AppBarButton x:Name="BtnPlayController" FontSize="26"
+                          Icon="Play" Label="Run" Background="Ivory"
+                           Margin="120,2,0,0"/>
+
+        </StackPanel>
+        <StackPanel x:Name="pan01" Grid.Column="0" Grid.Row="1"
+                    HorizontalAlignment="Stretch" Margin="0,0,0,0"
+                    VerticalAlignment="Stretch">
+            <!--<uc:MainTimeLineUserControl  HorizontalAlignment="Center"
+            Width="566" Height="79"/>-->
             <ucappfx:RepeaterUserControl/>
         </StackPanel>
         <StackPanel x:Name="pan02" Grid.Column="0" Grid.Row="2" 
-                    Visibility="Collapsed" Background="DarkGray" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
-
-        <!-- 2nd Col -->
-        <StackPanel x:Name="pan10" Grid.Column="1" Grid.Row="0" 
-                     Visibility="Collapsed" Background="DarkGray"
-                    HorizontalAlignment="Stretch" Margin="0,0,0,0"
+                    Visibility="Collapsed" Background="DarkGray" 
+                    HorizontalAlignment="Stretch" Margin="0,0,0,0" 
                     VerticalAlignment="Stretch"/>
 
-
+        <!-- 2nd Col -->
+        
 
         <StackPanel x:Name="pan30" Grid.Column="3" Grid.Row="0" 
                     Background="Black" HorizontalAlignment="Stretch" 
@@ -93,30 +103,36 @@
         </StackPanel>
 
         <!-- 2nd Column -->
-        <StackPanel x:Name="pan11" Grid.Column="1" Grid.Row="1" 
-                    Grid.RowSpan="2" Background="Black"
+        <StackPanel x:Name="pan11" Grid.Column="1" Grid.Row="1" Orientation="Horizontal"
+                    Grid.RowSpan="1" Background="Ivory"
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0" VerticalAlignment="Stretch">
-
-            <!--<ucnested:AddExistingFileUserControl x:Name="AddExistingFileUserControl" Height="640" Width="360" 
-                                Visibility="Visible"
-                                Margin="0 25 0 0"/>-->
-
+            <ucnested:DateButtonUC x:Name="uChild" VerticalAlignment="Top"/>
+            <TextBox x:Name="boxPage1DateTime" 
+                     Text="Value" Header="from DateButtonUC" Margin="5,0" 
+                     VerticalAlignment="Top"/>
+            <!--<ucnested:AddExistingFileUserControl x:Name="AddExistingFileUserControl"
+                          Height="640" Width="360" 
+                          Margin="0 25 0 0" Visibility="Visible"/>-->
         </StackPanel>
 
         <!-- 3rd Col -->
         <StackPanel x:Name="pan20" Grid.Column="2" Grid.Row="0" 
-                    Background="Black" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+                    Background="Black" HorizontalAlignment="Stretch"
+                    Margin="0,0,0,0" VerticalAlignment="Stretch">
             <TextBlock x:Name="tbNaveInfo" Text="Rehearsal 2 Ready"
-                        FontSize="30" Foreground="Ivory"
+                       FontSize="30" Foreground="Ivory"
                        HorizontalAlignment="Center" VerticalAlignment="Center"
                        Margin="0 15 0 0"/>
         </StackPanel>
         <StackPanel x:Name="pan21" Grid.Column="2" Grid.Row="1" 
-                    Grid.RowSpan="2" Background="Black" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-            <ucappfx:RepeaterUserControl2 Height="640" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
-         
+                    Grid.RowSpan="2" Background="Black"
+                    HorizontalAlignment="Stretch"
+                    Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <ucappfx:RepeaterUserControl2 Height="640" 
+                                          HorizontalAlignment="Stretch" 
+                                          Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+
         </StackPanel>
-        
     </Grid>
 </Page>

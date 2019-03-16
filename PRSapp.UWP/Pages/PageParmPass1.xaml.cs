@@ -1,4 +1,5 @@
 ﻿using PRSapp.UWP.UserControls.AppFx;
+using PRSapp.UWP.UserControls.Nested;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -39,7 +40,6 @@ namespace PRSapp.UWP.Pages
             BtnPage1RepeatMediaOutAsync2.Click += repeaterUserControl2.BtnRepeatMediaOutAsync_Click;
         }
 
-
         private void NavBacktoMain_Click(object sender, RoutedEventArgs e)
         {
             if (Frame.CanGoBack)
@@ -55,6 +55,19 @@ namespace PRSapp.UWP.Pages
         {
             // base.OnNavigatedTo(e); 
             boxSignedInUser.Text = "Hi, " +  e.Parameter.ToString();
+
+
+            //\\ Code Set - Pass data from User Control to Parent page in Windows Phone 8.1
+            //Our main page will subscribe to the event that we created on the user control, 
+            //to get notification of when the event is fired on the user control.
+            uChild.GetDataFromChild += new DateButtonUC.ChildControlDelegate(UChild_GetDataFromChild);
+        }
+
+        //\\ Code Set - Pass data from User Control to Parent page in Windows Phone 8.1
+        private void UChild_GetDataFromChild(DateTime dtCurrentDateTime)
+        {
+            DateTime dt = dtCurrentDateTime;
+            boxPage1DateTime.Text = dt.ToShortTimeString();
         }
 
     }
