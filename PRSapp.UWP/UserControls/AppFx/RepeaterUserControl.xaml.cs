@@ -439,8 +439,8 @@ namespace PRSapp.UWP.UserControls.AppFx
 
 
 
-            //ARS- change to MediaElementPrompter
-            await mediaElement.Play_Stream_Async(stream, true);
+            //ARS- Herehere change to MediaElementPrompter
+            await mediaElement.PlayStreamAsync1(stream, true);
         
         }
         #endregion
@@ -505,7 +505,7 @@ public static class RepeaterUCMediaElementExtensions
     
     
     //ARS- change to MediaElementPrompter
-    public static async Task Play_Stream_Async(
+    public static async Task PlayStreamAsync1(
       //? this MediaElement mediaElement,
       this MediaElement mediaElement,
       IRandomAccessStream stream,
