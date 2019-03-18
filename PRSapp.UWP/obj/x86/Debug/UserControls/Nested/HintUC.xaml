@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="200"
-    d:DesignWidth="365"
+    d:DesignWidth="360"
     mc:Ignorable="d">
 
 
@@ -16,15 +16,15 @@
             <RowDefinition Height="165"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Background="Black" VerticalAlignment="Top">
-            <Button x:ConnectionId='3' x:Name="BtnUcShowHideHint" Content="Hide Hint" Foreground="Black"                
-                     Background="Ivory"/>
+            <Button x:ConnectionId='3' x:Name="BtnUcShowHideHint" Content="Hide Hint" Foreground="Ivory"                
+                      Background="Black"/>
         </StackPanel>
         <StackPanel x:ConnectionId='2' x:Name="stpHint" Orientation="Horizontal" VerticalAlignment="Top"
                     Grid.Row="1" Background="Ivory">
-                <TextBox HorizontalAlignment="Center"
-                     Height="165" Width="365"  
+                <TextBox                  
                      Background="Black" Foreground="Ivory" FontSize="17"
-                     Text="Hint 1 - "/>
+                     Text="Hint 1 - "
+                     Height="165" Width="360" Margin="1,1" />
         </StackPanel>
     </Grid>
 </UserControl>

@@ -288,6 +288,12 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="PRSapp.UWP.Pages.ColorThemesPage" />
+    <RootType FullName="PRSapp.UWP.UserControls.AppFx.ResponseUC">
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.Nested.ClockUC">
       <RootProperty Name="VerticalAlignment" />
     </RootType>
@@ -301,10 +307,12 @@
     <RootType FullName="PRSapp.UWP.UserControls.Nested.HintUC">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.Nested.StopWatchUC">
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="PRSapp.UWP.UserControls.AppFx.PrompterUC" />
     <RootType FullName="PRSapp.UWP.Pages.PageParmPass1" />
     <RootType FullName="PRSapp.UWP.Pages.QnAPage" />
     <RootType FullName="PRSapp.UWP.UserControls.ListUserControl">

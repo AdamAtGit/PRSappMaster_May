@@ -24,7 +24,7 @@ namespace PRSapp.UWP.Pages
     /// </summary>
     public sealed partial class PageParmPass1 : Page
     {
-        RepeaterUserControl RepeaterUserControl = new RepeaterUserControl();
+        PrompterUC PrompterUC = new PrompterUC();
 
       
 
@@ -34,30 +34,33 @@ namespace PRSapp.UWP.Pages
            
 
             // Register UCs Click event handler in the parent page
-            var repeaterUserControl = new RepeaterUserControl();
-            repeaterUserControl.BtnRepeatMediaOutAsyncClick += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
-            BtnPage1RepeatMediaOutAsync.Click += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
+            var prompterUC = new PrompterUC();
+            prompterUC.BtnRepeatMediaOutAsyncClick += prompterUC.BtnRepeatMediaOutAsync_Click;
+            BtnPage1RepeatMediaOutAsync.Click += prompterUC.BtnRepeatMediaOutAsync_Click;
 
-            var hintUC = new HintUC();
-           // hintUC.BtnUcShowHint.Click += hintUC.BtnUcShowHint_Click;
-            //BtnPage1RepeatMediaOutAsync.Click += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
+            var hintUC = new HintUC();         
 
-            var repeaterUserControl2 = new RepeaterUserControl2();
-            repeaterUserControl2.BtnRepeatMediaOutAsync2Click += repeaterUserControl2.BtnRepeatMediaOutAsync_Click;
-            BtnPage1RepeatMediaOutAsync2.Click += repeaterUserControl2.BtnRepeatMediaOutAsync_Click;
+            var responseUC = new ResponseUC();
+            responseUC.BtnRepeatMediaOutAsync2Click += responseUC.BtnRepeatMediaOutAsync_Click;
+            BtnPage1RepeatMediaOutAsync2.Click += responseUC.BtnRepeatMediaOutAsync_Click;
 
             //Make so parent Run button invokes  
              BtnPlayController.Click += RunPlayListsSets_Click;
-           // repeaterUserControl.BtnRepeatMediaOutAsyncClick += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
-           // BtnPage1RepeatMediaOutAsync.Click += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
+           // PrompterUC.BtnRepeatMediaOutAsyncClick += prompterUC.BtnRepeatMediaOutAsync_Click;
+           // BtnPage1RepeatMediaOutAsync.Click += prompterUC.BtnRepeatMediaOutAsync_Click;
 
         }
 
      
         public void RunPlayListsSets_Click(object sender, RoutedEventArgs e)
         {
-            var prompterUC = new RepeaterUserControl();
+            var prompterUC = new PrompterUC();
+            var hinterUC = new HintUC();
+            var responseUC = new ResponseUC();
 
+            prompterUC.BtnRepeatMediaOutAsync_Click(sender, new RoutedEventArgs());
+            //todo hinterUC.' '(sender, new RoutedEventArgs());
+            responseUC.BtnRepeatMediaOutAsync_Click(this, new RoutedEventArgs());
         }
 
         private void NavBacktoMain_Click(object sender, RoutedEventArgs e)
@@ -68,7 +71,7 @@ namespace PRSapp.UWP.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var repeaterUserControl = new RepeaterUserControl();         
+            var prompterUC = new PrompterUC();         
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

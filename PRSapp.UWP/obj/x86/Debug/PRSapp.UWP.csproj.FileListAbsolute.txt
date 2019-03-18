@@ -1235,3 +1235,13 @@ C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Us
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\Nested\EyesUserControl.g.cs
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\Nested\EyesUserControl.xaml
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\Nested\EyesUserControl.xbf
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\PrompterUC.g.i.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\PrompterUC.g.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\PrompterUC.xaml
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\PrompterUC.xbf
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\PrompterUC.xbf
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\ResponseUC.xbf
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\ResponseUC.g.i.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\ResponseUC.g.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\ResponseUC.xaml
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\UserControls\AppFx\ResponseUC.xbf

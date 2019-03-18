@@ -24,7 +24,6 @@ namespace PRSapp.UWP.UserControls.AppFx
         public int DeleteTitleId { get; set; }
         //public List<Title> TitleListIds { get; set; }
 
-
         //Code-Set Get Amount of time takes for Async Task - awqit takes
         //private long CombinedMs;
 

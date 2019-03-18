@@ -41,7 +41,7 @@
                     Grid.ColumnSpan="2" Background="Gray" 
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                     Margin="0,0,0,0">
-            
+
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="boxSignedInUser" FontSize="13"
                          Header="From MainPage" IsReadOnly="True" Margin="1,0"/>
@@ -85,14 +85,14 @@
                     VerticalAlignment="Stretch">
             <!--<uc:MainTimeLineUserControl  HorizontalAlignment="Center"
             Width="566" Height="79"/>-->
-            <ucappfx:RepeaterUserControl/>
+            <ucappfx:PrompterUC/>
         </StackPanel>
         <StackPanel x:Name="pan02" Grid.Column="0" Grid.Row="2" 
                     Visibility="Collapsed" Background="DarkGray" 
                     HorizontalAlignment="Stretch" Margin="0,0,0,0" 
                     VerticalAlignment="Stretch"/>
         <!-- 2nd Col -->
-        
+
         <StackPanel x:Name="pan30" Grid.Column="3" Grid.Row="0" 
                     Background="Black" HorizontalAlignment="Stretch" 
                     Margin="0,0,0,0" VerticalAlignment="Stretch">
@@ -108,15 +108,15 @@
                     Background="Black"
                     HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <ucnested:ClockUC x:Name="uChildClock" VerticalAlignment="Top"/>
-           
+
             <ucnested:DateButtonUC x:Name="uChild" VerticalAlignment="Top"/>
             <TextBox x:Name="boxPage1DateTime" 
                      Text="Value" Header="from DateButtonUC" Margin="5,0" 
                      VerticalAlignment="Top"/>
             <ucnested:EyesUserControl x:Name="uChildEyes" VerticalAlignment="Top" Margin="0,5"/>
-            <ucnested:HintUC x:Name="uChildHint" VerticalAlignment="Top" Margin="0,5"/>
+            <ucnested:HintUC x:Name="uChildHint" VerticalAlignment="Center" Margin="0,0,2,0" HorizontalAlignment="Stretch"/>
             <ucnested:StopWatchUC x:Name="uChildStopWatch" VerticalAlignment="Top"/>
-                     
+
             <!--<ucnested:AddExistingFileUserControl x:Name="AddExistingFileUserControl"
                           Height="640" Width="360" 
                           Margin="0 25 0 0" Visibility="Visible"/>-->
@@ -135,7 +135,7 @@
                     Grid.RowSpan="2" Background="Black"
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0" VerticalAlignment="Stretch">
-            <ucappfx:RepeaterUserControl2 Height="640" 
+            <ucappfx:ResponseUC Height="640" 
                                           HorizontalAlignment="Stretch" 
                                           Margin="0,0,0,0" VerticalAlignment="Stretch"/>
 

@@ -339,7 +339,6 @@ namespace PRSapp.UWP.UserControls.AppFx
             {
                 ex.Message.ToString();
             }
-
         }
 
         #region Speech Recognition
@@ -414,12 +413,7 @@ namespace PRSapp.UWP.UserControls.AppFx
             }
             return (stream);
         }
-        
-        
-        
-        
-        
-        //ARS- change to MediaElementPrompter
+
         async Task SpeakTextAsync(string text, MediaElement mediaElement)
         {
            
@@ -434,12 +428,7 @@ namespace PRSapp.UWP.UserControls.AppFx
             //}
             //   IRandomAccessStream stream = await this.SynthesizeTextToSpeechAsync(text);
             IRandomAccessStream stream = await SynthesizeTextToSpeechAsync(text);
-            
-            
 
-
-
-            //ARS- Herehere change to MediaElementPrompter
             await mediaElement.PlayStreamAsync1(stream, true);
         
         }
@@ -497,14 +486,8 @@ private async void BtnSpeechRecogWeatherSearchAsync_Click(object sender, RoutedE
 public static class RepeaterUCMediaElementExtensions
 {
    
-    
-    //ARS- change to MediaElementPrompter
     public static object MediaElement { get; internal set; }
 
-    
-    
-    
-    //ARS- change to MediaElementPrompter
     public static async Task PlayStreamAsync1(
       //? this MediaElement mediaElement,
       this MediaElement mediaElement,
@@ -525,21 +508,14 @@ public static class RepeaterUCMediaElementExtensions
             taskCompleted.SetResult(true);
         };
        
-        
-        
-        
-        //ARS- change to MediaElementPrompter
+
         mediaElement.MediaEnded += endOfPlayHandler;
 
         mediaElement.SetSource(stream, string.Empty);
         mediaElement.Play();
 
         await taskCompleted.Task;
-       
-        
-        
-        
-        //ARS- change to MediaElementPrompter
+
         mediaElement.MediaEnded -= endOfPlayHandler;
     }
 }

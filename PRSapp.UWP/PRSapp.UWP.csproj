@@ -186,6 +186,9 @@
     <Compile Include="UserControls\AppFx\MentPrepRepeaterUserControl.xaml.cs">
       <DependentUpon>MentPrepRepeaterUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AppFx\PrompterUC.xaml.cs">
+      <DependentUpon>PrompterUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AppFx\RepeaterUserControl2.xaml.cs">
       <DependentUpon>RepeaterUserControl2.xaml</DependentUpon>
     </Compile>
@@ -239,6 +242,9 @@
     </Compile>
     <Compile Include="UserControls\PlayListUserControl.xaml.cs">
       <DependentUpon>PlayListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AppFx\ResponseUC.xaml.cs">
+      <DependentUpon>ResponseUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_AddCreateTTS.xaml.cs">
       <DependentUpon>UC_AddCreateTTS.xaml</DependentUpon>
@@ -594,6 +600,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UserControls\AppFx\PrompterUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\AppFx\RepeaterUserControl2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -671,6 +681,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\PlayListUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AppFx\ResponseUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
