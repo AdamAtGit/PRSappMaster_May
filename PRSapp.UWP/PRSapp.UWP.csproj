@@ -228,6 +228,15 @@
     <Compile Include="UserControls\Nested\DateUC.xaml.cs">
       <DependentUpon>DateUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Nested\EyesUserControl.xaml.cs">
+      <DependentUpon>EyesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Nested\HintUC.xaml.cs">
+      <DependentUpon>HintUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Nested\StopWatchUC.xaml.cs">
+      <DependentUpon>StopWatchUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PlayListUserControl.xaml.cs">
       <DependentUpon>PlayListUserControl.xaml</DependentUpon>
     </Compile>
@@ -287,6 +296,14 @@
     <Content Include="Assets\Images\Camera-Icon-Black-01.png" />
     <Content Include="Assets\Images\Camera-Icon-Wh-01.png" />
     <Content Include="Assets\Images\Camera-Icon-Wh-Zoomed-01.png" />
+    <Content Include="Assets\Images\Eyes\Eyes_Icon_1.jpeg" />
+    <Content Include="Assets\Images\Eyes\Eyes_Icon_Carton_LookingLeft.png" />
+    <Content Include="Assets\Images\Eyes\Eyes_Icon_Confused_Perturbed.jpg" />
+    <Content Include="Assets\Images\Eyes\Eyes_Icon_Fem_Eveil_Angry.png" />
+    <Content Include="Assets\Images\Eyes\Eyes_set_Icon_Inwards_Confused.png" />
+    <Content Include="Assets\Images\Eyes\Eyes_set_Icon_Left.png" />
+    <Content Include="Assets\Images\Eyes\Eyes_set_Icon_Looking_Right.png" />
+    <Content Include="Assets\Images\Eyes\Eyeys_Icon_Fem_1.jpg" />
     <Content Include="Assets\Images\Mic-Icon-Bl-01.png" />
     <Content Include="Assets\Images\Mic-Icon-Bl-03.png" />
     <Content Include="Assets\Images\Mic-Icon-Colorful-01.png" />
@@ -638,6 +655,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\Nested\DateUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Nested\EyesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Nested\HintUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Nested\StopWatchUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

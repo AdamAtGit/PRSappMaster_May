@@ -288,7 +288,21 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="PRSapp.UWP.Pages.ColorThemesPage" />
+    <RootType FullName="PRSapp.UWP.UserControls.Nested.ClockUC">
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.Nested.DateButtonUC">
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="PRSapp.UWP.UserControls.Nested.EyesUserControl">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="PRSapp.UWP.UserControls.Nested.HintUC">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="PRSapp.UWP.UserControls.Nested.StopWatchUC">
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="PRSapp.UWP.Pages.PageParmPass1" />
@@ -338,6 +352,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -400,7 +416,6 @@
     <RootType FullName="PRSapp.UWP.UserControls.DetailsUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.Nested.AddCreateUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.Nested.AddExistingFileUserControl" />
-    <RootType FullName="PRSapp.UWP.UserControls.Nested.ClockUC" />
     <RootType FullName="PRSapp.UWP.UserControls.Nested.DateUC" />
     <RootType FullName="PRSapp.UWP.UserControls.PlayListUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.SaveControl" />

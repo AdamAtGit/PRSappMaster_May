@@ -1,0 +1,53 @@
+﻿<UserControl
+    x:Class="PRSapp.UWP.UserControls.Nested.StopWatchUC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.UserControls.Nested"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="180"
+    d:DesignWidth="200">
+
+    <StackPanel x:Name="stpStopwatchUC" Background="Black" Height="180" Width="200">
+        <StackPanel x:Name="stpSegmentTimeElapsed" Orientation="Horizontal" Margin="0,0,0,5">
+            <TextBlock Foreground="Ivory" FontSize="15" Text="Seg Time Elapsed:" Margin="10,2"/>
+            <TextBlock x:Name="tbStopWatchTimeElapsed" Foreground="Ivory"
+                   FontSize="15" Text="00 : 00" Margin="10,2"/>
+        </StackPanel>
+
+        <StackPanel x:Name="stpSegSplitTime" Orientation="Horizontal" Margin="0,0,0,5"
+                     Visibility="Collapsed">
+            <TextBlock Foreground="Ivory" FontSize="15" Text="Segment Split:" Margin="10,2"/>
+            <TextBlock x:Name="tbStopWatchSegSplit" Foreground="Ivory"
+                   FontSize="15" Text="00 : 00" Margin="10,2"/>
+        </StackPanel>
+       
+        <StackPanel x:Name="stpSetSPlitTime" Orientation="Horizontal" Margin="0,0,0,5"
+                     Visibility="Collapsed">
+            <TextBlock Foreground="Ivory" FontSize="15" Text="Set Split:" Margin="10,2"/>
+            <TextBlock x:Name="tbStopWatchSetsSplit" Foreground="Ivory"
+                   FontSize="15" Text="00 : 00" Margin="10,2"/>
+        </StackPanel>
+
+        <StackPanel x:Name="stpTimeConsumerName" Orientation="Horizontal" Margin="0,0,0,5"
+                      Visibility="Collapsed">
+            <TextBlock Foreground="Ivory" FontSize="12" Text="Time Consumer:" Margin="10,2"/>
+            <TextBlock x:Name="tbShowTimeConsumer" Foreground="Ivory"
+                   FontSize="12" Text="TSLeadTime" Margin="10,2"/>
+        </StackPanel>
+        
+        <StackPanel x:Name="stpSetNo" Orientation="Horizontal" Margin="0,0,0,5">
+            <TextBlock Foreground="Ivory" FontSize="15" Text="Set No:" Margin="10,2"/>
+            <TextBlock x:Name="tbSetNo" Foreground="Ivory"
+                   FontSize="15" Text="0" Margin="10,2"/>
+        </StackPanel>
+        
+        <StackPanel x:Name="StpTotalTime" Orientation="Horizontal" Margin="0,10,0,0"
+                      Visibility="Collapsed">
+            <TextBlock Foreground="Ivory" FontSize="14.5" Text="Total Time:" Margin="10,2"/>
+            <TextBlock x:Name="tbTotalTimeElapsed" Foreground="Ivory"
+                   FontSize="14.5" Text="00 : 00 : 00" Margin="10,2"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

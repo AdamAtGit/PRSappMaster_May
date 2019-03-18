@@ -26,25 +26,45 @@ namespace PRSapp.UWP.Pages
     {
         RepeaterUserControl RepeaterUserControl = new RepeaterUserControl();
 
+      
+
         public PageParmPass1()
         {
             this.InitializeComponent();
+           
 
             // Register UCs Click event handler in the parent page
             var repeaterUserControl = new RepeaterUserControl();
             repeaterUserControl.BtnRepeatMediaOutAsyncClick += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
             BtnPage1RepeatMediaOutAsync.Click += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
 
+            var hintUC = new HintUC();
+           // hintUC.BtnUcShowHint.Click += hintUC.BtnUcShowHint_Click;
+            //BtnPage1RepeatMediaOutAsync.Click += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
+
             var repeaterUserControl2 = new RepeaterUserControl2();
             repeaterUserControl2.BtnRepeatMediaOutAsync2Click += repeaterUserControl2.BtnRepeatMediaOutAsync_Click;
             BtnPage1RepeatMediaOutAsync2.Click += repeaterUserControl2.BtnRepeatMediaOutAsync_Click;
+
+            //Make so parent Run button invokes  
+             BtnPlayController.Click += RunPlayListsSets_Click;
+           // repeaterUserControl.BtnRepeatMediaOutAsyncClick += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
+           // BtnPage1RepeatMediaOutAsync.Click += repeaterUserControl.BtnRepeatMediaOutAsync_Click;
+
+        }
+
+     
+        public void RunPlayListsSets_Click(object sender, RoutedEventArgs e)
+        {
+            var prompterUC = new RepeaterUserControl();
+
         }
 
         private void NavBacktoMain_Click(object sender, RoutedEventArgs e)
         {
             if (Frame.CanGoBack)
                 Frame.GoBack();
-        }    
+        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -61,9 +81,17 @@ namespace PRSapp.UWP.Pages
             //Our main page will subscribe to the event that we created on the user control, 
             //to get notification of when the event is fired on the user control.
             uChild.GetDataFromChild += new DateButtonUC.ChildControlDelegate(UChild_GetDataFromChild);
+            uChildHint.GetDataFromHintUcChild += new HintUC.ChildHintUCDelegate(HintUC_GetDataFromHintUcChild);
         }
 
-        //\\ Code Set - Pass data from User Control to Parent page in Windows Phone 8.1
+        private void HintUC_GetDataFromHintUcChild(Boolean IsHintVisible)
+        {
+            Boolean isHintVisible = IsHintVisible;
+            boxIsHintVisible.Text = isHintVisible.ToString();
+            //boxPage1DateTime.Text = dt.ToShortTimeString();
+        }
+
+        //\\ Code Set - Pass data from User Control to Parent page
         private void UChild_GetDataFromChild(DateTime dtCurrentDateTime)
         {
             DateTime dt = dtCurrentDateTime;

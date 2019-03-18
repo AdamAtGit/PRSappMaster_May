@@ -1,0 +1,28 @@
+//Prompt - Hint - Repsonse Sets
+
+q1 How to get value in a parent Page from child user control?
+hi
+a1 
+
+q2 How to call a method from of a parent from a child user control?
+h2
+a2
+
+q3 How to get value in a child user control from Parent Page?
+h3
+a3
+
+q4 How call a method in a child user control from the parent page?
+h4
+a4
+
+q5
+h5
+a
+
+
+q6
+h6
+a6
+
+

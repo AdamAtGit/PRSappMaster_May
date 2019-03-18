@@ -655,6 +655,21 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Camera-Icon-Wh-Zoomed-01.png">
       <PackagePath>Assets\Images\Camera-Icon-Wh-Zoomed-01.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyes_Icon_Carton_LookingLeft.png">
+      <PackagePath>Assets\Images\Eyes\Eyes_Icon_Carton_LookingLeft.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyes_Icon_Fem_Eveil_Angry.png">
+      <PackagePath>Assets\Images\Eyes\Eyes_Icon_Fem_Eveil_Angry.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyes_set_Icon_Inwards_Confused.png">
+      <PackagePath>Assets\Images\Eyes\Eyes_set_Icon_Inwards_Confused.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyes_set_Icon_Left.png">
+      <PackagePath>Assets\Images\Eyes\Eyes_set_Icon_Left.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyes_set_Icon_Looking_Right.png">
+      <PackagePath>Assets\Images\Eyes\Eyes_set_Icon_Looking_Right.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Mic-Icon-Bl-01.png">
       <PackagePath>Assets\Images\Mic-Icon-Bl-01.png</PackagePath>
     </AppxPackagedFile>
@@ -963,6 +978,15 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyes_Icon_1.jpeg">
+      <PackagePath>Assets\Images\Eyes\Eyes_Icon_1.jpeg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyes_Icon_Confused_Perturbed.jpg">
+      <PackagePath>Assets\Images\Eyes\Eyes_Icon_Confused_Perturbed.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Assets\Images\Eyes\Eyeys_Icon_Fem_1.jpg">
+      <PackagePath>Assets\Images\Eyes\Eyeys_Icon_Fem_1.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -1353,6 +1377,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\DateUC.xbf">
       <PackagePath>UserControls\Nested\DateUC.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\EyesUserControl.xbf">
+      <PackagePath>UserControls\Nested\EyesUserControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\HintUC.xbf">
+      <PackagePath>UserControls\Nested\HintUC.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\StopWatchUC.xbf">
+      <PackagePath>UserControls\Nested\StopWatchUC.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\PlayListUserControl.xbf">
       <PackagePath>UserControls\PlayListUserControl.xbf</PackagePath>

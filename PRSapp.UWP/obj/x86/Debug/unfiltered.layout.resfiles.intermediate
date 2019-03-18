@@ -15,6 +15,14 @@ Assets\Images\All-Three-01.png
 Assets\Images\Camera-Icon-Black-01.png
 Assets\Images\Camera-Icon-Wh-01.png
 Assets\Images\Camera-Icon-Wh-Zoomed-01.png
+Assets\Images\Eyes\Eyes_Icon_1.jpeg
+Assets\Images\Eyes\Eyes_Icon_Carton_LookingLeft.png
+Assets\Images\Eyes\Eyes_Icon_Confused_Perturbed.jpg
+Assets\Images\Eyes\Eyes_Icon_Fem_Eveil_Angry.png
+Assets\Images\Eyes\Eyes_set_Icon_Inwards_Confused.png
+Assets\Images\Eyes\Eyes_set_Icon_Left.png
+Assets\Images\Eyes\Eyes_set_Icon_Looking_Right.png
+Assets\Images\Eyes\Eyeys_Icon_Fem_1.jpg
 Assets\Images\Mic-Icon_wh-01.png
 Assets\Images\Mic-Icon-Bl-01.png
 Assets\Images\Mic-Icon-Bl-03.png
@@ -149,6 +157,9 @@ UserControls\Nested\AddExistingFileUserControl.xbf
 UserControls\Nested\ClockUC.xbf
 UserControls\Nested\DateButtonUC.xbf
 UserControls\Nested\DateUC.xbf
+UserControls\Nested\EyesUserControl.xbf
+UserControls\Nested\HintUC.xbf
+UserControls\Nested\StopWatchUC.xbf
 UserControls\PlayListUserControl.xbf
 UserControls\SaveControl.xbf
 UserControls\UC_AddCreateTTS.xbf
