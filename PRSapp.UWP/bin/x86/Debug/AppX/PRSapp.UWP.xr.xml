@@ -187,6 +187,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="IsReadOnly" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Width" />
       <RootProperty Name="Tag" />
       <RootEvent Name="KeyUp" />

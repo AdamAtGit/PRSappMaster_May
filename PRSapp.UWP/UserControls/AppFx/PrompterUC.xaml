@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PRSapp.UWP.UserControls.AppFx"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested" 
+    xmlns:ucnested="using:PRSapp.UWP.UserControls.AppFxs.Nested" 
     GotFocus="UserControl_GotFocus" LostFocus="UserControl_LostFocus">
     <!--PrompterUC-->
     <Grid Height="640" Width="360" Background="#4a4a4a">

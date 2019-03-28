@@ -22,10 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		SubmissionsTODO.txt = SubmissionsTODO.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_CSharp", "..\..\AppSQL_Lists\Console_CSharp\Console_CSharp.csproj", "{31CD495F-FE32-4F2F-A622-9DC4DAC71DFC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRSapp", "..\..\DecOn_PRSapp_Cust_Proj\PRSapp\PRSapp\PRSapp.csproj", "{E26FE9BD-2537-4A75-9AD0-F1589DFBE41F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Console_CSharp_Only|Any CPU = Console_CSharp_Only|Any CPU

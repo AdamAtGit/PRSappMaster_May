@@ -76,7 +76,6 @@ namespace PRSapp.UWP.UserControls.AppFx
         public string SpeechInputResult { get; set; }
 
         //Speech User Settings
-
         public string VoiceGender = "female";
 
 

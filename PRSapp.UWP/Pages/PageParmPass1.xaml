@@ -73,12 +73,16 @@
                     Grid.Column="1" Grid.Row="0"
                     HorizontalAlignment="Stretch" Margin="0,0,0,0"
                     VerticalAlignment="Stretch">
+            <TextBox x:Name="boxLeadTime" Header="Lead Time" Text="10"
+                     Margin="60,0,0,0"/>
             <AppBarButton x:Name="BtnPlayController" FontSize="26"
                           Icon="Play" Label="Run" Background="Ivory"
-                           Margin="120,2,0,0"/>
+                           Margin="10,2,0,0"/>
             <TextBox x:Name="boxIsHintVisible" Header="Show Hints" Text="" 
                      Background="Ivory" IsReadOnly="True"
-                     Height="60" Margin="10,0" />
+                     Height="60" Margin="10,0" Visibility="Collapsed"/>
+            <TextBox x:Name="boxElapsedTime" Header=" Elapsed Time"
+                     Height="60" Width="100" Margin="5,0,0,3"/>
         </StackPanel>
         <StackPanel x:Name="pan01" Grid.Column="0" Grid.Row="1"
                     HorizontalAlignment="Stretch" Margin="0,0,0,0"
