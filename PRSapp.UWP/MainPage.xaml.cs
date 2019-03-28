@@ -409,6 +409,9 @@ namespace PRSapp.UWP
 
             //// List<String> lstitem = new List<String>();
             ////lstitem.Add(ShowTitlesListView.SelectedItem.ToString());
+
+          
+
             if (ShowTitlesListView.SelectedItems.Count > 1)
             {
 
@@ -445,6 +448,7 @@ namespace PRSapp.UWP
                     Debug.WriteLine("itemId: " + z + " - " + item.ToString());
                     z++;
                 }
+                #region Commented out stuff that may be useful
                 // Or just do it in one line:
 
                 //// List<string> selectedFields = chkDFMFieldList.CheckedItems.OfType<string>().ToList();
@@ -486,28 +490,12 @@ namespace PRSapp.UWP
 
                 //Refresh Show Titles List View
                 //// List<Title> selectedTitles = TitleListIds; //usersTitleDetails.ToList();
+                #endregion
+               
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            #region More Commented out stuff that may be useful
             //}
-
-
 
 
             //== "test")
@@ -531,11 +519,10 @@ namespace PRSapp.UWP
 
             //        List<Title> selectedUsersTitles = TitleListIds; //usersTitleDetails.ToList();
 
-
             //        }
 
             //}
-
+            #endregion
 
             DataPackage dataPackage = new DataPackage();
             foreach (var item in e.AddedItems.OfType<ListViewItem>())
@@ -566,6 +553,22 @@ namespace PRSapp.UWP
                     TitleDetailsListView.ItemsSource = selectedUsersTitles;
                     TitleDetailsListView.SelectedIndex = 0;
                 }
+                #region Enable/Disable TitleDeatilPanle's buttons when it's list view has no Item
+                if (TitleDetailsListView.Items.Count > 0 &&
+                    TitleDetailsListView.Items.Count < 2)
+                {
+                    btnDetailsPlay.IsEnabled = true;
+                    btnShowUpDatePanel.IsEnabled = true;
+                    btnShowDeletePanel.IsEnabled = true;
+                }
+                else
+                {
+                    btnDetailsPlay.IsEnabled = false;
+                    btnShowUpDatePanel.IsEnabled = false;
+                    btnShowDeletePanel.IsEnabled = false;
+                }
+                #endregion
+
 
             }
             #region Commented code for Selected item, Index, DataValue, and DataValuePath
@@ -895,11 +898,11 @@ namespace PRSapp.UWP
             //}
              
             string ttsRaw = "no Text to Speak of!";
-            //var whoRanThisMethod = (sender as dispatcherTimer).
+            //H- var whoRanThisMethod = (sender as dispatcherTimer).
             //string tag = (sender as Button).Tag.ToString();
             //if (tag == "btnDetailsPlay")
             //{
-                ttsRaw = boxWatchAndPlayTtsRaw.Text.Trim();
+              //H -someOne hacked in and did this code  ttsRaw = boxWatchAndPlayTtsRaw.Text.Trim();
                 if (String.IsNullOrEmpty(ttsRaw))
                 {
                     ttsRaw = "no Text to Speak of. Give me something.";
@@ -1047,7 +1050,7 @@ namespace PRSapp.UWP
             using (var context = new PRSappContext())
             {
                 var title =
-                    await context.Titles.FirstOrDefaultAsync(x => x.TitleId == EditTitleId);
+                await context.Titles.FirstOrDefaultAsync(x => x.TitleId == EditTitleId);
                 title.TitleName = boxUpdateTitleName.Text.Trim();
                 title.TtsRaw = boxUpdateTitleTtsRaw.Text.Trim();
                 await context.SaveChangesAsync();
@@ -1295,6 +1298,24 @@ namespace PRSapp.UWP
                     //Show results if Any
                     TitleDetailsListView.ItemsSource = selectedUsersTitles;
                     DeleteTitlesListView.ItemsSource = selectedUsersTitles;
+
+                    #region Enable/Disable TitleDeatilPanle's buttons when it's list view has no Item
+                    if (TitleDetailsListView.Items.Count > 0 &&
+                        TitleDetailsListView.Items.Count < 2)
+                    {
+                        btnDetailsPlay.IsEnabled = true;
+                        btnShowUpDatePanel.IsEnabled = true;
+                        btnShowDeletePanel.IsEnabled = true;
+                    }
+                    else
+                    {
+                        btnDetailsPlay.IsEnabled = false;
+                        btnShowUpDatePanel.IsEnabled = false;
+                        btnShowDeletePanel.IsEnabled = false;
+                        DeleteTitlesPanel.Visibility = Visibility.Collapsed;
+                    }
+                    #endregion
+                  
                 }
             }
             ////}
@@ -1351,6 +1372,7 @@ namespace PRSapp.UWP
 
                         //Load Update Title Panel with Selected Item            
                         ShowTitlesListView.ItemsSource = selectedUsersTitles;
+                        btnShowUpDatePanel.Visibility = Visibility.Collapsed;
                     }
                     //List<Title> titles = new List<Title>();
 

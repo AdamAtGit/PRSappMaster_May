@@ -107,7 +107,9 @@
             <TextBlock Text="Make Changes"  HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
         </StackPanel>
-        <StackPanel Grid.Column="3" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel Grid.Column="3" Background="LightGray" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch">
             <TextBlock Text="Play Settings &amp; Times"
                        HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
@@ -140,13 +142,12 @@
             </Button>
         </StackPanel>
 
-
         <StackPanel x:Name="AppFxPanel" Margin="0,1,0,1" Grid.Row="2" 
                     Grid.RowSpan="2"
-                    Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    Visibility="Visible" HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
             <ucappfx:UC_TMinus30/>
         </StackPanel>
-
 
         <!--Default Home Page - Panel >> Post Sign In -->
         <StackPanel x:Name="DefaultHomePagePanel" Margin="19,1,19,8"
@@ -306,6 +307,7 @@
                             Width="340" Height="Auto">
                     <AppBarButton Click="PlayAsync_Click"
                               x:Name="btnDetailsPlay"
+                              IsEnabled="False"
                               Icon="Play" Label="Play" 
                               VerticalAlignment="Center"
                               Tag="btnDetailsPlay" Margin="0 1 90 1"/>
@@ -359,15 +361,18 @@
                                 Height="Auto" Width="340">
                         <CommandBar.PrimaryCommands>
                             <AppBarButton x:Name="btnNavHome"
+                                          Visibility="Collapsed"
                                           Icon="Home" Label="Home" 
                                           Click="BtnTestPlayAsync_Click"
                                           Margin="0,0,80,0"/>
                             <AppBarButton x:Name="btnShowUpDatePanel"
-                                          Click="BtnShowUpDatePanel_Click" 
+                                          Click="BtnShowUpDatePanel_Click"
+                                          IsEnabled="False"
                                           Tag="btnEdit"
-                                          Icon="Edit" Label="Edit"                                                                    
+                                          Icon="Edit" Label="Edit" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom"                                                                    
                                           />
                             <AppBarButton x:Name="btnShowDeletePanel"
+                                          IsEnabled="False"
                                           Click="BtnShowDeletePanel_Click" 
                                           Tag="btnShowDeletePanel"
                                           Icon="Delete" Label="Delete"                                                                     
@@ -382,7 +387,7 @@
             </StackPanel>
             <!--Ends- Title Details-->
 
-            <!--Watch And Play-->
+            <!--Watch And Play--><!--
             <StackPanel x:Name="WatchAndPlayTitlesPanel" Width="360" Height="310"
                     Margin="0 0" Background="#c9c5c5"
                        Visibility="Visible">
@@ -395,7 +400,7 @@
 
                 </StackPanel>
             </StackPanel>
-            <!--Ends- Watch and Play-->
+            --><!--Ends- Watch and Play-->
 
             <!--Update-->
             <StackPanel x:Name="UpdateTitlesPanel" Width="360" Height="310"

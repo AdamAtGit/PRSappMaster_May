@@ -47,16 +47,16 @@
 
         <StackPanel Margin="0,-6,0,0" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <!--<CommandBar ClosedDisplayMode="Compact" Background="Gray">-->
-            <StackPanel x:ConnectionId='64' x:Name="panMainNavigationBar" Orientation="Horizontal" 
+            <StackPanel x:ConnectionId='62' x:Name="panMainNavigationBar" Orientation="Horizontal" 
                         Background="Gray" Width="360">
-                <AppBarButton x:ConnectionId='65' x:Name="BtnNavToMainPage"
+                <AppBarButton x:ConnectionId='63' x:Name="BtnNavToMainPage"
                               Foreground="Ivory"
                               Label="Your Here" Icon="Home"
                               IsTapEnabled="True" IsTabStop="True"   
                               VerticalAlignment="Top"                             
                               Height="55" Width="58" Margin="4 0"/>
 
-                <AppBarButton x:ConnectionId='66' x:Name="BtnNavToQnAPage"
+                <AppBarButton x:ConnectionId='64' x:Name="BtnNavToQnAPage"
                                                         
                               Foreground="Ivory"
                               Icon="Character"
@@ -65,7 +65,7 @@
                               VerticalAlignment="Top"
                               Height="55" Width="55" Margin="10 0 1 0"/>
 
-                <AppBarButton x:ConnectionId='67' x:Name="BtnNavToDayPage"
+                <AppBarButton x:ConnectionId='65' x:Name="BtnNavToDayPage"
                                                         
                               Foreground="Ivory"
                               Icon="Clock"
@@ -75,7 +75,7 @@
                               HorizontalAlignment="Left" VerticalAlignment="Top"
                               Height="55" Width="65" Margin="3 0"/>
 
-                <AppBarButton x:ConnectionId='68' x:Name="BtnNavToPageParmPass1"
+                <AppBarButton x:ConnectionId='66' x:Name="BtnNavToPageParmPass1"
                                                                  
                               Foreground="Ivory"
                               Icon="NewWindow"
@@ -85,7 +85,7 @@
                               HorizontalAlignment="Left" VerticalAlignment="Top"
                               Height="55" Width="65" Margin="3 0"/>
 
-                <AppBarButton x:ConnectionId='69' x:Name="BtnSignOut"
+                <AppBarButton x:ConnectionId='67' x:Name="BtnSignOut"
                                                       
                               Foreground="Ivory"
                               Icon="OtherUser"
@@ -107,7 +107,9 @@
             <TextBlock Text="Make Changes"  HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
         </StackPanel>
-        <StackPanel Grid.Column="3" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel Grid.Column="3" Background="LightGray" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch">
             <TextBlock Text="Play Settings &amp; Times"
                        HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
@@ -120,11 +122,11 @@
                     Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Create Login" FontSize="19" Margin="0 3" 
                        HorizontalAlignment="Center"/>
-            <TextBox x:ConnectionId='59' Name="NewUserUserLogin" Header="User Name" Margin="0 5"/>
-            <TextBox x:ConnectionId='60' Name="NewUserUserPwd" Header="Password" Margin="0 5"/>
-            <TextBox x:ConnectionId='61' Name="NewUserUserPwdRetyped" Header="Re-Type Password" Margin="0 5"/>
-            <Button x:ConnectionId='62'                           Margin="0 5">Create</Button>
-            <TextBlock x:ConnectionId='63' x:Name="JustCreatedUserTextBlock"/>
+            <TextBox x:ConnectionId='57' Name="NewUserUserLogin" Header="User Name" Margin="0 5"/>
+            <TextBox x:ConnectionId='58' Name="NewUserUserPwd" Header="Password" Margin="0 5"/>
+            <TextBox x:ConnectionId='59' Name="NewUserUserPwdRetyped" Header="Re-Type Password" Margin="0 5"/>
+            <Button x:ConnectionId='60'                           Margin="0 5">Create</Button>
+            <TextBlock x:ConnectionId='61' x:Name="JustCreatedUserTextBlock"/>
         </StackPanel>
         <!--SignIn-->
         <StackPanel x:ConnectionId='4' x:Name="SignInPanel" Margin="10,1,10,1" Grid.Row="2"
@@ -132,21 +134,20 @@
                     Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Sign In" FontSize="19" Margin="0 3" 
                        HorizontalAlignment="Center"/>
-            <TextBox x:ConnectionId='56' Name="SignInUserLogin" Header="Login" Margin="0 5"/>
-            <TextBox x:ConnectionId='57' Name="SignInUserPwd" Header="Password" Margin="0 5"/>
-            <Button x:ConnectionId='58' x:Name="SignInButton"                      
+            <TextBox x:ConnectionId='54' Name="SignInUserLogin" Header="Login" Margin="0 5"/>
+            <TextBox x:ConnectionId='55' Name="SignInUserPwd" Header="Password" Margin="0 5"/>
+            <Button x:ConnectionId='56' x:Name="SignInButton"                      
                     HorizontalAlignment="Right" Margin="5" Width="Auto">
                 Sign In
             </Button>
         </StackPanel>
 
-
         <StackPanel x:ConnectionId='5' x:Name="AppFxPanel" Margin="0,1,0,1" Grid.Row="2" 
                     Grid.RowSpan="2"
-                    Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    Visibility="Visible" HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
             <ucappfx:UC_TMinus30/>
         </StackPanel>
-
 
         <!--Default Home Page - Panel >> Post Sign In -->
         <StackPanel x:ConnectionId='6' x:Name="DefaultHomePagePanel" Margin="19,1,19,8"
@@ -155,23 +156,23 @@
                     Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <!--Background="#4a4a4a" darker >> #383838-->
             <StackPanel Orientation="Horizontal" Height="40" Margin="2 0 0 2">
-                <TextBlock x:ConnectionId='53' x:Name="tbUserId"
+                <TextBlock x:ConnectionId='51' x:Name="tbUserId"
                        DataContext="{Binding User}" Text="{Binding UserId}" 
                        FontSize="14.5" Foreground="Ivory"
                        HorizontalAlignment="Left" 
                        Height="35" Width="25" Margin="8,8,2,2"/>
-                <TextBlock x:ConnectionId='54' x:Name="tbLoggedInUser"
+                <TextBlock x:ConnectionId='52' x:Name="tbLoggedInUser"
                        DataContext="{Binding User}" Text="{Binding UserLogin}" 
                        FontSize="14.5" Foreground="Ivory"
                        HorizontalAlignment="Left" 
                        Height="35" Width="100" Margin="2,8,2,2"/>
-                <TextBlock x:ConnectionId='55' x:Name="tbPlayListLabel"
+                <TextBlock x:ConnectionId='53' x:Name="tbPlayListLabel"
                        Text="PlayLists"
                        Foreground="Ivory"
                        FontSize="19"
                        Height="35" Width="80" Margin="2 5 10 2"/>
             </StackPanel>
-            <ListView x:ConnectionId='51' Name="UsersDefaulHomePageListView" Background="WhiteSmoke"
+            <ListView x:ConnectionId='49' Name="UsersDefaulHomePageListView" Background="WhiteSmoke"
                       Height="250" Margin="5,0,5,0" DataContext="{Binding Title}"
                                                                                        >
                 <ListView.ItemTemplate>
@@ -198,7 +199,7 @@
                          Header="Selected Index Value" 
                          HorizontalAlignment="Left" Margin="25 5" Width="Auto"/>
             </StackPanel>-->
-            <ListView x:ConnectionId='46' x:Name="ShowTitlesListView" Background="WhiteSmoke" 
+            <ListView x:ConnectionId='44' x:Name="ShowTitlesListView" Background="WhiteSmoke" 
                       MinHeight="10" Height="200" MaxHeight="500"
                       Margin="5 7 5 3" 
                       DataContext="{Binding Title}"
@@ -225,7 +226,7 @@
                 <CommandBar.PrimaryCommands>
 
                     <!--Command="{Binding ChangeForeGroundColorCommand, Source={StaticResource viewModel } }"-->
-                    <AppBarButton x:ConnectionId='47' x:Name="BtnSetSelectionModeToMulitple"
+                    <AppBarButton x:ConnectionId='45' x:Name="BtnSetSelectionModeToMulitple"
                           
                             IsEnabled="True"
                                                                         
@@ -234,7 +235,7 @@
 
 
 
-                    <AppBarButton x:ConnectionId='48' x:Name="btnDeleteSelection"
+                    <AppBarButton x:ConnectionId='46' x:Name="btnDeleteSelection"
                            IsEnabled="True"
                                                                 
                               Icon="Delete" Label="Delete Selected"                            
@@ -242,7 +243,7 @@
 
                 </CommandBar.PrimaryCommands>
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='49' Name="setting" Icon="Setting" Label="Setting"/>
+                    <AppBarButton x:ConnectionId='47' Name="setting" Icon="Setting" Label="Setting"/>
                 </CommandBar.SecondaryCommands>
             </CommandBar>
         </StackPanel>
@@ -255,23 +256,23 @@
                     Grid.RowSpan="1" Margin="26,5,25,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TextBlock Text="Add Title" FontSize="19"
                        Margin="0 3" HorizontalAlignment="Center"/>
-            <TextBox x:ConnectionId='40' Name="boxAddTitleName" Header=" Name" 
+            <TextBox x:ConnectionId='38' Name="boxAddTitleName" Header=" Name" 
                      IsSpellCheckEnabled="True"
                      Margin="2 5"/>
-            <TextBox x:ConnectionId='41' Name="boxAddTitleTtsRaw" Header=" Text To Speak" 
+            <TextBox x:ConnectionId='39' Name="boxAddTitleTtsRaw" Header=" Text To Speak" 
                      IsSpellCheckEnabled="True" AcceptsReturn="True"
                      Height="135" Margin="2 5"/>
             <StackPanel Orientation="Horizontal">
-                <AppBarButton x:ConnectionId='42' x:Name="btnAddTitleLittleAsync"
+                <AppBarButton x:ConnectionId='40' x:Name="btnAddTitleLittleAsync"
                               Icon="Add" Label="Add"
                               Tag="AddTitleLittleAsync"
                               Margin="2 2"/>
-                <AppBarButton x:ConnectionId='43'                            
+                <AppBarButton x:ConnectionId='41'                            
                               x:Name="btnAddTestPlay"
                               Icon="Play" Label="Test Play"
                               Tag="btnAddTestPlay"
                               Margin="2 2"/>
-                <MediaElement x:ConnectionId='44' x:Name="uiMediaElement"
+                <MediaElement x:ConnectionId='42' x:Name="uiMediaElement"
                               HorizontalAlignment="Center" 
                               Height="10" Margin="0,0,0,0" 
                               VerticalAlignment="Stretch" 
@@ -279,7 +280,7 @@
                 <MediaTransportControls  Height="100" Margin="0,0,0,0" 
                               VerticalAlignment="Stretch" 
                               Width="250" Visibility="Collapsed"/>
-                <AppBarButton x:ConnectionId='45'                            
+                <AppBarButton x:ConnectionId='43'                            
                               Icon="Clear" Label="Clear"
                               Tag="btnClearAddBoxes"
                               Margin="123,3,0,5" RenderTransformOrigin="-0.515,0.4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Height="52"/>
@@ -304,8 +305,9 @@
                        HorizontalAlignment="Center"/>
                 <CommandBar ClosedDisplayMode="Compact" Background="LightGray" 
                             Width="340" Height="Auto">
-                    <AppBarButton x:ConnectionId='39'                        
+                    <AppBarButton x:ConnectionId='37'                        
                               x:Name="btnDetailsPlay"
+                              IsEnabled="False"
                               Icon="Play" Label="Play" 
                               VerticalAlignment="Center"
                               Tag="btnDetailsPlay" Margin="0 1 90 1"/>
@@ -321,7 +323,7 @@
                          Header="Selected Index Value" 
                          HorizontalAlignment="Left" Margin="25 5" Width="Auto"/>
             </StackPanel>-->
-                <ListView x:ConnectionId='33' Name="TitleDetailsListView" Background="WhiteSmoke" 
+                <ListView x:ConnectionId='31' Name="TitleDetailsListView" Background="WhiteSmoke" 
                       Height="150" MinHeight="100" MaxHeight="160" Margin="5 5 5 5" 
                                                                                 
                       SelectionMode="Single"
@@ -358,16 +360,19 @@
                     <CommandBar ClosedDisplayMode="Compact" Background="LightGray" 
                                 Height="Auto" Width="340">
                         <CommandBar.PrimaryCommands>
-                            <AppBarButton x:ConnectionId='34' x:Name="btnNavHome"
+                            <AppBarButton x:ConnectionId='32' x:Name="btnNavHome"
+                                          Visibility="Collapsed"
                                           Icon="Home" Label="Home" 
                                                                         
                                           Margin="0,0,80,0"/>
-                            <AppBarButton x:ConnectionId='35' x:Name="btnShowUpDatePanel"
-                                                                           
+                            <AppBarButton x:ConnectionId='33' x:Name="btnShowUpDatePanel"
+                                                                          
+                                          IsEnabled="False"
                                           Tag="btnEdit"
-                                          Icon="Edit" Label="Edit"                                                                    
+                                          Icon="Edit" Label="Edit" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom"                                                                    
                                           />
-                            <AppBarButton x:ConnectionId='36' x:Name="btnShowDeletePanel"
+                            <AppBarButton x:ConnectionId='34' x:Name="btnShowDeletePanel"
+                                          IsEnabled="False"
                                                                            
                                           Tag="btnShowDeletePanel"
                                           Icon="Delete" Label="Delete"                                                                     
@@ -375,19 +380,19 @@
 
                         </CommandBar.PrimaryCommands>
                         <CommandBar.SecondaryCommands>
-                            <AppBarButton x:ConnectionId='37' x:Name="settingTitles" Icon="Setting" Label="Setting"/>
+                            <AppBarButton x:ConnectionId='35' x:Name="settingTitles" Icon="Setting" Label="Setting"/>
                         </CommandBar.SecondaryCommands>
                     </CommandBar>
                 </StackPanel>
             </StackPanel>
             <!--Ends- Title Details-->
 
-            <!--Watch And Play-->
-            <StackPanel x:ConnectionId='22' x:Name="WatchAndPlayTitlesPanel" Width="360" Height="310"
+            <!--Watch And Play--><!--
+            <StackPanel x:Name="WatchAndPlayTitlesPanel" Width="360" Height="310"
                     Margin="0 0" Background="#c9c5c5"
                        Visibility="Visible">
 
-                <TextBlock x:ConnectionId='32' Name="boxWatchAndPlayTtsRaw" 
+                <TextBlock Name="boxWatchAndPlayTtsRaw" 
                      Text="{Binding ElementName=boxUpdateTitleTtsRaw,Path=Text}"
                      TextWrapping="WrapWholeWords"
                      Height="255" MaxHeight="255" Margin="5,0"/>
@@ -395,20 +400,20 @@
 
                 </StackPanel>
             </StackPanel>
-            <!--Ends- Watch and Play-->
+            --><!--Ends- Watch and Play-->
 
             <!--Update-->
-            <StackPanel x:ConnectionId='23' x:Name="UpdateTitlesPanel" Width="360" Height="310"
+            <StackPanel x:ConnectionId='22' x:Name="UpdateTitlesPanel" Width="360" Height="310"
                     Margin="0 0" Background="#c9c5c5"
                        Visibility="Collapsed">
                 <TextBlock Text="Edit" FontSize="19"
                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <TextBox x:ConnectionId='28' Name="boxUpdateTitleName" Header=" Title Name" Margin="2 4"/>
-                <TextBox x:ConnectionId='29' Name="boxUpdateTitleTtsRaw" Header=" TTS Raw" 
+                <TextBox x:ConnectionId='27' Name="boxUpdateTitleName" Header=" Title Name" Margin="2 4"/>
+                <TextBox x:ConnectionId='28' Name="boxUpdateTitleTtsRaw" Header=" TTS Raw" 
                      TextWrapping="Wrap" AcceptsReturn="True"
                      Height="155" MaxHeight="155" Margin="2,0"/>
                 <StackPanel Orientation="Horizontal">
-                    <AppBarButton x:ConnectionId='30' x:Name="btnEditUpDate" 
+                    <AppBarButton x:ConnectionId='29' x:Name="btnEditUpDate" 
                                                                
                               Icon="Save" Label="Save Changes"
                               Tag="Edit-KeepChanges"
@@ -416,7 +421,7 @@
                               Visibility="Visible" 
                               HorizontalAlignment="Left" Height="54" 
                               VerticalAlignment="Top"/>
-                    <AppBarButton x:ConnectionId='31' x:Name="btnUndoChanges"
+                    <AppBarButton x:ConnectionId='30' x:Name="btnUndoChanges"
                                                             
                               Icon="Undo" Label="Undo"                            
                               Tag="Edit-UndoChanges" 
@@ -427,12 +432,12 @@
             <!--Ends- Update-->
 
             <!--Delete-->
-            <StackPanel x:ConnectionId='24' x:Name="DeleteTitlesPanel" Visibility="Collapsed"
+            <StackPanel x:ConnectionId='23' x:Name="DeleteTitlesPanel" Visibility="Collapsed"
                         Width="350" Height="315"
                         Margin="5 0" Background="#c9c5c5">
                 <TextBlock Text="Delete" FontSize="19" Margin="0 3 0 5"
                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <ListView x:ConnectionId='25' Name="DeleteTitlesListView" Background="WhiteSmoke" 
+                <ListView x:ConnectionId='24' Name="DeleteTitlesListView" Background="WhiteSmoke" 
                           Height="160" Margin="5" DataContext="{Binding}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -456,7 +461,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <StackPanel Orientation="Horizontal">
-                    <AppBarButton x:ConnectionId='26' x:Name="btnDeleteData"
+                    <AppBarButton x:ConnectionId='25' x:Name="btnDeleteData"
                                                       
                               Icon="Delete" Label="Permanently Delete"                            
                               Tag="btnDeleteData" Margin="2,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="342" Height="68"/>

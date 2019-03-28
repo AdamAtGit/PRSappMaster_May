@@ -9,7 +9,6 @@
     <RootPropertyPathName Name="TitleName" />
     <RootPropertyPathName Name="TitleId" />
     <RootPropertyPathName Name="UserId" />
-    <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="UserLogin" />
     <RootPropertyPathName Name="UseVoiceSelection" />
@@ -137,14 +136,13 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="MaxHeight" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="HorizontalTextAlignment" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Name" />
@@ -162,8 +160,6 @@
       <RootEvent Name="KeyUp" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="ElementName" />
-      <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
       <RootProperty Name="Source" />
       <RootProperty Name="Converter" />
@@ -203,8 +199,8 @@
       <RootProperty Name="Tag" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="IsEnabled" />
+      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Name" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="IsTapEnabled" />
