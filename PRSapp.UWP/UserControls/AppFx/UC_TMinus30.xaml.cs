@@ -16,7 +16,16 @@ namespace PRSapp.UWP.UserControls.AppFx
 
         public UC_TMinus30()
         {
-            this.InitializeComponent();
+            try
+            {
+                this.InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+               Windows.UI.Popups.MessageDialog MsgDialog = 
+                    new Windows.UI.Popups.MessageDialog(ex.ToString());
+            }
+            
             //Load FileNames from App Settings
             try
             {
@@ -591,7 +600,8 @@ namespace PRSapp.UWP.UserControls.AppFx
         {
             btnRePlayGroup.Content = "Replay Group";
             btnResestGroup_Click(sender, e);
-
+            MedTransCtrl.IsCompact = false;
+            MedTransCtrl.Visibility = Visibility.Collapsed;
             if(TgsRepeatGroup.IsOn)
             {
                 for (int i = 0; i < 20; i++)
@@ -611,7 +621,6 @@ namespace PRSapp.UWP.UserControls.AppFx
                 Button_Click_4(sender, e);
                 Button_Click_5(sender, e);
             }
-
         }
       
     }

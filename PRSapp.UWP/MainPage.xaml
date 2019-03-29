@@ -33,10 +33,10 @@
 
     <Grid x:Name="MainPageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="338*"/>
-            <ColumnDefinition Width="340*"/>
-            <ColumnDefinition Width="411*"/>
-            <ColumnDefinition Width="411*"/>
+            <ColumnDefinition Width="360"/>
+            <ColumnDefinition Width="360"/>
+            <ColumnDefinition Width="360"/>
+            <ColumnDefinition Width="360"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height=".15*"/>
@@ -144,8 +144,7 @@
 
         <StackPanel x:Name="AppFxPanel" Margin="0,1,0,1" Grid.Row="2" 
                     Grid.RowSpan="2"
-                    Visibility="Visible" HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch">
+                    Visibility="Visible">
             <ucappfx:UC_TMinus30/>
         </StackPanel>
 
@@ -185,13 +184,14 @@
 
         <!--////  2nd Col  \\\\-->
         <!--Users Titles List - Library-->
-        <StackPanel x:Name="ShowTitlesPanel"
-                    Grid.Column="1" Grid.Row="1" 
+        <StackPanel x:Name="StpTitles"
+                    Grid.Column="1" Grid.Row="1"  
+                    Grid.RowSpan="2"
                     Background="#ddd7d3" Margin="19,4,19,3"
-                    Visibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    HorizontalAlignment="Stretch">
             <TextBlock Text="Titles" FontSize="19" Margin="0 3"
                        HorizontalAlignment="Center"/>
-            <!--Grid.RowSpan="2"-->
+           
             <!--<StackPanel Orientation="Horizontal" Margin="0 5">
                 <TextBlock Name="tbTitleID" DataContext="{Binding TitleID}" Text="{Binding TitleID}"
                          HorizontalAlignment="Left" Margin="2 5" Width="50"/>
@@ -200,7 +200,7 @@
                          HorizontalAlignment="Left" Margin="25 5" Width="Auto"/>
             </StackPanel>-->
             <ListView x:Name="ShowTitlesListView" Background="WhiteSmoke" 
-                      MinHeight="10" Height="200" MaxHeight="500"
+                      MinHeight="10" Height="500" MaxHeight="500"
                       Margin="5 7 5 3" 
                       DataContext="{Binding Title}"
                       SelectionMode="Extended"
@@ -251,9 +251,12 @@
 
         <!--////  3rd Col  \\\\-->
         <!--Add Title-->
-        <StackPanel x:Name="AddTitlesPanel" Background="#ddd8d8"
+        <StackPanel x:Name="AddTitlesPanel" 
+                    Background="#ddd8d8"
                     Grid.Column="2" Grid.Row="1" 
-                    Grid.RowSpan="1" Margin="26,5,25,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    Grid.RowSpan="1" Margin="0,1" 
+                    HorizontalAlignment="Center"
+                    >
             <TextBlock Text="Add Title" FontSize="19"
                        Margin="0 3" HorizontalAlignment="Center"/>
             <TextBox Name="boxAddTitleName" Header=" Name" 
@@ -291,16 +294,22 @@
 
         <!--Edit Wrapper Panel 3rd Col-->
         <StackPanel x:Name="EditWrapperPanel" 
-                    Grid.Column="2" Grid.Row="2" Grid.RowSpan="2"
+                    Grid.Column="2" Grid.Row="2" 
+                    Grid.RowSpan="2"
                     Height="630"
                     VerticalAlignment="Center"
-                    Background="#ddd8d8" Margin="26,0,25,0"
-                    Visibility="Visible" HorizontalAlignment="Stretch">
+                    Background="#ddd8d8" Margin="0,1"                  
+                    HorizontalAlignment="Stretch">
 
             <!--Title Details Panel-->
-            <StackPanel x:Name="TitleDetailsPanel" Height="315" Width="350"
-                    Margin="5 4 5 1" Background="#c9c5c5"
-                        Visibility="Visible">
+            <StackPanel x:Name="TitleDetailsPanel" 
+                        
+                        Grid.RowSpan="2"
+                        Height="630" 
+                        
+                        Width="350"
+                        Margin="5 1 5 1" Background="#c9c5c5"
+                        >
                 <TextBlock Text="Title Details" FontSize="19" Margin="0 3"
                        HorizontalAlignment="Center"/>
                 <CommandBar ClosedDisplayMode="Compact" Background="LightGray" 
@@ -315,16 +324,9 @@
                               VerticalAlignment="Stretch" 
                               Width="250" Visibility="Visible"/>-->
                 </CommandBar>
-                <!--<StackPanel Orientation="Horizontal" Margin="0 5">
-                <TextBox Name="TitleDetailsTitleName" Header="Title Name"
-                      DataContext="{Binding Title}" Text="{Binding TitleName}"
-                     HorizontalAlignment="Left"  Margin="2 5" Width="250"/>
-                <TextBox x:Name="SelectedIndex_TextBox" 
-                         Header="Selected Index Value" 
-                         HorizontalAlignment="Left" Margin="25 5" Width="Auto"/>
-            </StackPanel>-->
-                <ListView Name="TitleDetailsListView" Background="WhiteSmoke" 
-                      Height="150" MinHeight="100" MaxHeight="160" Margin="5 5 5 5" 
+                <!--<StackPanel x:Name="stpDetailsLsvAndEditUpdateCmdBar">-->
+                    <ListView Name="TitleDetailsListView" Background="WhiteSmoke" 
+                      Height="480" MinHeight="100" MaxHeight="495" Margin="5 5 5 5" 
                       SelectionChanged="TitleDetailsListView_OnSelectionChanged"
                       SelectionMode="Single"
                       SingleSelectionFollowsFocus="True"
@@ -354,17 +356,17 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
-                <StackPanel Orientation="Horizontal" 
-                        Height="70" Margin="5 5" Width="350">
+ <!--Height="70" Margin="5 5"-->
+                <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Bottom"
+                        Width="350">-->
                     <CommandBar ClosedDisplayMode="Compact" Background="LightGray" 
                                 Height="Auto" Width="340">
                         <CommandBar.PrimaryCommands>
-                            <AppBarButton x:Name="btnNavHome"
+                            <!--<AppBarButton x:Name="btnNavHome"
                                           Visibility="Collapsed"
                                           Icon="Home" Label="Home" 
                                           Click="BtnTestPlayAsync_Click"
-                                          Margin="0,0,80,0"/>
+                                          Margin="0,0,80,0"/>-->
                             <AppBarButton x:Name="btnShowUpDatePanel"
                                           Click="BtnShowUpDatePanel_Click"
                                           IsEnabled="False"
@@ -383,7 +385,7 @@
                             <AppBarButton x:Name="settingTitles" Icon="Setting" Label="Setting"/>
                         </CommandBar.SecondaryCommands>
                     </CommandBar>
-                </StackPanel>
+                <!--/StackPanel>-->
             </StackPanel>
             <!--Ends- Title Details-->
 

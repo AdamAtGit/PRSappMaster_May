@@ -16,6 +16,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <!--Media Element placedon page so any UC or page function can use it-->
+        <MediaElement x:ConnectionId='2' x:Name="uiMediaElement"/>
         <!--1st row-->
         <StackPanel Orientation="Horizontal">
             <ToggleSwitch x:ConnectionId='21' x:Name="tgsCommandModeOn" Header="Command Mode" 
@@ -60,36 +62,44 @@
 
         <!--3rd row-->
         <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <AppBarButton x:ConnectionId='11'  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
+            <AppBarButton x:ConnectionId='12'  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
                                                                
                            Margin="0 0 0 10" Height="54"/>
-            <AppBarButton x:ConnectionId='12'  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
+            <AppBarButton x:ConnectionId='13'  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
                                                                        
-                          Visibility="Collapsed" Margin="0 0 0 10" Height="54"/>
-            <ToggleSwitch x:ConnectionId='13' x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
-            <TextBox x:ConnectionId='14' x:Name="boxRepetitions" Text="3"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:ConnectionId='15' x:Name="boxInterval" Text="3" Header="   Intervals (Mins)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
-            <MediaElement x:ConnectionId='16' x:Name="uiMediaElement"/>
+                          Visibility="Collapsed" Margin="0 0 0 8" Height="59"/>
+            <ToggleSwitch x:ConnectionId='14' x:Name="TgsRepeats" Header="Repeat" IsOn="True" 
+                          Margin="5 8 45 0" FontSize="12" 
+                          VerticalAlignment="Top" Width="100"/>
+            <TextBox x:ConnectionId='15' x:Name="boxRepetitions" Text="3"
+                     Header="    Times" FontSize="12"
+                     Margin="-40,0,70,0" Height="52" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:ConnectionId='16' x:Name="boxInterval" Text="3" 
+                     Header=" Intervals (Mins)" FontSize="12" 
+                     Margin="-55,0,-28,0" HorizontalAlignment="Stretch" Height="52" VerticalAlignment="Stretch" />
+            <!--Need a UI MediaElementctlr on page or UC-->
         </StackPanel>
+        <!--Need a UI MediaElementctlr on page or UC-->
+
+
 
         <!--4th row-->
-        <StackPanel x:ConnectionId='2' x:Name="stpStatus" Grid.Row="3" Orientation="Horizontal" 
+        <StackPanel x:ConnectionId='3' x:Name="stpStatus" Grid.Row="3" Orientation="Horizontal" 
                     Visibility="Visible" Background="Black" Height="Auto">
             <TextBlock Text="Status" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Margin="10 0 5 0"/>
-            <TextBlock x:ConnectionId='10' x:Name="tbStatus" Text="0" FontSize="12" Foreground="WhiteSmoke"
+            <TextBlock x:ConnectionId='11' x:Name="tbStatus" Text="0" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Width="Auto" Margin="10 0 5 0"/>
         </StackPanel>
 
         <!--5th row-->
-        <StackPanel x:ConnectionId='3' x:Name="stpSpeechSettings" Grid.Row="4" Orientation="Horizontal" 
+        <StackPanel x:ConnectionId='4' x:Name="stpSpeechSettings" Grid.Row="4" Orientation="Horizontal" 
                    Height="Auto">
-
 
             <TextBlock Text="Voice Gender" FontSize="12" 
                        VerticalAlignment="Center" Margin="20 6 0 0" 
                        Visibility="Collapsed"/>
-            <ComboBox x:ConnectionId='9' x:Name="cboVoiceGender" FontSize="12" 
+            <ComboBox x:ConnectionId='10' x:Name="cboVoiceGender" FontSize="12" 
                                                                         
                       Height="27" Width="130" Margin="7 5 5 0"
                       Visibility="Collapsed">
@@ -105,22 +115,22 @@
         <!--6th row Slider timer interval-->
         <StackPanel Grid.Row="5" Margin="0 10" Height="Auto"
                     >
-            <Slider x:ConnectionId='4' x:Name="SdrSpeakAsyncProgress" 
+            <Slider x:ConnectionId='5' x:Name="SdrSpeakAsyncProgress" 
                     Value="0"  Pivot.SlideInAnimationGroup="GroupOne"
                     TickFrequency="5"
                     Margin="5 0 5 5"
                     Visibility="Collapsed"/>
-            <AppBarButton x:ConnectionId='5' x:Name="BtnStopAsync" Label="Stop" Icon="Stop"
+            <AppBarButton x:ConnectionId='6' x:Name="BtnStopAsync" Label="Stop" Icon="Stop"
                                                                        
                           Visibility="Collapsed" Margin="0 0 0 10" Height="54"/>
-            <StackPanel x:ConnectionId='6' x:Name="stpMediaOut" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel x:ConnectionId='7' x:Name="stpMediaOut" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <AppBarButton x:ConnectionId='7' x:Name="BtnSpeechRecogWeatherSearch" Grid.Column="0" 
+                    <AppBarButton x:ConnectionId='8' x:Name="BtnSpeechRecogWeatherSearch" Grid.Column="0" 
                               Label="Weather" Icon="World"
                               Margin="0 0 200 0"
                                                                             
@@ -133,7 +143,7 @@
                     <SymbolIcon Symbol="Admin"  Margin="190 0 0 0"
                                  Visibility="Collapsed"/>
 
-                    <Image x:ConnectionId='8' x:Name="imgSpeakerOut" Grid.Column="1"             
+                    <Image x:ConnectionId='9' x:Name="imgSpeakerOut" Grid.Column="1"             
                     Source="/Assets/Images/imgOutSoundBullHorn.png"
                     Height="50" Width="60" Margin="0 0 0 0"
                             Visibility="Collapsed"/>

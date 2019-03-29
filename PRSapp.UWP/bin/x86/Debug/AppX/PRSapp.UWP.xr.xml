@@ -31,6 +31,7 @@
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="RequestedTheme" />
       <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -60,6 +61,8 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsControl" />
@@ -236,7 +239,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Name" />
-      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MediaTransportControls">
       <RootProperty Name="Height" />
@@ -244,6 +246,17 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="IsVolumeEnabled" />
+      <RootProperty Name="IsVolumeButtonVisible" />
+      <RootProperty Name="IsPreviousTrackButtonVisible" />
+      <RootProperty Name="IsFastRewindButtonVisible" />
+      <RootProperty Name="IsFastForwardButtonVisible" />
+      <RootProperty Name="IsNextTrackButtonVisible" />
+      <RootProperty Name="IsPlaybackRateEnabled" />
+      <RootProperty Name="IsPlaybackRateButtonVisible" />
+      <RootProperty Name="IsFullWindowEnabled" />
+      <RootProperty Name="IsFullWindowButtonVisible" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.AppFx.UC_TMinus30" />
     <RootType FullName="PRSapp.UWP.MainPage" />
@@ -312,6 +325,7 @@
     <RootType FullName="PRSapp.UWP.UserControls.AppFx.PrompterUC" />
     <RootType FullName="PRSapp.UWP.Pages.PageParmPass1" />
     <RootType FullName="PRSapp.UWP.Pages.QnAPage" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="PRSapp.UWP.UserControls.ListUserControl">
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
@@ -382,18 +396,18 @@
       <RootProperty Name="IsOn" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="OffContent" />
       <RootProperty Name="OnContent" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="PRSapp.UWP.ViewModels.TimeViewModel" />
     <RootType FullName="PRSapp.UWP.ViewModels.Converters.DateTimeToDateTimeOffsetConverter" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Date" />
       <RootProperty Name="Header" />

@@ -90,17 +90,13 @@ namespace PRSapp.UWP
                 // ShowTitlesPanel.Visibility = Visibility.Collapsed;
 
                 //below lines are for Isolate and make more items visible for Testing
-                EditWrapperPanel.Visibility = Visibility.Visible;
+                //EditWrapperPanel.Visibility = Visibility.Visible;
                 EditWrapperPanel.SetValue(Grid.RowSpanProperty, 2);
-                ShowTitlesPanel.Height = 630;
-                ShowTitlesPanel.SetValue(Grid.RowSpanProperty, 2);
+               // StpTitles.Height = 630;
+               // StpTitles.SetValue(Grid.RowSpanProperty, 2);
                 ShowTitlesListView.Height = 500;
 
 
-                //TitleDetailsPanel.Visibility = Visibility.Collapsed;
-               // UpdateTitlesPanel.Visibility = Visibility.Collapsed;
-               // DeleteTitlesPanel.Visibility = Visibility.Collapsed;
-                
                 //// 3rd col
                 //AddTitlesPanel.Visibility = Visibility.Collapsed;
                 // 3rd & 4th col, 3rd & 4th row
@@ -180,7 +176,7 @@ namespace PRSapp.UWP
         //Redirect to Timeline and create page in 2 seconds
         private async void NavOnDelay()
         {
-            await Task.Delay(2000); //wait for 3 seconds asynchronously 
+            await Task.Delay(15000); //wait for 3 seconds asynchronously 
             Frame.Navigate(typeof(Pages.DayPage), SignInUserLogin.Text);
         }
 
@@ -198,14 +194,10 @@ namespace PRSapp.UWP
         //// LOADING DATA from Database Provider
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
             using (var db = new PRSappContext())
             {
-                //TestAreaListView.ItemsSource = db.Users.ToList();
                 UsersDefaulHomePageListView.ItemsSource = db.Titles.ToList();
-                //ShowTitlesListView.ItemsSource = db.Titles.ToList();
-                //UpdateTitlesListView.ItemsSource = db.Titles.ToList();
-                //DeleteTitlesListView.ItemsSource = db.Titles.ToList();
+                //ShowTitlesListView.ItemsSource = db.Titles.ToList();       
             }
 
             using (var context = new PRSappContext())
@@ -1012,6 +1004,7 @@ namespace PRSapp.UWP
 
         private void BtnShowUpDatePanel_Click(object sender, RoutedEventArgs e)
         {
+            TitleDetailsPanel.Height = 315;
             TitleDetailsListView.SelectedIndex = 0;
             if (DeleteTitlesPanel.Visibility == Visibility.Visible)
             {
@@ -1208,6 +1201,7 @@ namespace PRSapp.UWP
 
         private void BtnShowDeletePanel_Click(object sender, RoutedEventArgs e)
         {
+            TitleDetailsPanel.Height = 315;
             DeleteTitlesListView.SelectedIndex = 0;
             if (UpdateTitlesPanel.Visibility == Visibility.Visible)
             {

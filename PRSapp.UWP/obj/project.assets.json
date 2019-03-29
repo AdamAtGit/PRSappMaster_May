@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "UAP,Version=v10.0.16299": {
+    "UAP,Version=v10.0.17134": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -668,10 +668,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -689,7 +689,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.16299/win10-arm": {
+    "UAP,Version=v10.0.17134/win10-arm": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -1520,10 +1520,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -1541,7 +1541,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.16299/win10-arm-aot": {
+    "UAP,Version=v10.0.17134/win10-arm-aot": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -2373,10 +2373,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -2394,7 +2394,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.16299/win10-arm64-aot": {
+    "UAP,Version=v10.0.17134/win10-arm64-aot": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -3047,10 +3047,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -3068,7 +3068,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.16299/win10-x64": {
+    "UAP,Version=v10.0.17134/win10-x64": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -3899,10 +3899,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -3920,7 +3920,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.16299/win10-x64-aot": {
+    "UAP,Version=v10.0.17134/win10-x64-aot": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -4752,10 +4752,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -4773,7 +4773,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.16299/win10-x86": {
+    "UAP,Version=v10.0.17134/win10-x86": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -5604,10 +5604,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -5625,7 +5625,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.16299/win10-x86-aot": {
+    "UAP,Version=v10.0.17134/win10-x86-aot": {
       "Microsoft.Data.Sqlite.Core/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -6457,10 +6457,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.6.0-preview.18571.3": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "ref/uap10.0.16300/_._": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+          "lib/uap10.0.16300/_._": {}
         }
       },
       "PRSapp.Model/1.0.0": {
@@ -10790,7 +10790,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "UAP,Version=v10.0.16299": [
+    "UAP,Version=v10.0.17134": [
       "Microsoft.Extensions.Logging.Console >= 3.0.0-preview.18572.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.9",
       "PRSapp.Model >= 1.0.0"
@@ -10818,14 +10818,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "uap10.0.16299"
+        "uap10.0.17134"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "uap10.0.16299": {
+        "uap10.0.17134": {
           "projectReferences": {
             "C:\\Users\\Flazz\\source\\repos\\FebOn\\00MarchRepo\\PRSapp\\PRSapp.Model\\PRSapp.Model.csproj": {
               "projectPath": "C:\\Users\\Flazz\\source\\repos\\FebOn\\00MarchRepo\\PRSapp\\PRSapp.Model\\PRSapp.Model.csproj"
@@ -10835,7 +10835,7 @@
       }
     },
     "frameworks": {
-      "uap10.0.16299": {
+      "uap10.0.17134": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Console": {
             "target": "Package",

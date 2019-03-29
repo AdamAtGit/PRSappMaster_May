@@ -16,6 +16,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <!--Media Element placedon page so any UC or page function can use it-->
+        <MediaElement x:Name="uiMediaElement"/>
         <!--1st row-->
         <StackPanel Orientation="Horizontal">
             <ToggleSwitch x:Name="tgsCommandModeOn" Header="Command Mode" 
@@ -65,12 +67,21 @@
                            Margin="0 0 0 10" Height="54"/>
             <AppBarButton  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
                           Click="BtnStopPauseRepeatMediaOutAsync_Click"
-                          Visibility="Collapsed" Margin="0 0 0 10" Height="54"/>
-            <ToggleSwitch x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
-            <TextBox x:Name="boxRepetitions" Text="3"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:Name="boxInterval" Text="3" Header="   Intervals (Mins)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
-            <MediaElement x:Name="uiMediaElement"/>
+                          Visibility="Collapsed" Margin="0 0 0 8" Height="59"/>
+            <ToggleSwitch x:Name="TgsRepeats" Header="Repeat" IsOn="True" 
+                          Margin="5 8 45 0" FontSize="12" 
+                          VerticalAlignment="Top" Width="100"/>
+            <TextBox x:Name="boxRepetitions" Text="3"
+                     Header="    Times" FontSize="12"
+                     Margin="-40,0,70,0" Height="52" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBox x:Name="boxInterval" Text="3" 
+                     Header=" Intervals (Mins)" FontSize="12" 
+                     Margin="-55,0,-28,0" HorizontalAlignment="Stretch" Height="52" VerticalAlignment="Stretch" />
+            <!--Need a UI MediaElementctlr on page or UC-->
         </StackPanel>
+        <!--Need a UI MediaElementctlr on page or UC-->
+
+
 
         <!--4th row-->
         <StackPanel x:Name="stpStatus" Grid.Row="3" Orientation="Horizontal" 
@@ -84,7 +95,6 @@
         <!--5th row-->
         <StackPanel x:Name="stpSpeechSettings" Grid.Row="4" Orientation="Horizontal" 
                    Height="Auto">
-
 
             <TextBlock Text="Voice Gender" FontSize="12" 
                        VerticalAlignment="Center" Margin="20 6 0 0" 
