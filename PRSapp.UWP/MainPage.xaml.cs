@@ -35,6 +35,7 @@ namespace PRSapp.UWP
         public int SelectedTitleId { get; set; }
         public int EditTitleId { get; set; }
         public int DeleteTitleId { get; set; }
+        public string CurrentDetailsTtsRaw { get; set; }
         public List<Title> TitleListIds { get; set; }
 
         //Media type for speech and media element and media player
@@ -899,16 +900,19 @@ namespace PRSapp.UWP
              
             string ttsRaw = "no Text to Speak of!";
             //H- var whoRanThisMethod = (sender as dispatcherTimer).
-            //string tag = (sender as Button).Tag.ToString();
-            //if (tag == "btnDetailsPlay")
-            //{
+            string tag = (sender as Button).Tag.ToString();
+            if (tag == "btnDetailsPlay")
+            {
               //H -someOne hacked in and did this code  ttsRaw = boxWatchAndPlayTtsRaw.Text.Trim();
                 if (String.IsNullOrEmpty(ttsRaw))
                 {
                     ttsRaw = "no Text to Speak of. Give me something.";
                 }
-            //}
-
+                else
+                {
+                    ttsRaw = CurrentDetailsTtsRaw;        
+                }
+            }
             try
             {
                 await this.SpeakTextAsync(ttsRaw, this.uiMediaElement);
@@ -994,7 +998,7 @@ namespace PRSapp.UWP
                 if (selectedTitle != null)
                 {
                     //Verbose and play
-
+                    CurrentDetailsTtsRaw = selectedTitle.TtsRaw;
                     EditTitleId = selectedTitle.TitleId;
                     boxUpdateTitleName.Text = selectedTitle.TitleName;
                     boxUpdateTitleTtsRaw.Text = selectedTitle.TtsRaw;
