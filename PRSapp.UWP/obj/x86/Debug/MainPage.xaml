@@ -145,7 +145,7 @@
         <StackPanel x:ConnectionId='5' x:Name="AppFxPanel" Margin="0,1,0,1" Grid.Row="2" 
                     Grid.RowSpan="2"
                     Visibility="Visible">
-            <ucappfx:UC_TMinus30/>
+            <ucappfx:UC_TMinus30 d:IsHidden="True"/>
         </StackPanel>
 
         <!--Default Home Page - Panel >> Post Sign In -->
