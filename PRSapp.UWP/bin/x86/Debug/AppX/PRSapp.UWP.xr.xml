@@ -118,9 +118,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Orientation" />
-      <RootProperty Name="Width" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="DataContext" />
@@ -154,10 +154,12 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="MinHeight" />
       <RootProperty Name="MaxHeight" />
+      <RootProperty Name="MinHeight" />
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="SingleSelectionFollowsFocus" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="IsMultiSelectCheckBoxEnabled" />
       <RootEvent Name="SelectionChanged" />
       <RootEvent Name="ItemClick" />
       <RootEvent Name="KeyUp" />
@@ -176,6 +178,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="AcceptsReturn" />
+      <RootProperty Name="MinHeight" />
       <RootProperty Name="Height" />
       <RootProperty Name="MaxHeight" />
       <RootProperty Name="IsSpellCheckEnabled" />
@@ -204,13 +207,13 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="RenderTransformOrigin" />
-      <RootProperty Name="Name" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="IsTapEnabled" />
       <RootProperty Name="IsTabStop" />
       <RootProperty Name="Flyout" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Name" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="Command" />
       <RootProperty Name="FontWeight" />
@@ -223,14 +226,14 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="PrimaryCommands" />
-      <RootProperty Name="SecondaryCommands" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="SecondaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootMethod Name="GetIsVerticalRailEnabled" />
       <RootMethod Name="SetIsVerticalRailEnabled" />
-      <RootMethod Name="GetIsDeferredScrollingEnabled" />
-      <RootMethod Name="SetIsDeferredScrollingEnabled" />
+      <RootMethod Name="GetIsScrollInertiaEnabled" />
+      <RootMethod Name="SetIsScrollInertiaEnabled" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MediaElement">
       <RootProperty Name="HorizontalAlignment" />

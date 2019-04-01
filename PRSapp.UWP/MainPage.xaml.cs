@@ -92,8 +92,8 @@ namespace PRSapp.UWP
                 //below lines are for Isolate and make more items visible for Testing
                 //EditWrapperPanel.Visibility = Visibility.Visible;
                 EditWrapperPanel.SetValue(Grid.RowSpanProperty, 2);
-               // StpTitles.Height = 630;
-               // StpTitles.SetValue(Grid.RowSpanProperty, 2);
+                // StpTitles.Height = 630;
+                // StpTitles.SetValue(Grid.RowSpanProperty, 2);
                 ShowTitlesListView.Height = 500;
 
 
@@ -104,7 +104,7 @@ namespace PRSapp.UWP
 
                 //// 3.5 col
                 //ShowPlayListPanel *Not sure if here or bottom col 1
-                
+
                 //TODO: ARS-Build XAML stackpanels below for playlists
                 //AddPlayListPanel.Visibility = Visibility.Visible;
                 //UpdatePlayListPanel.Visibility = Visibility.Collapsed;
@@ -139,7 +139,7 @@ namespace PRSapp.UWP
         {
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += DispatcherTimer_Tick;
-            dispatcherTimer.Interval = new TimeSpan(0,0,30);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 30);
             //IsEnabled defaults to false
             Debug.WriteLine("dispatcherTimer.IsEnabled = " + dispatcherTimer.IsEnabled + "\n");
             startTime = DateTimeOffset.Now;
@@ -380,7 +380,7 @@ namespace PRSapp.UWP
 
         #region  2nd Col
         private void BtnSetSelectionModeToMulitple_Click(object sender, RoutedEventArgs e)
-        {          
+        {
             if (ShowTitlesListView.SelectionMode == (ListViewSelectionMode)SelectionMode.Extended)
             {
                 ShowTitlesListView.SelectionMode = (ListViewSelectionMode)SelectionMode.Multiple;
@@ -388,11 +388,11 @@ namespace PRSapp.UWP
             else
             {
                 ShowTitlesListView.SelectionMode = (ListViewSelectionMode)SelectionMode.Extended;
-            }        
+            }
         }
 
-       // public IEnumerable<string> SelectedItemsRange;
-       public List<string> selectedItemsList = new List<string>();
+        // public IEnumerable<string> SelectedItemsRange;
+        public List<string> selectedItemsList = new List<string>();
         private void ShowTitlesListView_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //List<string> selectedItemList = new List<string>();
@@ -403,7 +403,7 @@ namespace PRSapp.UWP
             //// List<String> lstitem = new List<String>();
             ////lstitem.Add(ShowTitlesListView.SelectedItem.ToString());
 
-          
+
 
             if (ShowTitlesListView.SelectedItems.Count > 1)
             {
@@ -415,7 +415,7 @@ namespace PRSapp.UWP
 
                 List<string> selectedItems = new List<string>();
                 selectedItems.AddRange(ShowTitlesListView.SelectedItems.OfType<string>());
-               // selectedItems.AddRange(ShowTitlesListView.SelectedItems.);
+                // selectedItems.AddRange(ShowTitlesListView.SelectedItems.);
                 //using (var context = new PRSappContext())
                 //{
                 var selectedTitleIds = selectedItems
@@ -437,7 +437,7 @@ namespace PRSapp.UWP
 
                 int z = 0;
                 foreach (int item in selectedItems.ToString())
-                {                  
+                {
                     Debug.WriteLine("itemId: " + z + " - " + item.ToString());
                     z++;
                 }
@@ -484,7 +484,7 @@ namespace PRSapp.UWP
                 //Refresh Show Titles List View
                 //// List<Title> selectedTitles = TitleListIds; //usersTitleDetails.ToList();
                 #endregion
-               
+
             }
 
             #region More Commented out stuff that may be useful
@@ -559,45 +559,14 @@ namespace PRSapp.UWP
                     btnDetailsPlay.IsEnabled = false;
                     btnShowUpDatePanel.IsEnabled = false;
                     btnShowDeletePanel.IsEnabled = false;
+                    TitleDetailsPanel.Visibility = Visibility.Visible;
+                    TitleDetailsPanel.Height = 630;                  
                 }
                 #endregion
 
 
             }
-            #region Commented code for Selected item, Index, DataValue, and DataValuePath
-            // Debug.WriteLine("Selected: {0}", e.AddedItems[0]);
-
-            // SelectedItemIndex = ShowTitlesListView.SelectedIndex;
-            // Debug.WriteLine(SelectedItemIndex.ToString());
-
-            //  SelectedItem = ShowTitlesListView.SelectedItem;
-            // Debug.WriteLine(SelectedItem.ToString());
-
-            // var SelectedDataValue = ShowTitlesListView.SelectedValue;
-            // Debug.WriteLine(SelectedDataValue.ToString());
-
-            // var SelectedValuePath = ShowTitlesListView.SelectedValuePath;
-            // Debug.WriteLine(SelectedValuePath.ToString());
-
-            //  String text = UsersTitlesPListView.SelectedItems[2].ToString();
-            //do something
-
-            //  var lookat = text;
-            //var item = e.AddedItems?.FirstOrDefault();
-            ////int Uid = (int)item.ToString
-
-            //if (TitlesListView.SelectedItems.Count > 0)
-            //{
-            //    var itemrow = ShowTitlesListView.SelectedItems[0];
-            //    //rest of your logic
-            //}
-
-            //if (TitlesListView.SelectedItems.Count > 0)
-            //{
-            //    var myitem = ShowTitlesListView.SelectedItems[0];
-            //    //rest of your logic
-            //}
-            #endregion
+            
         }
 
         private void ShowTitlesListView_KeyUp(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
@@ -889,27 +858,27 @@ namespace PRSapp.UWP
             //{
             //    dispatcherTimer.Stop();
             //}
-             
+
             string ttsRaw = "no Text to Speak of!";
             //H- var whoRanThisMethod = (sender as dispatcherTimer).
             string tag = (sender as Button).Tag.ToString();
             if (tag == "btnDetailsPlay")
             {
-              //H -someOne hacked in and did this code  ttsRaw = boxWatchAndPlayTtsRaw.Text.Trim();
+                //H -someOne hacked in and did this code  ttsRaw = boxWatchAndPlayTtsRaw.Text.Trim();
                 if (String.IsNullOrEmpty(ttsRaw))
                 {
                     ttsRaw = "no Text to Speak of. Give me something.";
                 }
                 else
                 {
-                    ttsRaw = CurrentDetailsTtsRaw;        
+                    ttsRaw = CurrentDetailsTtsRaw;
                 }
             }
             try
             {
                 await this.SpeakTextAsync(ttsRaw, this.uiMediaElement);
                 //Ad-Hoc Dispatcher Timer- code set
-               
+
             }
             catch (Exception ex)
             {
@@ -1001,10 +970,9 @@ namespace PRSapp.UWP
         }
 
         ////UPDATING DATA       /   Modify   /    Update      
-
         private void BtnShowUpDatePanel_Click(object sender, RoutedEventArgs e)
         {
-            TitleDetailsPanel.Height = 315;
+            TitleDetailsPanel.Height = 0;
             TitleDetailsListView.SelectedIndex = 0;
             if (DeleteTitlesPanel.Visibility == Visibility.Visible)
             {
@@ -1012,14 +980,15 @@ namespace PRSapp.UWP
             }
 
             UpdateTitlesPanel.Visibility = Visibility.Visible;
-
+          //not needed, set at Des. time   UpdateTitlesPanel.Height = 630;
             //Fill Delete Panel with selected Title\\
             //Query DBContext
             using (var context = new PRSappContext())
             {
                 var results =
                      from t in context.Titles
-                     where t.TitleId == EditTitleId && t.UserId == CurrentUserId
+                     where t.TitleId == EditTitleId &&
+                           t.UserId == CurrentUserId
                      select t;
 
                 //Assign results
@@ -1030,6 +999,7 @@ namespace PRSapp.UWP
             //Approach 2 - DeleteTitlesListView.ItemsSource = TitleDetailsListView.ItemsSource;
             DeleteTitlesListView.SelectedIndex = 0;
         }
+
         private void UpdateData_Click(object sender, RoutedEventArgs e)
         {
             using (var context = new PRSappContext())
@@ -1042,6 +1012,7 @@ namespace PRSapp.UWP
                 //?\\UpdateDataListView.ItemsSource = context.Titles.ToList();
             }
         }
+
         private async void UpDateChangesAsync_Click(object sender, RoutedEventArgs e)
         {
             using (var context = new PRSappContext())
@@ -1069,7 +1040,8 @@ namespace PRSapp.UWP
                 boxUpdateTitleTtsRaw.Text = String.Empty;
                 //Collapse Update Titles Panel and Showing Details Panel after edit complete
                 UpdateTitlesPanel.Visibility = Visibility.Collapsed;
-                //Clear Title Dtails List View
+                TitleDetailsPanel.Visibility = Visibility.Visible;
+                TitleDetailsPanel.Height = 630;
             }
         }
 
@@ -1082,7 +1054,6 @@ namespace PRSapp.UWP
                 context.SaveChanges();
 
                 //refresh listview after update
-
             }
         }
 
@@ -1091,7 +1062,6 @@ namespace PRSapp.UWP
 
         }
         #endregion
-
 
         #region Deleting Data
         /// <summary>
@@ -1201,7 +1171,7 @@ namespace PRSapp.UWP
 
         private void BtnShowDeletePanel_Click(object sender, RoutedEventArgs e)
         {
-            TitleDetailsPanel.Height = 315;
+            TitleDetailsPanel.Height = 0;
             DeleteTitlesListView.SelectedIndex = 0;
             if (UpdateTitlesPanel.Visibility == Visibility.Visible)
             {
@@ -1209,7 +1179,7 @@ namespace PRSapp.UWP
             }
 
             DeleteTitlesPanel.Visibility = Visibility.Visible;
-
+           // DeleteTitlesPanel.Height = 630;
 
             //Fill Delete Panel with selected Title\\
             //Query DBContext
@@ -1227,10 +1197,8 @@ namespace PRSapp.UWP
 
                 Title selectedTitle = ((Title)TitleDetailsListView.SelectedItem);
 
-
             }
             //Approach 2 - DeleteTitlesListView.ItemsSource = TitleDetailsListView.ItemsSource;
-
         }
         ////DELETING DATA       /   Remove    /    Delete
         //Use the DbSet.Remove method to delete instances of your entity classes.
@@ -1244,8 +1212,7 @@ namespace PRSapp.UWP
             //      becuase we only want one item/row/title domain object at a sime here
             ////if(TitleDetailsListView.SelectedItems.Count > 0)
             ////{ 
-
-
+            ///
             if (TitleDetailsListView.SelectedItems.Count > 0)
             {
                 var title = new Title()
@@ -1264,6 +1231,7 @@ namespace PRSapp.UWP
                     var queryresults =
                          from t in context.Titles
                          where t.UserId == CurrentUserId
+                         orderby t.TitleId descending
                          select t;
                     int count = queryresults.Count();
                     if (count > 0)
@@ -1273,7 +1241,10 @@ namespace PRSapp.UWP
 
                         //Load Update Title Panel with Selected Item            
                         ShowTitlesListView.ItemsSource = selectedUsersTitles;
+
                     }
+                    TitleDetailsPanel.Visibility = Visibility.Visible;
+                    TitleDetailsPanel.Height = 630;
                     ////else
                     ////{
 
@@ -1282,12 +1253,11 @@ namespace PRSapp.UWP
                 }
                 using (var context = new PRSappContext())
                 {
-
-
                     //Refresh TitleDetailsListView & DeleteTitlesListView after delete      
                     var queryresults =
                          from t in context.Titles
                          where t.UserId == CurrentUserId && t.TitleId == DeleteTitleId
+                         orderby t.TitleId descending
                          select t;
 
                     //Put queryresults into a collection
@@ -1311,9 +1281,11 @@ namespace PRSapp.UWP
                         btnShowUpDatePanel.IsEnabled = false;
                         btnShowDeletePanel.IsEnabled = false;
                         DeleteTitlesPanel.Visibility = Visibility.Collapsed;
+                        TitleDetailsPanel.Visibility = Visibility.Visible;
+                       //dup TitleDetailsPanel.Height = 630;
                     }
                     #endregion
-                  
+
                 }
             }
             ////}
@@ -1361,6 +1333,7 @@ namespace PRSapp.UWP
                     var queryresults =
                          from t in context.Titles
                          where t.UserId == CurrentUserId // && t.TitleId == SelectedTitleId
+                         orderby t.TitleId descending
                          select t;
                     int count = queryresults.Count();
                     if (count > 0)
@@ -1416,6 +1389,12 @@ namespace PRSapp.UWP
             ////}
         }
 
+        private void btnDeleteGoBack_Click(object sender, RoutedEventArgs e)
+        {           
+            DeleteTitlesPanel.Visibility = Visibility.Collapsed;
+            TitleDetailsPanel.Height = 630;
+            TitleDetailsPanel.Visibility = Visibility.Visible;
+        }
         #endregion
 
         #region 4th Col 
@@ -1532,12 +1511,12 @@ namespace PRSapp.UWP
 
         private void NavToQnAPage_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Pages.QnAPage), SignInUserLogin.Text);          
+            Frame.Navigate(typeof(Pages.QnAPage), SignInUserLogin.Text);
         }
 
         private void NavToDayPage_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Pages.DayPage), SignInUserLogin.Text);           
+            Frame.Navigate(typeof(Pages.DayPage), SignInUserLogin.Text);
         }
 
         private void BtnSignOut_Click(object sender, RoutedEventArgs e)
@@ -1548,7 +1527,7 @@ namespace PRSapp.UWP
         private void BtnNavToPageParmPass1_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Pages.PageParmPass1), SignInUserLogin.Text);
-        }
+        }    
     }
     /////Ends MainPage partial Class and starts a static 'Top Level'(non-nested) class in same NameSpace
     //This below static class is an extension method for MediaElement
