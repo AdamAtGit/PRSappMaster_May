@@ -26,10 +26,16 @@ namespace PRSapp.UWP.UserControls.AppFx
 {
     public sealed partial class MentPrepRepeaterUserControl : UserControl
     {
+        //Set up so can pass Values from (Parent page) to this Usercontrol
+        public string TTS;
+
 
         // For App Life Cycle and Db
         public string CurrentUserName { get; set; }
         public int CurrentUserId { get; set; }
+
+        //internal string TTS;
+
         public int SelectedTitleId { get; set; }
         public int EditTitleId { get; set; }
         public int DeleteTitleId { get; set; }
@@ -73,6 +79,25 @@ namespace PRSapp.UWP.UserControls.AppFx
 
             TimerSetUp();
             cboVoiceGender.SelectedIndex = cboVoiceGender.Items.Count - 1;
+        }
+
+        public void PassPageValsToSetBindings(string tTs)
+        {
+            TTS = tTs;
+            boxTtsRawBig.Text = TTS;
+
+            ViewModels.AppFxsViewModel appFxsVM = new ViewModels.AppFxsViewModel();
+            this.MentPrepRepeaterUC.DataContext = appFxsVM;//ViewModels.AppFxsViewModel;
+            this.MentPrepRepeaterUC.SetBinding(TextBox.TextProperty,
+                new Binding()
+                {
+                    Path = new PropertyPath("TTS"),
+                    Source = appFxsVM
+                });
+        }
+        public void MentPrepRepeaterUC_Loaded(object sender, RoutedEventArgs e)
+        {
+          
         }
 
         public void TimerSetUp()
@@ -202,8 +227,6 @@ namespace PRSapp.UWP.UserControls.AppFx
         }
         #endregion
 
-
-
         private async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -279,12 +302,10 @@ namespace PRSapp.UWP.UserControls.AppFx
                     }
                 }
             }
-
             catch (Exception ex)
             {
                 ex.Message.ToString();
             }
-
         }
 
         #region Speech Recognition
@@ -312,8 +333,6 @@ namespace PRSapp.UWP.UserControls.AppFx
                         await speechRecognizer.RecognizeAsync();
             //await speechRecognizer.RecognizeWithUIAsync();
 
-
-
             // Do something with the recognition result.
             SpeechInputResult = speechRecognitionResult.Text;
             boxTtsRawBig.Text += SpeechInputResult;
@@ -327,9 +346,6 @@ namespace PRSapp.UWP.UserControls.AppFx
             //await messageDialog.ShowAsync();
         }
         #endregion
-
-
-
 
 
         #region User Speech Settings
@@ -380,7 +396,7 @@ namespace PRSapp.UWP.UserControls.AppFx
 
             await mediaElement.PlayStreamAsync(stream, true);
         }
-        #endregion
+        #endregion    
 
         private void BtnStopPauseRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
         {

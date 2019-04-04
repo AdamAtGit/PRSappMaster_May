@@ -157,6 +157,9 @@
     <Compile Include="Pages\PageParmPass1.xaml.cs">
       <DependentUpon>PageParmPass1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PassValstoUCsPage.xaml.cs">
+      <DependentUpon>PassValstoUCsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\QnAPage.xaml.cs">
       <DependentUpon>QnAPage.xaml</DependentUpon>
     </Compile>
@@ -186,6 +189,7 @@
     <Compile Include="UserControls\AppFx\MentPrepRepeaterUserControl.xaml.cs">
       <DependentUpon>MentPrepRepeaterUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AppFx\Models\AppFxsDataModel.cs" />
     <Compile Include="UserControls\AppFx\PrompterUC.xaml.cs">
       <DependentUpon>PrompterUC.xaml</DependentUpon>
     </Compile>
@@ -207,6 +211,7 @@
     <Compile Include="UserControls\AppFx\UC_TMinus30.xaml.cs">
       <DependentUpon>UC_TMinus30.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AppFx\ViewModels\AppFxsViewModel.cs" />
     <Compile Include="UserControls\Nested\AddChooseExistOrCreateUserControl.xaml.cs">
       <DependentUpon>AddChooseExistOrCreateUserControl.xaml</DependentUpon>
     </Compile>
@@ -561,6 +566,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\PageParmPass1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PassValstoUCsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

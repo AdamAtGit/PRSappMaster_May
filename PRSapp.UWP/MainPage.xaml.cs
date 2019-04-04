@@ -52,7 +52,10 @@ namespace PRSapp.UWP
         int timesTicked = 1;
         int timesToTick = 4;
 
-        public MainPage()
+       //Declare to Pass value to UC - Not currently Using
+       public string SourceTTS { get; set; }
+
+    public MainPage()
         {
             this.InitializeComponent();
             ////HardwareButtons.BackPressed += HardwareButtons_BackPressed; //for Phone
@@ -393,6 +396,8 @@ namespace PRSapp.UWP
 
         // public IEnumerable<string> SelectedItemsRange;
         public List<string> selectedItemsList = new List<string>();
+        private readonly object TTS;
+
         private void ShowTitlesListView_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //List<string> selectedItemList = new List<string>();
@@ -545,6 +550,23 @@ namespace PRSapp.UWP
 
                     TitleDetailsListView.ItemsSource = selectedUsersTitles;
                     TitleDetailsListView.SelectedIndex = 0;
+ 
+                }
+                
+                //put TTS in the Mental Prep user Control's TextBox
+                using (var context = new PRSappContext())
+                {
+                    var usersTitleDetails =
+                       from t in context.Titles
+                       where t.TitleId == selectedTitleID.TitleId
+                       select t.TtsRaw;
+
+                 //this.MPrepUC.TTS = usersTitleDetails.ToString();              
+                    //SourceTTS = usersTitleDetails.ToString();
+              //      Debug.WriteLine("SourceTTS\n" + SourceTTS.ToString());
+              //      Debug.WriteLine("______________________________\n");
+                   // Debug.WriteLine("this.MPrepUC.TTS:\n" + this.MPrepUC.TTS);
+                   // Debug.WriteLine("______________________________");
                 }
                 #region Enable/Disable TitleDeatilPanle's buttons when it's list view has no Item
                 if (TitleDetailsListView.Items.Count > 0 &&
@@ -966,6 +988,16 @@ namespace PRSapp.UWP
                     //Put TitleId and UserId into public fields for Delete
                     DeleteTitleId = selectedTitle.TitleId;
                     CurrentUserId = selectedTitle.UserId;
+
+                    //WIP 
+                    //Load page-->child UCs, that is bool IsAppFxCompatible with
+                    //with values.
+                    //Next step will be to make a page level bool ToggleButton in case
+                    //user wants to run some other content
+                  this.MPrepUC.TTS = selectedTitle.TtsRaw;
+                   this.MPrepUC.PassPageValsToSetBindings(this.MPrepUC.TTS);
+
+
                 }
         }
 

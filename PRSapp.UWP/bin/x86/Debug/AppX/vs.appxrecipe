@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-01T05:07:29.959</Modified>
+      <Modified>2019-04-04T22:28:00.325</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PRSapp.UWP.exe">
       <PackagePath>entrypoint\PRSapp.UWP.exe</PackagePath>
-      <Modified>2019-04-01T05:07:28.784</Modified>
+      <Modified>2019-04-04T22:27:58.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\.nuget\packages\microsoft.data.sqlite.core\2.1.0\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -1641,219 +1641,223 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PRSapp.UWP.xr.xml">
       <PackagePath>PRSapp.UWP.xr.xml</PackagePath>
-      <Modified>2019-04-01T05:07:27.608</Modified>
+      <Modified>2019-04-04T21:40:19.942</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.818</Modified>
+      <Modified>2019-04-04T22:27:57.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\ColorThemes.cs.xbf">
       <PackagePath>ColorThemes.cs.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.819</Modified>
+      <Modified>2019-04-04T22:27:57.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.692</Modified>
+      <Modified>2019-04-04T22:27:57.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppAboutPage.xbf">
       <PackagePath>PagesPhone\AppAboutPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.820</Modified>
+      <Modified>2019-04-04T22:27:57.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppCopyWritePage.xbf">
       <PackagePath>PagesPhone\AppCopyWritePage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.820</Modified>
+      <Modified>2019-04-04T22:27:57.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppCreateUserNamePage.xbf">
       <PackagePath>PagesPhone\AppCreateUserNamePage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.821</Modified>
+      <Modified>2019-04-04T22:27:57.886</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppDemoPage.xbf">
       <PackagePath>PagesPhone\AppDemoPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.821</Modified>
+      <Modified>2019-04-04T22:27:57.886</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppHelpPage.xbf">
       <PackagePath>PagesPhone\AppHelpPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.822</Modified>
+      <Modified>2019-04-04T22:27:57.887</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppProfilePage.xbf">
       <PackagePath>PagesPhone\AppProfilePage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.822</Modified>
+      <Modified>2019-04-04T22:27:57.888</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppResetPwdPage.xbf">
       <PackagePath>PagesPhone\AppResetPwdPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.822</Modified>
+      <Modified>2019-04-04T22:27:57.888</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppResetUserNamePage.xbf">
       <PackagePath>PagesPhone\AppResetUserNamePage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.823</Modified>
+      <Modified>2019-04-04T22:27:57.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppSettingsOverViewPage.xbf">
       <PackagePath>PagesPhone\AppSettingsOverViewPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.823</Modified>
+      <Modified>2019-04-04T22:27:57.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppSplashPage.xbf">
       <PackagePath>PagesPhone\AppSplashPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.824</Modified>
+      <Modified>2019-04-04T22:27:57.890</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\PagesPhone\AppSignInPage.xbf">
       <PackagePath>PagesPhone\AppSignInPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.824</Modified>
+      <Modified>2019-04-04T22:27:57.891</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\AddOrCreatePage.xbf">
       <PackagePath>Pages\AddOrCreatePage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.825</Modified>
+      <Modified>2019-04-04T22:27:57.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\AddPlayListPage.xbf">
       <PackagePath>Pages\AddPlayListPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.825</Modified>
+      <Modified>2019-04-04T22:27:57.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\AppFxs-PlayList-Titles.xbf">
       <PackagePath>Pages\AppFxs-PlayList-Titles.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.825</Modified>
+      <Modified>2019-04-04T22:27:57.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\AppSignedOutPage.xbf">
       <PackagePath>Pages\AppSignedOutPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.826</Modified>
+      <Modified>2019-04-04T22:27:57.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\ColorThemesPage.xbf">
       <PackagePath>Pages\ColorThemesPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.707</Modified>
+      <Modified>2019-04-04T22:27:57.764</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\PageParmPass1.xbf">
       <PackagePath>Pages\PageParmPass1.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.713</Modified>
+      <Modified>2019-04-04T22:27:57.770</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\PassValstoUCsPage.xbf">
+      <PackagePath>Pages\PassValstoUCsPage.xbf</PackagePath>
+      <Modified>2019-04-04T22:27:57.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\QnAPage.xbf">
       <PackagePath>Pages\QnAPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.718</Modified>
+      <Modified>2019-04-04T22:27:57.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\DayPage.xbf">
       <PackagePath>Pages\DayPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.723</Modified>
+      <Modified>2019-04-04T22:27:57.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\DragDropImgsExplorToListViewPage.xbf">
       <PackagePath>Pages\DragDropImgsExplorToListViewPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.828</Modified>
+      <Modified>2019-04-04T22:27:57.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\DTLuc_N_CreateTTSuc.xbf">
       <PackagePath>Pages\DTLuc_N_CreateTTSuc.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.828</Modified>
+      <Modified>2019-04-04T22:27:57.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\PlayListsPage.xbf">
       <PackagePath>Pages\PlayListsPage.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.829</Modified>
+      <Modified>2019-04-04T22:27:57.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\Template3Col3Row640x360.xbf">
       <PackagePath>Pages\Template3Col3Row640x360.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.829</Modified>
+      <Modified>2019-04-04T22:27:57.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\TimeLines_n_CreateBig_Page.xbf">
       <PackagePath>Pages\TimeLines_n_CreateBig_Page.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.830</Modified>
+      <Modified>2019-04-04T22:27:57.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AddChooseMenuUserControl.xbf">
       <PackagePath>UserControls\AddChooseMenuUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.830</Modified>
+      <Modified>2019-04-04T22:27:57.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\MentPrepRepeaterUserControl.xbf">
       <PackagePath>UserControls\AppFx\MentPrepRepeaterUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.752</Modified>
+      <Modified>2019-04-04T22:27:57.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\PrompterUC.xbf">
       <PackagePath>UserControls\AppFx\PrompterUC.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.758</Modified>
+      <Modified>2019-04-04T22:27:57.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\RepeaterUserControl2.xbf">
       <PackagePath>UserControls\AppFx\RepeaterUserControl2.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.762</Modified>
+      <Modified>2019-04-04T22:27:57.825</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\RepeaterUserControl.xbf">
       <PackagePath>UserControls\AppFx\RepeaterUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.768</Modified>
+      <Modified>2019-04-04T22:27:57.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\UC_Edit_Core_PlayItem.xbf">
       <PackagePath>UserControls\AppFx\UC_Edit_Core_PlayItem.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.832</Modified>
+      <Modified>2019-04-04T22:27:57.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\UC_Mood.xbf">
       <PackagePath>UserControls\AppFx\UC_Mood.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.776</Modified>
+      <Modified>2019-04-04T22:27:57.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\UC_PlayGroup.xbf">
       <PackagePath>UserControls\AppFx\UC_PlayGroup.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.783</Modified>
+      <Modified>2019-04-04T22:27:57.847</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\UC_TMinus30.xbf">
       <PackagePath>UserControls\AppFx\UC_TMinus30.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.790</Modified>
+      <Modified>2019-04-04T22:27:57.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\AddChooseExistOrCreateUserControl.xbf">
       <PackagePath>UserControls\Nested\AddChooseExistOrCreateUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.833</Modified>
+      <Modified>2019-04-04T22:27:57.903</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\CreateTtsLargeUserControl.xbf">
       <PackagePath>UserControls\CreateTtsLargeUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.795</Modified>
+      <Modified>2019-04-04T22:27:57.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\DetailsUserControl.xbf">
       <PackagePath>UserControls\DetailsUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.835</Modified>
+      <Modified>2019-04-04T22:27:57.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\ListUserControl.xbf">
       <PackagePath>UserControls\ListUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.836</Modified>
+      <Modified>2019-04-04T22:27:57.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\MainTimeLineUserControl.xbf">
       <PackagePath>UserControls\MainTimeLineUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.802</Modified>
+      <Modified>2019-04-04T22:27:57.867</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\AddCreateUserControl.xbf">
       <PackagePath>UserControls\Nested\AddCreateUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.837</Modified>
+      <Modified>2019-04-04T22:27:57.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\AddExistingFileUserControl.xbf">
       <PackagePath>UserControls\Nested\AddExistingFileUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.838</Modified>
+      <Modified>2019-04-04T22:27:57.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\ClockUC.xbf">
       <PackagePath>UserControls\Nested\ClockUC.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.838</Modified>
+      <Modified>2019-04-04T22:27:57.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\DateButtonUC.xbf">
       <PackagePath>UserControls\Nested\DateButtonUC.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.839</Modified>
+      <Modified>2019-04-04T22:27:57.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\DateUC.xbf">
       <PackagePath>UserControls\Nested\DateUC.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.839</Modified>
+      <Modified>2019-04-04T22:27:57.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\EyesUserControl.xbf">
       <PackagePath>UserControls\Nested\EyesUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.840</Modified>
+      <Modified>2019-04-04T22:27:57.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\HintUC.xbf">
       <PackagePath>UserControls\Nested\HintUC.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.841</Modified>
+      <Modified>2019-04-04T22:27:57.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\Nested\StopWatchUC.xbf">
       <PackagePath>UserControls\Nested\StopWatchUC.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.841</Modified>
+      <Modified>2019-04-04T22:27:57.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\PlayListUserControl.xbf">
       <PackagePath>UserControls\PlayListUserControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.842</Modified>
+      <Modified>2019-04-04T22:27:57.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\AppFx\ResponseUC.xbf">
       <PackagePath>UserControls\AppFx\ResponseUC.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.817</Modified>
+      <Modified>2019-04-04T22:27:57.882</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\SaveControl.xbf">
       <PackagePath>UserControls\SaveControl.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.842</Modified>
+      <Modified>2019-04-04T22:27:57.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\UserControls\UC_AddCreateTTS.xbf">
       <PackagePath>UserControls\UC_AddCreateTTS.xbf</PackagePath>
-      <Modified>2019-04-01T05:07:27.843</Modified>
+      <Modified>2019-04-04T22:27:57.911</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1861,11 +1865,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-03-29T18:10:49.615</Modified>
+      <Modified>2019-04-04T21:05:33.599</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Core\PRSapp.UWP.exe">
       <PackagePath>PRSapp.UWP.exe</PackagePath>
-      <Modified>2019-04-01T05:07:29.950</Modified>
+      <Modified>2019-04-04T22:28:00.315</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

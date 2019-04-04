@@ -11,6 +11,7 @@
     <RootPropertyPathName Name="UserId" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="UserLogin" />
+    <RootPropertyPathName Name="TTS" />
     <RootPropertyPathName Name="UseVoiceSelection" />
     <RootPropertyPathName Name="AddNewContentCmd" />
     <RootPropertyPathName Name="CurrentTime" />
@@ -37,14 +38,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Background" />
       <RootProperty Name="DataContext" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="Loaded" />
       <RootEvent Name="GotFocus" />
       <RootEvent Name="LostFocus" />
-      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="Background" />
@@ -165,6 +166,7 @@
       <RootEvent Name="KeyUp" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
       <RootProperty Name="Source" />
       <RootProperty Name="Converter" />
@@ -327,6 +329,7 @@
     </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.AppFx.PrompterUC" />
     <RootType FullName="PRSapp.UWP.Pages.PageParmPass1" />
+    <RootType FullName="PRSapp.UWP.Pages.PassValstoUCsPage" />
     <RootType FullName="PRSapp.UWP.Pages.QnAPage" />
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="PRSapp.UWP.UserControls.ListUserControl">
@@ -353,6 +356,7 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.AddChooseMenuUserControl" />
+    <RootType FullName="PRSapp.UWP.UserControls.AppFx.ViewModels.AppFxsViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
       <RootProperty Name="Value" />
       <RootProperty Name="TickFrequency" />

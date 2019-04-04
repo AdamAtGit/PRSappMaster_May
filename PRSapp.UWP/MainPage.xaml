@@ -8,8 +8,14 @@
     xmlns:vm="using:PRSapp.UWP.ViewModels"
     xmlns:uc="using:PRSapp.UWP.UserControls"
     xmlns:ucappfx="using:PRSapp.UWP.UserControls.AppFx"
+    xmlns:ucappfxsviewmodel="using:PRSapp.UWP.UserControls.AppFx.ViewModels"
     mc:Ignorable="d"
-    Loaded="Page_Loaded">
+    Loaded="Page_Loaded"
+    x:Name="Root"
+    >
+    <!--<Page.DataContext>
+        <ucappfxsviewmodel:AppFxsViewModel/>
+    </Page.DataContext>-->
     <!--Dodgerblue #1E90FF, Orange #ff8c00
         OrangeRed #ff4500  Magenta #ff00ff-->
     <!-- Blackish grays - fading down as they go
@@ -655,7 +661,9 @@
 
 
         <!--Repeater (mental Prep dic or type speech recog) user control-->
-        <ucappfx:MentPrepRepeaterUserControl Grid.Column="3" Grid.Row="2"
+        <ucappfx:MentPrepRepeaterUserControl 
+          x:Name="MPrepUC"
+           Grid.Column="3" Grid.Row="2"
            Grid.RowSpan="2" HorizontalAlignment="Stretch"
            Margin="0,0,0,0" VerticalAlignment="Stretch"/>
 

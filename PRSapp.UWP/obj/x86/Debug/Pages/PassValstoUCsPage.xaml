@@ -1,0 +1,33 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="PRSapp.UWP.Pages.PassValstoUCsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PRSapp.UWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:ucappfx="using:PRSapp.UWP.UserControls.AppFx"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    x:Name="ParentPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <TextBlock Text="Pass string result of LINQ to child UC" 
+                       FontSize="18" HorizontalAlignment="Center" Margin="10"/>
+            <TextBox x:ConnectionId='2' x:Name="boxTTS" Height="200" Width="600"
+                     Text="Test String IpSUm LipSam"/>
+            <Button x:ConnectionId='3' x:Name="BtnPassValuesToChildUC" 
+                    Content="Place Content to Mental Prep"
+                    HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="0,30">
+            <ucappfx:MentPrepRepeaterUserControl HorizontalAlignment="Center"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
+

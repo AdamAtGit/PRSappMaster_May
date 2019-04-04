@@ -5,8 +5,14 @@
     xmlns:local="using:PRSapp.UWP.Views.UserControls.AppFxs"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested">
-    <!--RepeaterUserControl 2-->
+    xmlns:ucnested="using:PRSapp.UWP.Views.UserControls.AppFxs.Nested"
+    xmlns:ucappfxsviewmodel="using:PRSapp.UWP.UserControls.AppFx.ViewModels"
+    x:Name="MentPrepRepeaterUC"
+    Loaded="MentPrepRepeaterUC_Loaded">
+    <UserControl.DataContext>
+        <ucappfxsviewmodel:AppFxsViewModel/>
+    </UserControl.DataContext>
+    <!--MentPrepRepeaterUserControl-->
     <Grid Height="640" Width="360" Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -49,11 +55,12 @@
                            Text="Tap Mic to start Dictating" Foreground="Ivory"
                            Margin="0,5,0,0"
                            HorizontalAlignment="Center"/>
+            <!--Text="{Binding ElementName=ParentPage, Path=TtsforMentPrepRepeater}"-->
             <TextBox x:Name="boxTtsRawBig" Height="230" Width="350"                  
                      TextWrapping="Wrap"
                      AcceptsReturn="True"
                      IsReadOnly="False"
-                     Text= ""
+                     Text="{Binding Path=TTS}"
                      IsSpellCheckEnabled="True"
                      HorizontalAlignment="Center" VerticalAlignment="Top"
                      Margin="0 5"/>

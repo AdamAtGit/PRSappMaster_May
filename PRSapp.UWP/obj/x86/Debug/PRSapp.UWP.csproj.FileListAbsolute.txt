@@ -1332,3 +1332,8 @@ C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Fx
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\FxResources.System.Transactions.Local.SR.resw
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\FxResources.System.ValueTuple.SR.resw
 C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758696200000000.json
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\bin\x86\Debug\Pages\PassValstoUCsPage.xbf
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PassValstoUCsPage.g.i.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PassValstoUCsPage.g.cs
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PassValstoUCsPage.xaml
+C:\Users\Flazz\source\repos\FebOn\00MarchRepo\PRSapp\PRSapp.UWP\obj\x86\Debug\Pages\PassValstoUCsPage.xbf
