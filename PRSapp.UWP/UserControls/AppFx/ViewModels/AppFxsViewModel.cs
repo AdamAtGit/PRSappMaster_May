@@ -21,7 +21,8 @@ namespace PRSapp.UWP.UserControls.AppFx.ViewModels
         {
             get
             {
-                OnPropertyChanged("TTS");
+                //OnPropertyChanged("TTS");//Not needed but may for twoWay bind mode
+                                            //to send to Add Title stackpanel for example
                 return tts;
             }
             set

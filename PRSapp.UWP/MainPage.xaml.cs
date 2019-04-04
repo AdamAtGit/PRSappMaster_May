@@ -51,10 +51,7 @@ namespace PRSapp.UWP
         DateTimeOffset stopTime;
         int timesTicked = 1;
         int timesToTick = 4;
-
-       //Declare to Pass value to UC - Not currently Using
-       public string SourceTTS { get; set; }
-
+   
     public MainPage()
         {
             this.InitializeComponent();
@@ -195,6 +192,7 @@ namespace PRSapp.UWP
         ////}
 
         //// LOADING DATA from Database Provider
+        
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             using (var db = new PRSappContext())
@@ -396,33 +394,14 @@ namespace PRSapp.UWP
 
         // public IEnumerable<string> SelectedItemsRange;
         public List<string> selectedItemsList = new List<string>();
-        private readonly object TTS;
 
         private void ShowTitlesListView_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //List<string> selectedItemList = new List<string>();
-            //selectedItemList.Add(ShowTitlesListView.SelectedItem.ToString());
-            ////now add to the plural public list
-            //selectedItemsList.Add();
-
-            //// List<String> lstitem = new List<String>();
-            ////lstitem.Add(ShowTitlesListView.SelectedItem.ToString());
-
-
-
+        {          
             if (ShowTitlesListView.SelectedItems.Count > 1)
             {
 
-                ////////////////////////
-                //Try this(using System.Linq):
-
-                //OfType() is an extension method, so you need to use System.Linq
-
                 List<string> selectedItems = new List<string>();
-                selectedItems.AddRange(ShowTitlesListView.SelectedItems.OfType<string>());
-                // selectedItems.AddRange(ShowTitlesListView.SelectedItems.);
-                //using (var context = new PRSappContext())
-                //{
+                selectedItems.AddRange(ShowTitlesListView.SelectedItems.OfType<string>());            
                 var selectedTitleIds = selectedItems
                                  .Select(x => selectedItems.ToString())
                                        .ToList();
@@ -434,12 +413,7 @@ namespace PRSapp.UWP
                     Debug.WriteLine("selectedItems: " + h + " - " + item.ToString());
                     h++;
                 }
-                // lstitems = ShowTitlesListView.SelectedItems
-                //                       .Select(x => ShowTitlesListView.Items[y].ToString())
-                //                       .ToList();
-
-                // }
-
+              
                 int z = 0;
                 foreach (int item in selectedItems.ToString())
                 {
@@ -489,7 +463,6 @@ namespace PRSapp.UWP
                 //Refresh Show Titles List View
                 //// List<Title> selectedTitles = TitleListIds; //usersTitleDetails.ToList();
                 #endregion
-
             }
 
             #region More Commented out stuff that may be useful
@@ -527,10 +500,7 @@ namespace PRSapp.UWP
             {
                 // copy 
                 dataPackage.RequestedOperation = DataPackageOperation.Copy;
-            }
-            //TitlesListView Title = ((new_client)Listview.SelectedItem);
-            //MyClient.new_name;
-            //MyClient.new_clientId;
+            }        
 
             if (ShowTitlesListView.SelectedItems.Count > 0)
             {
@@ -550,7 +520,6 @@ namespace PRSapp.UWP
 
                     TitleDetailsListView.ItemsSource = selectedUsersTitles;
                     TitleDetailsListView.SelectedIndex = 0;
- 
                 }
                 
                 //put TTS in the Mental Prep user Control's TextBox
@@ -559,14 +528,7 @@ namespace PRSapp.UWP
                     var usersTitleDetails =
                        from t in context.Titles
                        where t.TitleId == selectedTitleID.TitleId
-                       select t.TtsRaw;
-
-                 //this.MPrepUC.TTS = usersTitleDetails.ToString();              
-                    //SourceTTS = usersTitleDetails.ToString();
-              //      Debug.WriteLine("SourceTTS\n" + SourceTTS.ToString());
-              //      Debug.WriteLine("______________________________\n");
-                   // Debug.WriteLine("this.MPrepUC.TTS:\n" + this.MPrepUC.TTS);
-                   // Debug.WriteLine("______________________________");
+                       select t.TtsRaw;       
                 }
                 #region Enable/Disable TitleDeatilPanle's buttons when it's list view has no Item
                 if (TitleDetailsListView.Items.Count > 0 &&
@@ -585,10 +547,7 @@ namespace PRSapp.UWP
                     TitleDetailsPanel.Height = 630;                  
                 }
                 #endregion
-
-
-            }
-            
+            }           
         }
 
         private void ShowTitlesListView_KeyUp(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
@@ -596,10 +555,6 @@ namespace PRSapp.UWP
 
         }
         #endregion
-
-
-
-
 
         #region 3rd Col
         #region Add Title

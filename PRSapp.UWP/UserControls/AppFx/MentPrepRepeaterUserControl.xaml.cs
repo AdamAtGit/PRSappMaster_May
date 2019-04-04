@@ -29,13 +29,9 @@ namespace PRSapp.UWP.UserControls.AppFx
         //Set up so can pass Values from (Parent page) to this Usercontrol
         public string TTS;
 
-
         // For App Life Cycle and Db
         public string CurrentUserName { get; set; }
         public int CurrentUserId { get; set; }
-
-        //internal string TTS;
-
         public int SelectedTitleId { get; set; }
         public int EditTitleId { get; set; }
         public int DeleteTitleId { get; set; }
@@ -48,16 +44,13 @@ namespace PRSapp.UWP.UserControls.AppFx
         int i = 0;
         int repetitions;
 
-
         // Media Output Async 
         string ttsRaw = string.Empty;
-
 
         //Speech Synth and Recogn
         public string SpeechInputResult { get; set; }
 
         //Speech User Settings
-
         public string VoiceGender = "female";
 
 
@@ -86,14 +79,14 @@ namespace PRSapp.UWP.UserControls.AppFx
             TTS = tTs;
             boxTtsRawBig.Text = TTS;
 
-            ViewModels.AppFxsViewModel appFxsVM = new ViewModels.AppFxsViewModel();
-            this.MentPrepRepeaterUC.DataContext = appFxsVM;//ViewModels.AppFxsViewModel;
-            this.MentPrepRepeaterUC.SetBinding(TextBox.TextProperty,
-                new Binding()
-                {
-                    Path = new PropertyPath("TTS"),
-                    Source = appFxsVM
-                });
+            //ViewModels.AppFxsViewModel appFxsVM = new ViewModels.AppFxsViewModel();
+            //this.MentPrepRepeaterUC.DataContext = appFxsVM;//ViewModels.AppFxsViewModel;
+            //this.MentPrepRepeaterUC.SetBinding(TextBox.TextProperty,
+            //    new Binding()
+            //    {
+            //        Path = new PropertyPath("TTS"),
+            //        Source = appFxsVM
+            //    });
         }
         public void MentPrepRepeaterUC_Loaded(object sender, RoutedEventArgs e)
         {
