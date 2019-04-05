@@ -38,6 +38,9 @@ namespace PRSapp.UWP
         public string CurrentDetailsTtsRaw { get; set; }
         public List<Title> TitleListIds { get; set; }
 
+        //Declare Holding members for child UCs
+        public string SourceTTS { get; set; }
+
         //Media type for speech and media element and media player
         public string MediaType = "TtsRaw";
 
@@ -949,11 +952,18 @@ namespace PRSapp.UWP
                     //with values.
                     //Next step will be to make a page level bool ToggleButton in case
                     //user wants to run some other content
-                  this.MPrepUC.TTS = selectedTitle.TtsRaw;
-                   this.MPrepUC.PassPageValsToSetBindings(this.MPrepUC.TTS);
-
-
+               ////this.MPrepUC.TTS = selectedTitle.TtsRaw;
+               ////this.MPrepUC.PassPageValsToSetBindings(this.MPrepUC.TTS);
+                
+                    SourceTTS = selectedTitle.TtsRaw;
+                    BtnPlayInMPRepeater.IsEnabled = true;
                 }
+        }
+
+        private void PlayInMPRepeater_Click(object sender, RoutedEventArgs e)
+        {
+            this.MPrepUC.TTS = SourceTTS;
+            this.MPrepUC.PassPageValsToSetBindings(this.MPrepUC.TTS);
         }
 
         ////UPDATING DATA       /   Modify   /    Update      
@@ -1514,7 +1524,9 @@ namespace PRSapp.UWP
         private void BtnNavToPageParmPass1_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Pages.PageParmPass1), SignInUserLogin.Text);
-        }    
+        }
+
+     
     }
     /////Ends MainPage partial Class and starts a static 'Top Level'(non-nested) class in same NameSpace
     //This below static class is an extension method for MediaElement

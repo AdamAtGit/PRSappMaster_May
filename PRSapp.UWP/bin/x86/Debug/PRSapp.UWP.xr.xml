@@ -56,6 +56,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Content" />
+      <RootProperty Name="IsEnabled" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="BorderBrush" />

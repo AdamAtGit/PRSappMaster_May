@@ -658,7 +658,13 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
-
+        <StackPanel x:Name="stpPlayInCompatibleAppFx" 
+            Grid.Row="1" Grid.Column="3"
+            HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button x:Name="BtnPlayInMPRepeater" Content="Play in Mental Prep"
+                   Click="PlayInMPRepeater_Click"
+                    IsEnabled="False"/>
+        </StackPanel>
 
         <!--Repeater (mental Prep dic or type speech recog) user control-->
         <ucappfx:MentPrepRepeaterUserControl 
