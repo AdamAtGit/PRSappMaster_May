@@ -5,12 +5,14 @@
     xmlns:local="using:PRSapp.UWP.UserControls.AppFx"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ucappfxsviewmodel="using:PRSapp.UWP.UserControls.AppFx.ViewModels"
+    x:Name="UCTMinus30"
     mc:Ignorable="d"
-   
-    Height="640" Width="360">
-
+    Height="635" Width="355">
+    <UserControl.DataContext>
+        <ucappfxsviewmodel:AppFxsViewModel/>
+    </UserControl.DataContext>
     <UserControl.Resources>
-       
         <Style TargetType="AppBarButton">
             <!--<Setter Property="Background" Value="{StaticResource AppBarBackgroundThemeBrush}"/>-->
             <Setter Property="Height" Value="50"/>
@@ -143,8 +145,9 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="15 5 15 0" Background="DarkGray">
                 <ToggleSwitch x:Name="TgsRepeatGroup" Background="{StaticResource ToggleButtonBackgroundThemeBrush}"
+                        IsOn="{Binding Path=IsRepeatOn}"
                         FontSize="12.5" Foreground="OrangeRed"
-                        Header="Repeat" IsOn="True"                        
+                        Header="Repeat"                        
                         HorizontalAlignment="Left"
                         Height="56" Width="100" Margin="35,0,0,0"/>
                 <ToggleSwitch x:Name="TgbShuffle"

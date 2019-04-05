@@ -19,13 +19,20 @@ namespace PRSapp.UWP.UserControls.AppFx
             try
             {
                 this.InitializeComponent();
+                //Binding- since bound to prop IsReapeatOn in AppFxsViewModel
+                //Set TgsRepeatGroup to true here
+                TgsRepeatGroup.IsOn = true;
+               
             }
             catch (Exception ex)
             {
                Windows.UI.Popups.MessageDialog MsgDialog = 
                     new Windows.UI.Popups.MessageDialog(ex.ToString());
             }
-            
+            //Test to see if not popping up b/c was in the try{}
+            Windows.UI.Popups.MessageDialog MsDialog =
+               new Windows.UI.Popups.MessageDialog(TgsRepeatGroup.IsOn.ToString());
+
             //Load FileNames from App Settings
             try
             {

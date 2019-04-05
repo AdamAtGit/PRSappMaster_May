@@ -17,6 +17,7 @@
     <RootPropertyPathName Name="CurrentTime" />
     <RootPropertyPathName Name="SomeDateTime" />
     <RootPropertyPathName Name="SomeDateTimeTimeSpanProxy" />
+    <RootPropertyPathName Name="IsRepeatOn" />
     <RootPropertyPathName Name="SomeDateTime_5" />
     <RootPropertyPathName Name="SomeDateTimeTimeSpanProxy_5" />
     <RootPropertyPathName Name="SomeDateTime_4" />

@@ -106,7 +106,11 @@
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>-->
         </StackPanel>
         <StackPanel Grid.Column="1" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TextBlock Text="Library &amp; Tracks"  HorizontalTextAlignment="Center"
+            <!--<TextBlock Text="Library &amp; Tracks"  HorizontalTextAlignment="Center"
+                       FontWeight="SemiBold" FontSize="18" Margin="3"/>-->
+            <TextBlock Text="Status: "  HorizontalTextAlignment="Center"
+                       FontWeight="SemiBold" FontSize="18" Margin="3"/>
+            <TextBlock Text=""  HorizontalTextAlignment="Center"
                        FontWeight="SemiBold" FontSize="18" Margin="3"/>
         </StackPanel>
         <StackPanel Grid.Column="2" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -148,10 +152,11 @@
             </Button>
         </StackPanel>
 
-        <StackPanel x:ConnectionId='5' x:Name="AppFxPanel" Margin="0,1,0,1" Grid.Row="2" 
+        <StackPanel x:ConnectionId='5' x:Name="AppFxPanel" Margin="0,1,0,1" 
+                    Grid.Row="2" 
                     Grid.RowSpan="2"
                     Visibility="Visible">
-            <ucappfx:UC_TMinus30 d:IsHidden="True"/>
+            <ucappfx:UC_TMinus30 d:IsHidden="False"/>
         </StackPanel>
 
         <!--Default Home Page - Panel >> Post Sign In -->

@@ -16,6 +16,7 @@ namespace PRSapp.UWP.UserControls.AppFx.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
 
+        //For AppFxs that use TTS
         private string tts;
         public string TTS
         {
@@ -31,6 +32,41 @@ namespace PRSapp.UWP.UserControls.AppFx.ViewModels
                 tts = value;
             }
         }
+
+        //For AppFxs that repeat groups (PLayLists) like T-30, CC, QtA/PhR
+        private bool isRepeatOn;
+        public bool IsRepeatOn
+        {
+            get
+            {
+                //OnPropertyChanged("IsRepeatOn");//Not needed but may for twoWay bind mode
+                //to send to Add Title stackpanel for example
+                return isRepeatOn;
+            }
+            set
+            {
+                OnPropertyChanged("IsRepeatOn");
+                isRepeatOn = value;
+            }
+        }
+
+        //For AppFxs that repeat groups (PLayLists) like T-30, CC, QtA/PhR
+        private bool objNameCurrentlyUsingMediaControl;
+        public bool ObjCurrentlyUsingMediaControl
+        {
+            get
+            {
+                //OnPropertyChanged("IsRepeatOn");//Not needed but may for twoWay bind mode
+                //to send to Add Title stackpanel for example
+                return objNameCurrentlyUsingMediaControl;
+            }
+            set
+            {
+                OnPropertyChanged("ObjNameCurrentlyUsingMediaControl");
+                objNameCurrentlyUsingMediaControl = value;
+            }
+        }
+
 
     }
 }
