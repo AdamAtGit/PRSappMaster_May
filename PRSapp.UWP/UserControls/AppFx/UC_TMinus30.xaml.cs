@@ -22,7 +22,8 @@ namespace PRSapp.UWP.UserControls.AppFx
                 //Binding- since bound to prop IsReapeatOn in AppFxsViewModel
                 //Set TgsRepeatGroup to true here
                 TgsRepeatGroup.IsOn = true;
-               
+                Debug.WriteLine("\nHit  public UC_TMinus30()\nIsRepeatOn. \nVal: "
+                   + TgsRepeatGroup.IsOn.ToString() +"\n");
             }
             catch (Exception ex)
             {

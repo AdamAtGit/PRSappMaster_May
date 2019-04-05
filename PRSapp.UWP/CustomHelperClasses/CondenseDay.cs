@@ -26,8 +26,15 @@ namespace PRSapp.UWP.CustomHelperClasses
             _dayPart3 = dayPart3.Subtract(spanDecrementAmt);
             _dayPart4 = dayPart4.Subtract(spanDecrementAmt);
 
-            Debug.WriteLine(" spanDecrementAmt :{0}\n ", spanDecrementAmt.ToString());
-            Debug.WriteLine(" _dayPart2 :{0} \n+ _dayPart3 :{1} \n+ _dayPart4 : {2}", _dayPart2.ToString(), _dayPart3.ToString(), _dayPart4.ToString());
+            #region Debugging
+            Debug.WriteLine("________________________________________");
+            Debug.WriteLine("Hit CondenseDays.cs");
+            Debug.Write("spanDecrementAmt.TotalSeconds: ");
+            Debug.WriteLine(spanDecrementAmt.TotalSeconds.ToString());
+            Debug.WriteLine("_dayPart2 :{0} \n_dayPart3 :{1} \n_dayPart4 :{2}",
+                            _dayPart2.ToString(), _dayPart3.ToString(), _dayPart4.ToString());
+            Debug.WriteLine("_________________________________________\n");
+            #endregion
         }
     }
 }

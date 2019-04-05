@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,10 +42,14 @@ namespace PRSapp.UWP.UserControls.AppFx.ViewModels
             {
                 //OnPropertyChanged("IsRepeatOn");//Not needed but may for twoWay bind mode
                 //to send to Add Title stackpanel for example
+                Debug.WriteLine("\nHit IsRepeatOn Getter. \nVal: "
+                    + isRepeatOn.ToString());
                 return isRepeatOn;
             }
             set
             {
+                Debug.WriteLine("\nHit IsRepeatOn Setter. \nVal: "
+                   + isRepeatOn.ToString());
                 OnPropertyChanged("IsRepeatOn");
                 isRepeatOn = value;
             }

@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ucappfxsviewmodel="using:PRSapp.UWP.UserControls.AppFx.ViewModels"
-    x:Name="MentPrepRepeaterUC"
+    x:Name="UCTMinus30"
     mc:Ignorable="d"
     Height="635" Width="355">
     <UserControl.DataContext>
