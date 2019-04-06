@@ -6,6 +6,12 @@ using Windows.Storage;
 using System.Diagnostics;
 using Windows.UI.Xaml.Input;
 using PRSapp.UWP.CustomHelperClasses;
+using Windows.UI;
+using Windows.UI.Xaml.Media;
+using Windows.ApplicationModel.Activation;
+using Windows.Media.Core;
+using Windows.Security.Cryptography.Core;
+
 
 namespace PRSapp.UWP.UserControls.AppFx
 {
@@ -13,7 +19,7 @@ namespace PRSapp.UWP.UserControls.AppFx
     {  
         //below line for app settings
         ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
-
+        bool hasFinishedGroupPlaying = false; 
         public UC_TMinus30()
         {
             try
@@ -68,8 +74,31 @@ namespace PRSapp.UWP.UserControls.AppFx
             PickAFileButton3.Click += new RoutedEventHandler(PickAFileButton3_Click);
             PickAFileButton4.Click += new RoutedEventHandler(PickAFileButton4_Click);
             PickAFileButton5.Click += new RoutedEventHandler(PickAFileButton5_Click);
+
+            //Wire up MediaElement events
+            //MediaTool.MediaOpened += MediaTool_MediaFailed;
+            //MediaTool.MediaEnded += MediaTool_MediaOpened;
+            //MediaTool.MediaEnded += MediaTool_MediaEnded;
+           
         }
 
+        #region MediaElement Event Handlers
+        private void MediaTool_MediaFailed(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Hit UC_TMinus30 CB > MediaTool_MediaFailed");
+            // Do your stuff       
+        }
+        private void MediaTool_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Hit UC_TMinus30 CB > MediaTool_MediaOpened");
+            // Do your stuff       
+        }
+        private void MediaTool_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Hit UC_TMinus30 CB > MediaTool_MediaEnded");
+            // Do your stuff       
+        }
+        #endregion
         #region Timer Decarations
         private DispatcherTimer timer;
         private DispatcherTimer timer2;
@@ -125,6 +154,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                 {
                     // MediaTool.Source = new Uri(ENV_CENTRAL_PATH + tbFilePicked.Text);
                     MediaTool.Source = new Uri(ENV_PROJ_PATH + tbFilePicked.Text);
+                   // MedTransCtrl.Source = new Uri(ENV_PROJ_PATH + tbFilePicked.Text);
                 }
                 catch (Exception ex)
                 {

@@ -25,7 +25,7 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         <Style TargetType="TextBlock">
-            <Setter Property="Foreground" Value="DarkOrange"/>
+            <Setter Property="Foreground" Value="Ivory"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="0 10"/>
             <Setter Property="Width" Value="60"/>
@@ -38,30 +38,30 @@
             <Setter Property="Height" Value="40"/>
         </Style>-->
     </UserControl.Resources>
-    <Grid Background="{StaticResource FocusVisualBlackStrokeThemeBrush}" Height="640">
+    <Grid Height="640">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height=".175*"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto" MinHeight="121"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" 
-                     Height="Auto">
+                     Height="509">
             <StackPanel Orientation="Horizontal" 
                         HorizontalAlignment="Stretch" VerticalAlignment="Top"
-                        Background="Gray" Height="50" Margin="0 0 0 12.5" >
-                <TextBlock FontSize="22" Foreground="OrangeRed" FontWeight="Bold"
-                           Margin="60 7 7 7" Text="'T-30'" Width="Auto"/>
-                <TextBlock FontSize="20" Foreground="OrangeRed" FontWeight="Bold"                            
-                           Margin="0 9 0 5" Text="Count Down" Width="125"/>
+                        Background="Gray" Height="30" Margin="0 0 0 0">
+                <TextBlock FontSize="18" Foreground="Ivory" FontWeight="Bold"
+                           Margin="90 5 7 5" Text="'T-30'" Width="Auto"/>
+                <TextBlock FontSize="18" Foreground="Ivory" FontWeight="Bold"                            
+                           Margin="0 5 0 5" Text="Count Down" Width="125"/>
             </StackPanel>
             <StackPanel x:Name="stpTitlesGroup" 
                         Background="Gray"
                         HorizontalAlignment="Stretch" 
-                        Margin="10,0,0,0" Width="350"
+                        Margin="0,3,0,0" Width="350"
                         VerticalAlignment="Stretch">
                 <StackPanel Orientation="Horizontal" Margin="5, 10, 5 ,10">
                     <AppBarButton x:Name="PickAFileButton" Icon="Add"
                          Content="Pick" Margin="0,0,5,0"/>
-                    <TextBox Name="txtCountDown" Text="100" Foreground="OrangeRed"
+                    <TextBox Name="txtCountDown" Text="100" Foreground="Ivory"
                          KeyUp="txtCountDown_KeyUp"
                          LostFocus="txtCountDown_LostFocus"
                          Height="35" Margin="5 0 5 0"/>
@@ -69,8 +69,9 @@
                               Click="Button_Click_1" Content="Start"/>
                     <TextBlock x:Name="tbFilePicked" Text="File Name 1"
                                FontSize="14"
+                               Foreground="Ivory"
                                TextWrapping="Wrap" Width="152" 
-                               HorizontalAlignment="Left" Margin="3 13 5 0"/>
+                               HorizontalAlignment="Left" Margin="3 10 5 0"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="5 12.5">
@@ -83,8 +84,10 @@
                     <AppBarButton Icon="Play" Name="btn2CountDown"
                               Click="Button_Click_2" Content="Start"/>
                     <TextBlock Name="tb2FilePicked" Text="File Name 2" 
-                           FontSize="14" Margin="3 13 5 0"
-                           TextWrapping="Wrap" Width="152" HorizontalAlignment="Left" Height="37"/>
+                           FontSize="14" Margin="3 10 5 0"
+                                 Foreground="Ivory"
+                           TextWrapping="Wrap" Width="152" HorizontalAlignment="Left"
+                           Height="37"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="5 12.5">
@@ -97,8 +100,12 @@
                     <AppBarButton Icon="Play" Name="btn3CountDown" 
                               Click="Button_Click_3" Content="Start"/>
                     <TextBlock Name="tb3FilePicked" Text="File Name 3"
-                           FontSize="14" Margin="3 13 5 0"
-                           TextWrapping="Wrap" Width="152" HorizontalAlignment="Left" Height="37"/>
+                           FontSize="14" 
+                           Foreground="Ivory"
+                           Margin="3 13 5 0"
+                           TextWrapping="Wrap"
+                           Width="156" HorizontalAlignment="Left" 
+                           Height="37"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="5 12.5">
@@ -112,7 +119,10 @@
                               Click="Button_Click_4" Content="Start"/>
                     <TextBlock Name="tb4FilePicked" Text="File Name 4"
                            FontSize="14" Margin="0,0,0,0"
-                           TextWrapping="Wrap" Width="152" HorizontalAlignment="Center" Height="37" VerticalAlignment="Stretch"/>
+                           Foreground="Ivory"
+                           TextWrapping="Wrap" Width="152" 
+                           HorizontalAlignment="Center" Height="37" 
+                           VerticalAlignment="Stretch"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="5 12.5">
@@ -125,69 +135,75 @@
                     <AppBarButton Icon="Play" Name="btn5CountDown"
                               Click="Button_Click_5" Content="Start"/>
                     <TextBlock Name="tb5FilePicked" Text="File Name 5"
-                           FontSize="14" Margin="0,0,0,0"
-                           TextWrapping="Wrap" Width="152" HorizontalAlignment="Center" Height="37"/>
+                           FontSize="14" 
+                           Foreground="Ivory"
+                           Margin="0,0,0,0"
+                           TextWrapping="Wrap"
+                           Width="152" HorizontalAlignment="Center"
+                           Height="37"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
-                        Height="36" VerticalAlignment="Stretch">
+                        Background="Gray"
+                        Height="50" VerticalAlignment="Stretch">
                 <Button x:Name="btnResestGroup" Click="btnResestGroup_Click"
-                         Background="Black" Foreground="OrangeRed"
+                        Background="Black" Foreground="Ivory"
                         BorderThickness="1" BorderBrush="Ivory"    
                         Content="Reset Intervals"  
                         HorizontalAlignment="Left" Width="110"
                         VerticalAlignment="Center" Margin="40,0,50,0"/>
                 <Button x:Name="btnRePlayGroup" Click="btnRePlayGroup_Click"
-                        Background="Black" Foreground="OrangeRed"
+                        Background="Black" Foreground="Ivory"
                         BorderThickness="1" BorderBrush="Ivory"                       
                         Content="Play Group" 
-                        HorizontalAlignment="Center" Width="110" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                        HorizontalAlignment="Center" Width="110"
+                        VerticalAlignment="Center" 
+                        Margin="0,0,0,0"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="15 5 15 0" Background="DarkGray">
-                <ToggleSwitch x:Name="TgsRepeatGroup" Background="{StaticResource ToggleButtonBackgroundThemeBrush}"
+            <StackPanel Orientation="Horizontal" Margin="0" Background="DarkGray">
+                <ToggleSwitch x:Name="TgsRepeatGroup" 
+                        Background="{StaticResource ToggleButtonBackgroundThemeBrush}"
                         IsOn="{Binding Path=IsRepeatOn}"
-                        FontSize="12.5" Foreground="OrangeRed"
+                        FontSize="12.5" Foreground="Ivory"
                         Header="Repeat"                        
                         HorizontalAlignment="Left"
                         Height="56" Width="100" Margin="35,0,0,0"/>
                 <ToggleSwitch x:Name="TgbShuffle"
-                        FontSize="12.5" Foreground="OrangeRed"
+                        FontSize="12.5" Foreground="Ivory"
                         Header="Shuffle" IsOn="True"
                         HorizontalAlignment="Left"
                         Height="56" Width="100" Margin="15,0,0,0"/>
             </StackPanel>
         </StackPanel>
+        <!--Group Reset/Play-->
+        <StackPanel x:Name="StpBottomBar" Grid.Row="1" 
+                        Margin="0,5,0,0" Height="Auto" Width="345" 
+                        HorizontalAlignment="Center" Background="LightGray">
 
-        <StackPanel x:Name="StpBottomBar" Grid.Row="1"
-                    VerticalAlignment="Stretch"
-                    HorizontalAlignment="Center">
-            
-            <MediaElement x:Name="MediaTool"/> 
-            
-            <!--Visibility="Visible"-->               
-                                     <!--IsCompact="True"
-                  IsCompactOverlayEnabled="True"                  
-                IsCompactOverlayButtonVisible="True"--> 
-            <MediaTransportControls x:Name="MedTransCtrl" 
+            <MediaPlayerElement x:Name="MediaTool"   
                      
-        
-                                   
-                            
-                IsVolumeEnabled="True" IsVolumeButtonVisible="True"
-                
-                IsPreviousTrackButtonVisible="False"
-                                    
-                IsFastRewindButtonVisible="False"
-                                   
-                IsFastForwardButtonVisible="False"
-                                    
-                IsNextTrackButtonVisible="False"
-                                                 
-                IsPlaybackRateEnabled="True"  IsPlaybackRateButtonVisible="True"                                                            
-                                    
-                IsFullWindowEnabled="True" IsFullWindowButtonVisible="True"
-                                    
-                VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+                       AutoPlay="False"                                 
+                       AreTransportControlsEnabled="True"                      
+                       Height="Auto" Width="330" Margin="2.5 25 3 25">
+
+
+                <MediaPlayerElement.TransportControls>
+                    <MediaTransportControls IsCompact="True"
+                              IsSkipForwardButtonVisible="True"
+                              IsSkipBackwardEnabled="True"
+                              IsSkipBackwardButtonVisible="True"
+                              IsSkipForwardEnabled="True"
+                              IsFastForwardButtonVisible="True"
+                              IsFastForwardEnabled="True"
+                              IsFastRewindButtonVisible="True"
+                              IsFastRewindEnabled="True"/>
+                </MediaPlayerElement.TransportControls>
+            </MediaPlayerElement>
+            <!--MediaFailed="MediaTool_MediaFailed"
+                       MediaOpened="MediaTool_MediaOpened"
+                       MediaEnded="MediaTool_MediaEnded"-->
+
+
         </StackPanel>
     </Grid>
 </UserControl>

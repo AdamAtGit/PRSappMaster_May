@@ -246,6 +246,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Name" />
+      <RootProperty Name="TransportControls" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MediaTransportControls">
       <RootProperty Name="Height" />
@@ -263,7 +264,6 @@
       <RootProperty Name="IsPlaybackRateButtonVisible" />
       <RootProperty Name="IsFullWindowEnabled" />
       <RootProperty Name="IsFullWindowButtonVisible" />
-      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.AppFx.UC_TMinus30" />
     <RootType FullName="PRSapp.UWP.MainPage" />
