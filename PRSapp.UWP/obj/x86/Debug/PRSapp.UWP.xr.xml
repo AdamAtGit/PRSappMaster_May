@@ -113,6 +113,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
+      <RootProperty Name="MinHeight" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Margin" />
@@ -246,7 +247,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Name" />
-      <RootProperty Name="TransportControls" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MediaTransportControls">
       <RootProperty Name="Height" />
@@ -254,16 +254,15 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="IsVolumeEnabled" />
-      <RootProperty Name="IsVolumeButtonVisible" />
-      <RootProperty Name="IsPreviousTrackButtonVisible" />
-      <RootProperty Name="IsFastRewindButtonVisible" />
+      <RootProperty Name="IsCompact" />
+      <RootProperty Name="IsSkipForwardButtonVisible" />
+      <RootProperty Name="IsSkipBackwardEnabled" />
+      <RootProperty Name="IsSkipBackwardButtonVisible" />
+      <RootProperty Name="IsSkipForwardEnabled" />
       <RootProperty Name="IsFastForwardButtonVisible" />
-      <RootProperty Name="IsNextTrackButtonVisible" />
-      <RootProperty Name="IsPlaybackRateEnabled" />
-      <RootProperty Name="IsPlaybackRateButtonVisible" />
-      <RootProperty Name="IsFullWindowEnabled" />
-      <RootProperty Name="IsFullWindowButtonVisible" />
+      <RootProperty Name="IsFastForwardEnabled" />
+      <RootProperty Name="IsFastRewindButtonVisible" />
+      <RootProperty Name="IsFastRewindEnabled" />
     </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.AppFx.UC_TMinus30" />
     <RootType FullName="PRSapp.UWP.MainPage" />
@@ -440,6 +439,14 @@
     <RootType FullName="PRSapp.UWP.UserControls.AppFx.UC_Edit_Core_PlayItem" />
     <RootType FullName="Views.UsrControls.UC_Mood" />
     <RootType FullName="Views.UsrControls.UC_PlayGroup" />
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
+      <RootProperty Name="AutoPlay" />
+      <RootProperty Name="AreTransportControlsEnabled" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TransportControls" />
+    </RootType>
     <RootType FullName="PRSapp.UWP.UserControls.NestedUserControl.AddChooseExistOrCreateUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.DetailsUserControl" />
     <RootType FullName="PRSapp.UWP.UserControls.Nested.AddCreateUserControl" />

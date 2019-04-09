@@ -27,7 +27,7 @@ namespace PRSapp.UWP.UserControls.AppFx
                 this.InitializeComponent();
                 //Binding- since bound to prop IsReapeatOn in AppFxsViewModel
                 //Set TgsRepeatGroup to true here
-                TgsRepeatGroup.IsOn = true;
+                TgsRepeatGroup.IsOn = false;
                 Debug.WriteLine("\nHit  public UC_TMinus30()\nIsRepeatOn. \nVal: "
                    + TgsRepeatGroup.IsOn.ToString() +"\n");
             }
@@ -638,8 +638,8 @@ namespace PRSapp.UWP.UserControls.AppFx
         {
             btnRePlayGroup.Content = "Replay Group";
             btnResestGroup_Click(sender, e);
-            MedTransCtrl.IsCompact = false;
-            MedTransCtrl.Visibility = Visibility.Collapsed;
+            ////MedTransCtrl.IsCompact = false;
+           //// MedTransCtrl.Visibility = Visibility.Collapsed;
             if(TgsRepeatGroup.IsOn)
             {
                 for (int i = 0; i < 20; i++)
